@@ -10,6 +10,10 @@
     "isSubmenu": false
   },
   {
+    "text": "Projects",
+    "link": "/case-studies"
+  },
+  {
     "text": "Blog",
     "link": "/blog",
     "isSubmenu": true,
