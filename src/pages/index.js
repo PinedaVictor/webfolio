@@ -1,35 +1,35 @@
-import React from "react"
-import SEO from "../components/seo"
-import Layout from '../containers/layout/layout'
-import Header from '../containers/layout/header/header-four'
-import Footer from '../containers/layout/footer/footer-two'
-import Hero from '../containers/landing/hero'
-import Feature from '../containers/landing/feature'
-import Demos from '../containers/landing/demo-area'
-import InnerDemos from '../containers/landing/inner-demo-area'
-import CaseStudy from '../containers/landing/case-study'
-import HeaderLayout from '../containers/landing/header-layout'
-import BlogLayout from '../containers/landing/blog-layout'
-import Plugins from '../containers/landing/plugins'
-import ExtraFeature from '../containers/landing/extra-features'
+import React from "react";
+import SEO from "../components/seo";
+import Layout from "../containers/layout/layout";
+import Header from "../containers/layout/header/header-three";
+import Footer from "../containers/layout/footer/footer-one";
+import HeroArea from "../containers/index-resolutions/hero-area";
+import FeaturesArea from "../containers/index-resolutions/features-area";
+import FunFactArea from "../containers/index-resolutions/funfact-area";
+import ServicesArea from "../containers/index-resolutions/services-area";
+import ContactArea from "../containers/global/contact-area/contact-three";
+import TestimonialArea from "../containers/global/testimonial-area/section-one";
+import WhatsnewArea from "../containers/index-resolutions/whats-new-area";
+import CTAArea from "../containers/global/cta-area/section-one";
+import ClientsArea from "../containers/global/clients-area";
 
-const IndexPage = ({location}) => (
+const IndexPage = ({ location }) => (
   <Layout location={location}>
-    <SEO/>
-    <Header transparent/>
+    <SEO title="Resolutions" />
+    <Header transparent />
     <main className="site-wrapper-reveal">
-      <Hero/>
-      <Feature/>
-      <Demos/>
-      <InnerDemos/>
-      <CaseStudy/>
-      <HeaderLayout/>
-      <BlogLayout/>
-      <Plugins/>
-      <ExtraFeature/>
+      <HeroArea />
+      <FeaturesArea />
+      <FunFactArea />
+      <ServicesArea />
+      <ContactArea />
+      <TestimonialArea />
+      <WhatsnewArea />
+      <CTAArea />
+      <ClientsArea />
     </main>
-    <Footer/>
+    <Footer />
   </Layout>
-)
- 
-export default IndexPage
+);
+
+export default IndexPage;
