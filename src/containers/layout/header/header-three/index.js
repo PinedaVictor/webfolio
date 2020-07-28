@@ -104,27 +104,26 @@ const Header = ({ props, ...styles }) => {
                       color={transparent ? "#fff" : "textColor"}
                       {...noticeStyle}
                     >
-                      <strong>Now Hiring:</strong> Are you a driven and
-                      motivated 1st Line IT Support Engineer?
+                      {/* <strong>GitHub icon</strong> link */}
                     </Text>
                   </HeaderCol>
                   <HeaderCol right>
                     <HeaderElement {...phoneElStyle}>
                       <HeaderInfoItem>
                         <Anchor path="tel:01228899900">
-                          <MdPhone />
-                          <Text as="strong">0122 8899900</Text>
+                          {/* <MdPhone /> */}
+                          <Text as="strong">GitHub: Link</Text>
                         </Anchor>
                       </HeaderInfoItem>
                     </HeaderElement>
                     <HeaderElement>
                       <HeaderInfoItem>
-                        <Text>
+                        {/* <Text>
                           <MdPlace />
                           <Text as="span">
                             58 Howard Street #2 San Francisco
                           </Text>
-                        </Text>
+                        </Text> */}
                       </HeaderInfoItem>
                     </HeaderElement>
                   </HeaderCol>
