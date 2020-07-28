@@ -20,7 +20,7 @@ const IndexPage = ({ location }) => (
     <main className="site-wrapper-reveal">
       <HeroArea />
       <FeaturesArea />
-      <FunFactArea />
+      {/* <FunFactArea /> */}
       <ServicesArea />
       <ContactArea />
       <TestimonialArea />
