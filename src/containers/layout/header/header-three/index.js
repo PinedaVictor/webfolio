@@ -41,13 +41,6 @@ const Header = ({ props, ...styles }) => {
             id
             text
             link
-            megamenu {
-              title
-              submenu {
-                link
-                text
-              }
-            }
           }
         }
       }
