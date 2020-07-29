@@ -12,11 +12,10 @@ const HeroArea = (props) => {
     const heroData = useStaticQuery(graphql `
         query ResolutionsHeroQuery {
             indexResolutionsJson(id: {eq: "resolutions-hero-content"}) {
-                title
-                subtitle
-                text
+                valueOne
+                valueTwo
+                valueThree
                 link
-                video_link
                 bg_image {
                     childImageSharp {
                         fluid(maxWidth: 1920, maxHeight: 890, quality: 100, srcSetBreakpoints: 6) {
@@ -29,7 +28,7 @@ const HeroArea = (props) => {
             }
         }      
     `);
-    const {title, subtitle, text, bg_image, link, video_link} = heroData.indexResolutionsJson;
+    const {valueOne, valueTwo, valueThree, bg_image, link, video_link} = heroData.indexResolutionsJson;
     const {subtitleStyle, titleStyle, textStyle, btnStyle, consult_btn, work_btn} = props;
     let video_arr, video_id, video_channel;
     if(video_link){
@@ -51,12 +50,12 @@ const HeroArea = (props) => {
                     <Row>
                         <Col lg={12}>
                             <HeroContent>
-                                {subtitle && <Heading {...subtitleStyle}>{subtitle}</Heading>}
-                                {title && <Heading {...titleStyle}>{title}</Heading>}
-                                {text && <Text {...textStyle}>{text}</Text>}
-                                <HeroBtnGroup>
+                                {valueOne && <Heading {...subtitleStyle}>{valueOne}</Heading>}
+                                {valueTwo && <Heading {...titleStyle}>{valueTwo}</Heading>}
+                                {valueThree && <Text {...subtitleStyle}>{valueThree}</Text>}
+                                <HeroBtnGroup >
                                     {link && <Button {...btnStyle} {...consult_btn}>Free Consultation</Button>}
-                                    {video_link && <Button onClick={modalVideoOpen} icon={<MdPlayArrow/>} {...btnStyle} {...work_btn}>How We Work</Button>}
+                                    {/* {video_link && <Button onClick={modalVideoOpen} icon={<MdPlayArrow/>} {...btnStyle} {...work_btn}>How We Work</Button>} */}
                                 </HeroBtnGroup>
                             </HeroContent>
                         </Col>
@@ -79,8 +78,8 @@ const HeroArea = (props) => {
 }
 
 HeroArea.defaultProps = {
-    subtitleStyle: {
-        as: 'h3',
+    subtitleStyle: { 
+        as: 'h2',
         color: '#fff',
         mb: '20px',        
         responsive: {
@@ -93,17 +92,17 @@ HeroArea.defaultProps = {
         }
     },
     titleStyle: {
-        as: 'h1',
+        as: 'h2',
         fontSize: '120px',
         color: '#fff',
         lineHeight: 1.09,
         mb: '30px',
         responsive: {
             xlarge: {
-                fontSize: '100px'
+                fontSize: '80px'
             },
             large: {
-                fontSize: '80px'
+                fontSize: '60px'
             },
             medium: {
                 fontSize: '60px'
@@ -119,7 +118,15 @@ HeroArea.defaultProps = {
     },
     textStyle: {
         color: '#fff',
-        fontWeight: 500
+        fontWeight: 500,
+        responsive:{
+            large: {
+                fontSize: '30px'
+            },
+            small: {
+                fontSize: '22px'
+            }
+        }
     },
     btnStyle: {
         m: '10px',

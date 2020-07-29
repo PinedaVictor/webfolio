@@ -9,7 +9,7 @@ import { SectionWrap } from "./features-area.style";
 const FeaturesArea = ({ headingStyle, linkStyle, featureBoxStyle }) => {
   const featureData = useStaticQuery(graphql`
     query ResolutionsFeaturesQuery {
-      allItServicesJson(filter: { is_featured: { eq: true } }, limit: 3) {
+      allItServicesJson(filter: { is_featured: { eq: true } }, limit: 9) {
         edges {
           node {
             fields {
@@ -40,7 +40,7 @@ const FeaturesArea = ({ headingStyle, linkStyle, featureBoxStyle }) => {
   `);
   const features = featureData.allItServicesJson.edges;
   return (
-    <SectionWrap style={{ backgroundColor: "green" }}>
+    <SectionWrap>
       <Container>
         <Row>
           {features.map((feature) => (

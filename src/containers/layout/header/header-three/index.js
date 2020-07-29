@@ -154,14 +154,14 @@ const Header = ({ props, ...styles }) => {
                           menuData={menuArr}
                         />
                       </HeaderNavigation>
-                      <HeaderElement {...searchElStyle}>
+                      {/* <HeaderElement {...searchElStyle}>
                         <Clickable
                           className="search-btn"
                           onClick={flyoutHandler}
                         >
                           <MdSearch />
                         </Clickable>
-                      </HeaderElement>
+                      </HeaderElement> */}
                       <HeaderElement
                         {...burgerBtnElStyle}
                         visibility={{ default: "false", lg: "true" }}

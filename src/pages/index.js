@@ -21,12 +21,12 @@ const IndexPage = ({ location }) => (
       <HeroArea />
       <FeaturesArea />
       {/* <FunFactArea /> */}
-      <ServicesArea />
+      {/* <ServicesArea /> */}
       <ContactArea />
-      <TestimonialArea />
-      <WhatsnewArea />
-      <CTAArea />
-      <ClientsArea />
+      {/* <TestimonialArea /> */}
+      {/* <WhatsnewArea /> */}
+      {/* <CTAArea /> */}
+      {/* <ClientsArea /> */}
     </main>
     <Footer />
   </Layout>

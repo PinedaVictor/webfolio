@@ -42,6 +42,12 @@
                 "image": "../images/icons/icon-17-80x83.png",
                 "title": "Firewall Advancement",
                 "desc": "Programming is taken care of by our experienced and professional specialist in IT management."
+            },
+            {
+                "id": 6,
+                "image": "../images/icons/icon-17-80x83.png",
+                "title": "Firew",
+                "desc": "Programming is taken care of by our experienced and professional specialist in IT management."
             }
         ]
     },

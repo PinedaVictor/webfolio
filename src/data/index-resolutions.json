@@ -1,10 +1,10 @@
 [
   {
     "id": "resolutions-hero-content",
-    "title": "Your Business",
-    "subtitle": "IT Services Designed For",
-    "text": "Highly Tailored IT Design, Management & Support Services.",
-    "bg_image": "./images/see.jpg",
+    "valueOne": "Integrity",
+    "valueTwo": "Creativity",
+    "valueThree": "Perseverance",
+    "bg_image": "./images/nasa.jpg",
     "link": "/contact-us",
     "video_link": "https://www.youtube.com/watch?v=9No-FiEInLA"
   },
