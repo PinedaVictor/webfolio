@@ -1,12 +1,12 @@
 {
   "id": "business-reform-service",
-  "title": "Web App",
-  "excerpt": "We provide the most responsive and functional IT design for companies and businesses worldwide.",
+  "title": "United International Services LLC",
+  "excerpt": "Web application to host business marketing and contacting requirements.",
   "icon": {
-    "svg": "../../images/icons/linea-basic-gear.svg",
+    "svg": "../../images/icons/linear-basic-gear.svg",
     "img": "../../images/icons/icon-04-100x108.png",
-    "img_two": "../../images/uuu.jpg",
-    "img_hover": "../../images/icons/icon-01-hover-100x98.png"
+    "img_two": "../../images/uis.png",
+    "img_hover": "../../images/uis.png"
   },
   "is_featured": true,
   "banner_image": "../../images/banner/banner-01.jpg",

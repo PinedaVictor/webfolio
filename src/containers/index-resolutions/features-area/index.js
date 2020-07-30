@@ -20,14 +20,14 @@ const FeaturesArea = ({ headingStyle, linkStyle, featureBoxStyle }) => {
             icon {
               img_two {
                 childImageSharp {
-                  fixed(width: 100, height: 98, quality: 100) {
+                  fixed(width: 253, height: 55, quality: 100) {
                     ...GatsbyImageSharpFixed_tracedSVG
                   }
                 }
               }
               img_hover {
                 childImageSharp {
-                  fixed(width: 100, height: 98, quality: 100) {
+                  fixed(width: 253, height: 55, quality: 100) {
                     ...GatsbyImageSharpFixed_tracedSVG
                   }
                 }
@@ -56,12 +56,13 @@ const FeaturesArea = ({ headingStyle, linkStyle, featureBoxStyle }) => {
             </Col>
           ))}
         </Row>
+        {/* TODO: Good place for get resume functionality */}
         <Row>
           <Col lg={12}>
             <Heading {...headingStyle}>
-              Challenges are just opportunities in disguise.{" "}
+              {/* Challenges are just opportunities in disguise.{" "} */}
               <Anchor {...linkStyle} path="/">
-                Take the challenge!
+                Send me the resume!
               </Anchor>
             </Heading>
           </Col>
