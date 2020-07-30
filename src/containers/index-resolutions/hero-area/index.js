@@ -54,7 +54,7 @@ const HeroArea = (props) => {
                                 {valueTwo && <Heading {...titleStyle}>{valueTwo}</Heading>}
                                 {valueThree && <Text {...subtitleStyle}>{valueThree}</Text>}
                                 <HeroBtnGroup >
-                                    {link && <Button {...btnStyle} {...consult_btn}>Free Consultation</Button>}
+                                    {/* {link && <Button {...btnStyle} {...consult_btn}>Free Consultation</Button>} */}
                                     {/* {video_link && <Button onClick={modalVideoOpen} icon={<MdPlayArrow/>} {...btnStyle} {...work_btn}>How We Work</Button>} */}
                                 </HeroBtnGroup>
                             </HeroContent>
