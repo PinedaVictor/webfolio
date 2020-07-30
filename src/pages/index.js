@@ -12,6 +12,7 @@ import TestimonialArea from "../containers/global/testimonial-area/section-one";
 import WhatsnewArea from "../containers/index-resolutions/whats-new-area";
 import CTAArea from "../containers/global/cta-area/section-one";
 import ClientsArea from "../containers/global/clients-area";
+import ContactFormArea from "../containers/contact-us/contact-form-area";
 
 const IndexPage = ({ location }) => (
   <Layout location={location}>
@@ -22,7 +23,8 @@ const IndexPage = ({ location }) => (
       <FeaturesArea />
       {/* <FunFactArea /> */}
       {/* <ServicesArea /> */}
-      <ContactArea />
+      <ContactFormArea />
+      {/* <ContactArea /> */}
       {/* <TestimonialArea /> */}
       {/* <WhatsnewArea /> */}
       {/* <CTAArea /> */}
