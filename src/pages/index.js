@@ -21,10 +21,10 @@ const IndexPage = ({ location }) => (
     <main className="site-wrapper-reveal">
       <HeroArea />
       <FeaturesArea />
-      {/* <FunFactArea /> */}
-      {/* <ServicesArea /> */}
       <ContactFormArea />
       {/* <ContactArea /> */}
+      <FunFactArea />
+      {/* <ServicesArea /> */}
       {/* <TestimonialArea /> */}
       {/* <WhatsnewArea /> */}
       {/* <CTAArea /> */}
