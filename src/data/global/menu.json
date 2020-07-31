@@ -8,16 +8,5 @@
     "text": "About Me",
     "link": "/about-us",
     "isSubmenu": false
-  },
-  {
-    "text": "Blog",
-    "link": "/blog",
-    "isSubmenu": true,
-    "submenu": [
-      {
-        "text": "Single Blog",
-        "link": "/5-ways-technology-has-improved-business-today"
-      }
-    ]
   }
 ]
