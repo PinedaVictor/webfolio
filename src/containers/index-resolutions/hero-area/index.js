@@ -80,7 +80,7 @@ const HeroArea = (props) => {
 HeroArea.defaultProps = {
     subtitleStyle: { 
         as: 'h2',
-        color: '#fff',
+        color: '#fb8e6f',
         mb: '20px',        
         responsive: {
             large: {
@@ -89,12 +89,12 @@ HeroArea.defaultProps = {
             small: {
                 fontSize: '22px'
             }
-        }
+    }
     },
     titleStyle: {
         as: 'h2',
         fontSize: '120px',
-        color: '#fff',
+        color: '#fb8e6f',
         lineHeight: 1.09,
         mb: '30px',
         responsive: {

@@ -47,7 +47,7 @@ export const BoxImgWrapper = styled.div`
   &:hover {
     ${BoxImgInner} {
       transform: translateY(-5px);
-      background: #f4452a;
+      background: ${props => props.theme.colors.themeColor};
     }
     ${HeadingWrap},
     ${TextWrap} {

@@ -1,14 +1,16 @@
 import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-
+import { theme } from '../../../../theme/index'
+// color: ${props => props.theme.colors.black};
 export const NavLinkStyled = css`
-    display: inline-block;
-    position: relative;
-    color: ${props => props.theme.colors.black};
-    font-size: 16px;
+    display: flex;    
+    justify-content: center;    
+    align-items: center;
+    font-size: 20px;
+    font-style: bold;    
     font-weight: 500;
-    line-height: 1.18;
+    line-height: .01;
     padding-right: 21px;
     ${props => props.hassubmenu === "false" && css`
         padding: 0;
@@ -26,9 +28,11 @@ export const NavLinkStyled = css`
         color: ${props => props.theme.colors.themeColor};
     }
     span{
-        display: inline-block;
-        position: relative;
-        padding: 31px 0;
+        display: inline-block;                
+        margin: auto;
+        font-style: bold;
+        padding: 31px 0;        
+        color: ${theme.colors.themeColor};
         &:before{
             content: '';
             width: 0;
@@ -38,7 +42,7 @@ export const NavLinkStyled = css`
             left: 0;
             background-color: ${props => props.theme.colors.themeColor};
             transition: ${props => props.theme.transition};
-        }
+        }        
     }
     & > .icon{
         position: absolute;

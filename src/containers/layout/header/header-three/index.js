@@ -104,18 +104,24 @@ const Header = ({ props, ...styles }) => {
                       color={transparent ? "#fff" : "textColor"}
                       {...noticeStyle}
                     >
-                      {/* <strong>GitHub icon</strong> link */}
+                      <strong>GitHub icon</strong> link
                     </Text>
                   </HeaderCol>
                   <HeaderCol right>
-                    <HeaderElement {...phoneElStyle}>
-                      <HeaderInfoItem>
-                        <Anchor path="tel:01228899900">
-                          {/* <MdPhone /> */}
+                    {/* <HeaderElement {...phoneElStyle}> */}
+                      {/* <HeaderInfoItem> */}
+                        {/* <Anchor path="tel:01228899900">
+                          <MdPhone />
                           <Text as="strong">GitHub: Link</Text>
-                        </Anchor>
-                      </HeaderInfoItem>
-                    </HeaderElement>
+                        </Anchor> */}
+                        <Text
+                      color={transparent ? "#fff" : "textColor"}
+                      {...noticeStyle}
+                    >
+                      <strong>GitHub icon</strong> link
+                    </Text>
+                      {/* </HeaderInfoItem> */}
+                    {/* </HeaderElement> */}
                     <HeaderElement>
                       <HeaderInfoItem>
                         {/* <Text>
@@ -217,7 +223,7 @@ Header.propTypes = {
 Header.defaultProps = {
   noticeStyle: {
     fontSize: "14px",
-    lineHeight: 1.78,
+    lineHeight: 1.78,    
   },
   logoStyle: {
     pt: "14px",
@@ -230,7 +236,8 @@ Header.defaultProps = {
     pl: "50px",
   },
   burgerBtnElStyle: {
-    pl: "25px",
+    pl: "25px",  
+    backgroundColor:'red',  
   },
 };
 

@@ -7,7 +7,7 @@ export const ExpandButtonWrap = styled.span `
     background: rgba(255,255,255,0.1);
     color: #fff;
     text-align: center;
-    line-height: 40px;
+    line-height: 40px;    
     cursor: pointer;
     transition: ${props => props.theme.transition};
     .icon{
