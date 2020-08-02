@@ -44,15 +44,16 @@ const FeaturesArea = ({ headingStyle, linkStyle, featureBoxStyle }) => {
       <Container>
         <Row>
           {features.map((feature) => (
-            <Col lg={4} md={6} key={feature.node.fields.slug} >
+            <Col lg={4} md={6} key={feature.node.fields.slug}>
               <FeatureBox
                 {...featureBoxStyle}
                 imageSrc={feature.node.icon.img_two.childImageSharp}
                 hoverImg={feature.node.icon.img_hover.childImageSharp}
                 title={feature.node.title}
                 desc={feature.node.excerpt}
-                path={`/it-service/${feature.node.fields.slug}`}
+                path={"https://unitedinternationalservices.com/"}
               />
+              {/* path={`/it-service/${feature.node.fields.slug}`} */}
             </Col>
           ))}
         </Row>

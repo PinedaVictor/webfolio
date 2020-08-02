@@ -2,6 +2,7 @@
   "id": "business-reform-service",
   "title": "United International Services LLC",
   "excerpt": "Web application to host business marketing and contacting requirements.",
+  "path": "THis is the path",
   "icon": {
     "svg": "../../images/icons/linear-basic-gear.svg",
     "img": "../../images/icons/icon-04-100x108.png",
