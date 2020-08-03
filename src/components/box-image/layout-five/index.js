@@ -5,6 +5,14 @@ import { MdTrendingFlat } from "react-icons/md";
 import Image from "../../image";
 import Button from "../../ui/button";
 import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
+} from "react-accessible-accordion";
+import AccordionWrap from "../../ui/accordion";
+import {
   BoxImgWrapper,
   BoxImgInner,
   BoxImgMedia,
@@ -15,7 +23,16 @@ import {
   TextWrap,
 } from "./box-image.style";
 
-const BoxImage = ({ imageSrc, hoverImg, title, desc, path, ...boxStyles }) => {
+const BoxImage = ({
+  imageSrc,
+  hoverImg,
+  title,
+  desc,
+  path,
+  accordion,
+  visitExternal,
+  ...boxStyles
+}) => {
   const { boxStyle, headingStyle, descStyle } = boxStyles;
   let boxImage;
   let hoverImage;
@@ -50,17 +67,33 @@ const BoxImage = ({ imageSrc, hoverImg, title, desc, path, ...boxStyles }) => {
             </HeadingWrap>
           )}
           {desc && <TextWrap {...descStyle}>{desc}</TextWrap>}
-          <Button
-            className="button"
-            to={path}
-            icon={<MdTrendingFlat />}
-            iconposition="right"
-            icondistance="4px"
-            varient="texted"
-            hover="false"
-          >
-            More...
-          </Button>
+          {accordion && (
+            <AccordionWrap layout="two">
+              <Accordion allowZeroExpanded>
+                <AccordionItem id={1} key={2}>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>see</AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <p>IDK LETS SEE</p>
+                  </AccordionItemPanel>
+                </AccordionItem>
+              </Accordion>
+            </AccordionWrap>
+          )}
+          {visitExternal && (
+            <Button
+              className="button"
+              to={path}
+              icon={<MdTrendingFlat />}
+              iconposition="right"
+              icondistance="4px"
+              varient="texted"
+              hover="false"
+            >
+              More...
+            </Button>
+          )}
         </BoxImgContent>
       </BoxImgInner>
     </BoxImgWrapper>

@@ -1,9 +1,11 @@
 {
   "id": "uis",
   "title": "United International Services LLC",
+  "tagline": "Intersting",
   "excerpt": "Web application to host business marketing and contacting requirements.",
   "path": "https://unitedinternationalservices.com/",
   "newTab": true,
+  "accordion": false,
   "icon": {
     "svg": "../../images/icons/linear-basic-gear.svg",
     "img": "../../images/icons/icon-04-100x108.png",
