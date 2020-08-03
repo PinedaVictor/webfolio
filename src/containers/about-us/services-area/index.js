@@ -10,7 +10,7 @@ import {ServicesWrapper} from './services-area.style'
 const Services = ({serviceBoxStyle, linkStyle, headingStyle}) => {
     const featuredDataQuery = useStaticQuery(graphql `
         query AboutServicesQueryData {
-            allItServicesJson(sort: {order: DESC, fields: id}, filter: {is_featured: {eq: true}}, limit: 3) {
+            allProjectsJson(sort: {order: DESC, fields: id}, filter: {is_featured: {eq: true}}, limit: 3) {
                 edges {
                   node {
                     fields {
@@ -33,7 +33,7 @@ const Services = ({serviceBoxStyle, linkStyle, headingStyle}) => {
             }
         }
     `);
-    const services = featuredDataQuery.allItServicesJson.edges;
+    const services = featuredDataQuery.allProjectsJson.edges;
     return (
         <ServicesWrapper> 
             <Container>
@@ -44,7 +44,7 @@ const Services = ({serviceBoxStyle, linkStyle, headingStyle}) => {
                                 title={service.node.title}
                                 desc={service.node.excerpt}
                                 imageSrc={service.node.icon.img.childImageSharp}
-                                path={`/it-service/${service.node.fields.slug}`}
+                                path={`/projects/${service.node.fields.slug}`}
                             />
                         </Col>
                     ))}

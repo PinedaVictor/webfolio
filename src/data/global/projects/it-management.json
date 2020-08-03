@@ -1,16 +1,16 @@
 {
-    "id": "info-security-service",
-    "title": "Info Security",
-    "excerpt": "At Mitech, we have a holistic and integrated approach towards core modernization to experience technological evolution.",
-    "image": "../../images/box-image/image-05-480x298.jpg",
+    "id": "it-management-service",
+    "title": "IT Management",
+    "excerpt": "It’s possible to simultaneously manage and transform information from one server to another.",
+    "newTab": false,
     "icon": {
-        "svg": "../../images/icons/linea-basic-spread-text-bookmark.svg",
-        "img": "../../images/icons/icon-04-100x108.png",
-        "img_two": "../../images/icons/icon-01-100x98.png",
-        "img_hover": "../../images/icons/icon-01-hover-100x98.png"
+        "svg": "../../images/icons/linea-basic-case.svg",
+        "img": "../../images/icons/icon-02-100x108.png",
+        "img_two": "../../images/icons/icon-04-100x98.png",
+        "img_hover": "../../images/icons/icon-04-hover-100x98.png"
     },
-    "is_featured": false,
-    "banner_image": "../../images/banner/banner-05.jpg",
+    "is_featured": true,
+    "banner_image": "../../images/banner/banner-08.jpg",
     "introText": {
         "heading": "Mitech specializes in <span>technological and IT-related services</span> such as product engineering, warranty management, building cloud, infrastructure, network, etc.",
         "text": "We’re available for 8 hours a day! <br/>Contact to require a detailed analysis and assessment of your plan."

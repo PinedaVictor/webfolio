@@ -1,15 +1,18 @@
 {
-    "id": "infrastructure-plan-service",
-    "title": "Infrastructure Plan",
-    "excerpt": "We provide the most responsive and functional IT design for companies and businesses worldwide.",
+    "id": "highly-professional-service",
+    "title": "Highly Professional Staffs",
+    "tagline": "Reach out to the world’s most reliable IT services.",
+    "excerpt": "Having obtained the official & formal training in IT technology and technical fields, our staffs know best.",
+    "newTab": false,
+    "image": "../../images/box-image/image-06-480x298.jpg",
     "icon": {
-        "svg": "../../images/icons/linea-ecommerce-money.svg",
-        "img": "../../images/icons/icon-06-100x108.png",
+        "svg": "../../images/icons/linea-basic-spread-text-bookmark.svg",
+        "img": "../../images/icons/icon-05-100x108.png",
         "img_two": "../../images/icons/icon-06-100x98.png",
         "img_hover": "../../images/icons/icon-06-hover-100x98.png"
     },
-    "is_featured": true,
-    "banner_image": "../../images/banner/banner-06.jpg",
+    "is_featured": false,
+    "banner_image": "../../images/banner/banner-04.jpg",
     "introText": {
         "heading": "Mitech specializes in <span>technological and IT-related services</span> such as product engineering, warranty management, building cloud, infrastructure, network, etc.",
         "text": "We’re available for 8 hours a day! <br/>Contact to require a detailed analysis and assessment of your plan."

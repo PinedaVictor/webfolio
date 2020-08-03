@@ -9,9 +9,11 @@ import { SectionWrap } from "./features-area.style";
 const FeaturesArea = ({ headingStyle, linkStyle, featureBoxStyle }) => {
   const featureData = useStaticQuery(graphql`
     query ResolutionsFeaturesQuery {
-      allItServicesJson(filter: { is_featured: { eq: true } }, limit: 6) {
+      allProjectsJson(filter: { is_featured: { eq: true } }, limit: 6) {
         edges {
           node {
+            path
+            newTab
             fields {
               slug
             }
@@ -38,12 +40,13 @@ const FeaturesArea = ({ headingStyle, linkStyle, featureBoxStyle }) => {
       }
     }
   `);
-  const features = featureData.allItServicesJson.edges;
+  const features = featureData.allProjectsJson.edges;
   return (
-    <SectionWrap>
+    <SectionWrap>      
       <Container>
         <Row>
           {features.map((feature) => (
+            console.log("newTab feild: ", feature.node.newTab),
             <Col lg={4} md={6} key={feature.node.fields.slug}>
               <FeatureBox
                 {...featureBoxStyle}
@@ -51,9 +54,8 @@ const FeaturesArea = ({ headingStyle, linkStyle, featureBoxStyle }) => {
                 hoverImg={feature.node.icon.img_hover.childImageSharp}
                 title={feature.node.title}
                 desc={feature.node.excerpt}
-                path={"https://unitedinternationalservices.com/"}
-              />
-              {/* path={`/it-service/${feature.node.fields.slug}`} */}
+                path={feature.node.newTab ? feature.node.path : (`/projects/${feature.node.fields.slug}`)}
+              />              
             </Col>
           ))}
         </Row>

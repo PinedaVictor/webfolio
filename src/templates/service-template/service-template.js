@@ -25,7 +25,7 @@ import AccordionWrap from '../../components/ui/accordion'
 import { BannerArea, BannerTextWrap, IntroArea, FaqArea, VideoBoxWrap, VideoBtnWrap, FeatureArea } from './service-template.style'
 
 const ServiceTemplate = ({ data, location, ...restProps }) => {
-    const pageData = data.itServicesJson;
+    const pageData = data.projectsJson;
     let bannerImg;
     if (pageData.banner_image) {
         bannerImg = pageData.banner_image.childImageSharp.fluid;
@@ -171,7 +171,7 @@ const ServiceTemplate = ({ data, location, ...restProps }) => {
 
 export const query = graphql`
     query($slug: String!){
-        itServicesJson(fields: {slug: {eq: $slug}}){
+        projectsJson(fields: {slug: {eq: $slug}}){
             title
             id
             tagline

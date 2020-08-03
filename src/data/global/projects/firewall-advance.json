@@ -1,15 +1,16 @@
 {
-    "id": "data-security-service",
-    "title": "Data Security",
+    "id": "firewall-advance-service",
+    "title": "Firewall Advance",
     "excerpt": "We provide the most responsive and functional IT design for companies and businesses worldwide.",
+    "newTab": false,
     "icon": {
-        "svg": "../../images/icons/linea-music-headphones.svg",
-        "img": "../../images/icons/icon-03-100x108.png",
-        "img_two": "../../images/icons/icon-06-100x98.png",
-        "img_hover": "../../images/icons/icon-06-hover-100x98.png"
+        "svg": "../../images/icons/linea-basic-spread-text-bookmark.svg",
+        "img": "../../images/icons/icon-05-100x108.png",
+        "img_two": "../../images/icons/icon-04-100x98.png",
+        "img_hover": "../../images/icons/icon-04-hover-100x98.png"
     },
     "is_featured": true,
-    "banner_image": "../../images/banner/banner-02.jpg",
+    "banner_image": "../../images/banner/banner-03.jpg",
     "introText": {
         "heading": "Mitech specializes in <span>technological and IT-related services</span> such as product engineering, warranty management, building cloud, infrastructure, network, etc.",
         "text": "We’re available for 8 hours a day! <br/>Contact to require a detailed analysis and assessment of your plan."

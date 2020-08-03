@@ -2,6 +2,7 @@
     "id": "quality-assurance-service",
     "title": "Quality Assurance System",
     "excerpt": "At Mitech, we have a holistic and integrated approach towards core modernization to experience technological evolution.",
+    "newTab": false,
     "image": "../../images/box-image/image-03-480x298.jpg",
     "icon": {
         "svg": "../../images/icons/linea-basic-case.svg",

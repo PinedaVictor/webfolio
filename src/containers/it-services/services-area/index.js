@@ -10,8 +10,8 @@ import {SectionWrap, SectionBottom} from './services-area.style'
 
 const ServicesArea = (props) => {
     const featuredDataQuery = useStaticQuery(graphql `
-        query ITServicesQueryData {
-            allItServicesJson(sort: {order: DESC, fields: id}, limit: 6) {
+        query ProjectsQueryData {
+            allProjectsJson(sort: {order: DESC, fields: id}, limit: 6) {
                 edges {
                   node {
                     fields {
@@ -34,7 +34,7 @@ const ServicesArea = (props) => {
             }
         }
     `); 
-    const featureData = featuredDataQuery.allItServicesJson.edges;
+    const featureData = featuredDataQuery.allProjectsJson.edges;
     const {linkStyle, headingStyle} = props;
     return (
         <SectionWrap>

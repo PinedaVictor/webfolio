@@ -1,15 +1,16 @@
 {
-    "id": "it-design-service",
-    "title": "IT Design",
+    "id": "data-security-service",
+    "title": "Data Security",
     "excerpt": "We provide the most responsive and functional IT design for companies and businesses worldwide.",
+    "newTab": false,
     "icon": {
-        "svg": "../../images/icons/linea-basic-heart.svg",
-        "img": "../../images/icons/icon-01-100x108.png",
-        "img_two": "../../images/icons/icon-01-100x98.png",
-        "img_hover": "../../images/icons/icon-01-hover-100x98.png"
+        "svg": "../../images/icons/linea-music-headphones.svg",
+        "img": "../../images/icons/icon-03-100x108.png",
+        "img_two": "../../images/icons/icon-06-100x98.png",
+        "img_hover": "../../images/icons/icon-06-hover-100x98.png"
     },
     "is_featured": true,
-    "banner_image": "../../images/banner/banner-07.jpg",
+    "banner_image": "../../images/banner/banner-02.jpg",
     "introText": {
         "heading": "Mitech specializes in <span>technological and IT-related services</span> such as product engineering, warranty management, building cloud, infrastructure, network, etc.",
         "text": "We’re available for 8 hours a day! <br/>Contact to require a detailed analysis and assessment of your plan."
