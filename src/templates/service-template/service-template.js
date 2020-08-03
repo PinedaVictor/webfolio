@@ -156,7 +156,7 @@ const ServiceTemplate = ({ data, location, ...restProps }) => {
                         </Container>
                     </FeatureArea>
                 )}
-                <CTA />
+                {/* <CTA /> */}
             </main>
             <ModalVideo
                 channel='youtube'
