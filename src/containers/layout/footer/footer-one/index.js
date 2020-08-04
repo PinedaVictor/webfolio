@@ -58,16 +58,16 @@ const Footer = ({ copyrightStyle, ...props }) => {
                                 <LogoWidget>
                                     <img src={Logo} alt="Logo" />
                                 </LogoWidget>
-                                <TextWidget>
+                                {/* <TextWidget>
                                     {address && <Text mb="10px">{address}</Text>}
                                     {email && <Text mb="10px"><Anchor path={`mailto:${email}`} color="textColor" hoverstyle="2">{email}</Anchor></Text>}
                                     {phone && <Text mb="10px"><Anchor path={`tel:${phone}`} fontWeight="800" color="#333" hoverstyle="2">{phone}</Anchor></Text>}
                                     {website && <Text mb="10px"><Anchor path={website} hoverstyle="2">{website}</Anchor></Text>}
-                                </TextWidget>
+                                </TextWidget> */}
                             </FooterWidget>
                         </Col>
                         <Col lg={2} md={4} sm={6}>
-                            <FooterWidget responsive={{ medium: { mb: '31px' } }}>
+                            {/* <FooterWidget responsive={{ medium: { mb: '31px' } }}>
                                 <Heading as="h6" mt="-3px" mb="20px">IT Services</Heading>
                                 <FooterWidgetList>
                                     <li><Anchor path="/" color="textColor" hoverstyle="2">Managed IT</Anchor></li>
@@ -76,10 +76,10 @@ const Footer = ({ copyrightStyle, ...props }) => {
                                     <li><Anchor path="/" color="textColor" hoverstyle="2">Cloud Computing</Anchor></li>
                                     <li><Anchor path="/" color="textColor" hoverstyle="2">Cyber Security</Anchor></li>
                                 </FooterWidgetList>
-                            </FooterWidget>
+                            </FooterWidget> */}
                         </Col>
                         <Col lg={2} md={4} sm={6}>
-                            <FooterWidget responsive={{ medium: { mb: '27px' } }}>
+                            {/* <FooterWidget responsive={{ medium: { mb: '27px' } }}>
                                 <Heading as="h6" mt="-3px" mb="20px">Quick links</Heading>
                                 <FooterWidgetList>
                                     <li><Anchor path="/" color="textColor" hoverstyle="2">Pick up locations</Anchor></li>
@@ -87,10 +87,10 @@ const Footer = ({ copyrightStyle, ...props }) => {
                                     <li><Anchor path="/" color="textColor" hoverstyle="2">Privacy Policy</Anchor></li>
                                     <li><Anchor path="/" color="textColor" hoverstyle="2">Where to Find Us</Anchor></li>
                                 </FooterWidgetList>
-                            </FooterWidget>
+                            </FooterWidget> */}
                         </Col>
                         <Col lg={2} md={4} sm={6}>
-                            <FooterWidget>
+                            {/* <FooterWidget>
                                 <Heading as="h6" mt="-3px" mb="20px">Support</Heading>
                                 <FooterWidgetList>
                                     <li><Anchor path="/" color="textColor" hoverstyle="2">Forum Support</Anchor></li>
@@ -99,10 +99,10 @@ const Footer = ({ copyrightStyle, ...props }) => {
                                     <li><Anchor path="/" color="textColor" hoverstyle="2">Pricing and plans</Anchor></li>
                                     <li><Anchor path="/" color="textColor" hoverstyle="2">Cookies Policy</Anchor></li>
                                 </FooterWidgetList>
-                            </FooterWidget>
+                            </FooterWidget> */}
                         </Col>
                         <Col lg={2} md={4} sm={6}>
-                            <FooterWidget mt='50px' responsive={{ small: { mt: '34px' } }}>
+                            {/* <FooterWidget mt='50px' responsive={{ small: { mt: '34px' } }}>
                                 <FooterWidgetList>
                                     <li>
                                         <Button path="/" to="/" imgbutton="true" shadow="true"><img src={gplayImage} alt="Google Play" /></Button>
@@ -111,7 +111,7 @@ const Footer = ({ copyrightStyle, ...props }) => {
                                         <Button path="/" to="/" imgbutton="true" shadow="true"><img src={appImage} alt="App Store" /></Button>
                                     </li>
                                 </FooterWidgetList>
-                            </FooterWidget>
+                            </FooterWidget> */}
                         </Col>
                     </Row>
                 </Container>
@@ -124,7 +124,7 @@ const Footer = ({ copyrightStyle, ...props }) => {
                         </Col>
                         <Col md={6} className="text-center text-md-right">
                             <Social space="8px" tooltip={true} shape="rounded" varient="outlined">
-                                {twitter && (
+                                {/* {twitter && (
                                     <SocialLink
                                         path={twitter}
                                         title="Twitter">
@@ -144,7 +144,7 @@ const Footer = ({ copyrightStyle, ...props }) => {
                                         title="Instagram">
                                         <TiSocialInstagram />
                                     </SocialLink>
-                                )}
+                                )} */}
                                 {linkedin && (
                                     <SocialLink
                                         path={linkedin}

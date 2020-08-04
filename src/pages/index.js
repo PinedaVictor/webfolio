@@ -23,7 +23,7 @@ const IndexPage = ({ location }) => (
       <FeaturesArea />
       <ContactFormArea />
       {/* <ContactArea /> */}
-      <FunFactArea />
+      {/* <FunFactArea /> */}
       {/* <ServicesArea /> */}
       {/* <TestimonialArea /> */}
       {/* <WhatsnewArea /> */}
