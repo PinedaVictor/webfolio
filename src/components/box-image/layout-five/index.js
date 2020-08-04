@@ -50,8 +50,8 @@ const BoxImage = ({
     hoverImage = <Image fluid={hoverImg.fluid} alt={title} />;
   } else {
     hoverImage = <img src={hoverImg} alt={title} />;
-  }
-  return (
+  }  
+  return (    
     <BoxImgWrapper {...boxStyle}>
       <BoxImgInner>
         {imageSrc && (
@@ -68,14 +68,28 @@ const BoxImage = ({
           )}
           {desc && <TextWrap {...descStyle}>{desc}</TextWrap>}
           {accordion && (
-            <AccordionWrap layout="two">
+            <AccordionWrap layout="two" style={{backgroundColor: "white", borderRadius: "10px", padding: "5px"}}>
               <Accordion allowZeroExpanded>
                 <AccordionItem id={1} key={2}>
                   <AccordionItemHeading>
-                    <AccordionItemButton>see</AccordionItemButton>
+                    <AccordionItemButton style={{fontSize:'14px'}}>More...</AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
-                    <p>IDK LETS SEE</p>
+                      <li>
+                        IDK LETS SEE
+                      </li>
+                      <li>
+                        IDK LETS SEE
+                      </li>
+                      <li>
+                        IDK LETS SEE
+                      </li>
+                      <li>
+                        IDK LETS SEE
+                      </li>
+                      <li>
+                        IDK LETS SEE
+                      </li>
                   </AccordionItemPanel>
                 </AccordionItem>
               </Accordion>
@@ -91,7 +105,7 @@ const BoxImage = ({
               varient="texted"
               hover="false"
             >
-              More...
+              Visit
             </Button>
           )}
         </BoxImgContent>

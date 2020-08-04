@@ -14,6 +14,7 @@ const FeaturesArea = ({ headingStyle, linkStyle, featureBoxStyle }) => {
           node {
             path
             newTab
+            accordion
             fields {
               slug
             }
@@ -61,7 +62,7 @@ const FeaturesArea = ({ headingStyle, linkStyle, featureBoxStyle }) => {
                         ? feature.node.path
                         : `/projects/${feature.node.fields.slug}`
                     }
-                    accordion={true}
+                    accordion={feature.node.accordion}
                     visitExternal={feature.node.newTab}
                   />
                 </Col>
