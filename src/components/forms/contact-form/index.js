@@ -16,12 +16,7 @@ const ContactForm = () => {
     submitting: false,
     status: null,
   });
-  const [formFields, setFormField] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+
   const handleServerResponse = (ok, msg, form) => {
     setServerState({
       submitting: false,
@@ -30,27 +25,6 @@ const ContactForm = () => {
     if (ok) {
       form.reset();
     }
-  };
-
-  const nameChangeHandler = (e) => {
-    const fields = Object.assign({}, formFields);
-    fields.name = e.target.value;
-    setFormField({ fields });
-  };
-  const emailChangeHandler = (e) => {
-    const fields = Object.assign({}, formFields);
-    fields.email = e.target.value;
-    setFormField({ fields });
-  };
-  const subjectChangeHandler = (e) => {
-    const fields = Object.assign({}, formFields);
-    fields.subject = e.target.value;
-    setFormField({ fields });
-  };
-  const messageChangeHandler = (e) => {
-    const fields = Object.assign({}, formFields);
-    fields.message = e.target.value;
-    setFormField({ fields });
   };
 
   const onSubmit = (data, e) => {
@@ -79,7 +53,6 @@ const ContactForm = () => {
               id="name"
               placeholder="Name *"
               ref={register({ required: "Name is required" })}
-              onChange={nameChangeHandler}
             />
             <Error>{errors.name && errors.name.message}</Error>
           </FormGroup>
@@ -98,7 +71,6 @@ const ContactForm = () => {
                   message: "invalid email address",
                 },
               })}
-              onChange={emailChangeHandler}
             />
             <Error>{errors.email && errors.email.message}</Error>
           </FormGroup>
@@ -113,7 +85,6 @@ const ContactForm = () => {
               id="subject"
               placeholder="Subject *"
               ref={register({ required: "Subject is required" })}
-              onChange={subjectChangeHandler}
             />
             <Error>{errors.subject && errors.subject.message}</Error>
           </FormGroup>
@@ -137,7 +108,6 @@ const ContactForm = () => {
                   message: "Minimum length is 10",
                 },
               })}
-              onChange={messageChangeHandler}
             ></Textarea>
             <Error>{errors.message && errors.message.message}</Error>
           </FormGroup>
