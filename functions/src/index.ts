@@ -5,6 +5,8 @@ import * as sgMail from "@sendgrid/mail";
 // https://firebase.google.com/docs/functions/typescript
 const sendGridConfig = functions.config().sendgrid;
 const SEND_GRID_API_KEY = sendGridConfig.key;
+const CLIENT_CONFIRMATION = sendGridConfig.client_confirmation;
+const MESSAGE_TO_ME = sendGridConfig.client_template;
 
 sgMail.setApiKey(SEND_GRID_API_KEY);
 // TODO: Finish confirmation template, should it include resume?
@@ -15,7 +17,22 @@ export const helloWorld = functions.https.onRequest((request, response) => {
   response.send("Hello from Firebase!");
 });
 
-export const sendResume = functions.https.onCall((data, context) => {});
+export const sendResume = functions.https.onCall((data, context) => {
+  const myNotificationTemplate = {
+    from: data.email,
+    templateId: MESSAGE_TO_ME,
+    dynamicTemplateData: {
+      name: data.name,
+      message: data.text,
+      subject: data.subject,
+      preheader: "[Website Inquiry]",
+    },
+  };
+  const myNotification = sgMail.send({
+    to: "pinedavictor095@gmail.com",
+    ...myNotificationTemplate,
+  });
+});
 export const contact = functions.https.onCall((data, context) => {});
 
 // const functions = require("firebase-functions");
