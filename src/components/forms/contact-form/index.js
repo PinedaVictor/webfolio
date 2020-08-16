@@ -5,6 +5,8 @@ import { Row, Col } from "../../ui/wrapper";
 import useFormUrl from "../useFormUrl";
 import Form, { FormGroup, Input, Textarea, Error } from "../../ui/form";
 import Button from "../../ui/button";
+import * as firebase from "firebase/app";
+import "firebase/functions";
 
 const ContactForm = () => {
   const formUrl = useFormUrl();
@@ -30,6 +32,10 @@ const ContactForm = () => {
   const onSubmit = (data, e) => {
     const form = e.target;
     setServerState({ submitting: true });
+    e.preventDefault();
+    console.log("THIS IS FORM DATA");
+    console.log(data);
+    console.log("Only the name:", data.name);
     axios({
       method: "post",
       url: formUrl,
@@ -42,6 +48,7 @@ const ContactForm = () => {
         handleServerResponse(false, r.response.data.error, form);
       });
   };
+
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
       <Row gutters={{ lg: 20 }}>
