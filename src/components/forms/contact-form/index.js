@@ -29,24 +29,32 @@ const ContactForm = () => {
     }
   };
 
-  const onSubmit = (data, e) => {
-    const form = e.target;
+  const onSubmit = (data, event) => {
+    const form = event.target;
     setServerState({ submitting: true });
-    e.preventDefault();
+    event.preventDefault();
+    const sendMail = firebase.functions().httpsCallable("contactMe");
     console.log("THIS IS FORM DATA");
     console.log(data);
-    console.log("Only the name:", data.name);
-    axios({
-      method: "post",
-      url: formUrl,
-      data: data,
-    })
-      .then((r) => {
+    sendMail(data)
+      .then(() => {
         handleServerResponse(true, "Thanks! for contact with us", form);
       })
-      .catch((r) => {
-        handleServerResponse(false, r.response.data.error, form);
+      .catch((error) => {
+        console.log("THIS IS THE ERROR: ", error);
+        handleServerResponse(false, error, form);
       });
+    // axios({
+    //   method: "post",
+    //   url: formUrl,
+    //   data: data,
+    // })
+    //   .then((r) => {
+    //     handleServerResponse(true, "Thanks! for contact with us", form);
+    //   })
+    //   .catch((r) => {
+    //     handleServerResponse(false, r.response.data.error, form);
+    //   });
   };
 
   return (
