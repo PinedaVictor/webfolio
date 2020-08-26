@@ -44,17 +44,6 @@ const ContactForm = () => {
         console.log("THIS IS THE ERROR: ", error);
         handleServerResponse(false, error, form);
       });
-    // axios({
-    //   method: "post",
-    //   url: formUrl,
-    //   data: data,
-    // })
-    //   .then((r) => {
-    //     handleServerResponse(true, "Thanks! for contact with us", form);
-    //   })
-    //   .catch((r) => {
-    //     handleServerResponse(false, r.response.data.error, form);
-    //   });
   };
 
   return (

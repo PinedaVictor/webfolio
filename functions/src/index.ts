@@ -4,12 +4,9 @@ import * as sgMail from "@sendgrid/mail";
 // https://firebase.google.com/docs/functions/typescript
 const sendGridConfig = functions.config().sendgrid;
 const SEND_GRID_API_KEY = sendGridConfig.key;
-// const CLIENT_CONFIRMATION = sendGridConfig.client_confirmation;
 const MESSAGE_TO_ME = sendGridConfig.client_template;
 
 sgMail.setApiKey(SEND_GRID_API_KEY);
-// TODO: Finish confirmation template, should it include resume?
-// Use existing UIS client contact email
 
 export const contactMe = functions.https.onCall((data, context) => {
   console.log("Mad it to http funciton");
@@ -38,27 +35,3 @@ export const contactMe = functions.https.onCall((data, context) => {
       );
     });
 });
-
-// const functions = require("firebase-functions");
-// const admin = require("firebase-admin");
-// admin.initializeApp();
-
-// exports.addMessage = functions.https.onRequest(async (req: any, res: any) => {
-//   const original = req.query.text;
-//   const writeResult = await admin
-//     .firestore()
-//     .collection("messages")
-//     .add({ original: original });
-
-//   res.json({ result: `Message with ID: ${writeResult.id} added.` });
-// });
-
-// exports.makeUppercase = functions.firestore
-//   .document("/messages/{documentId}")
-//   .onCreate((snap: any, context: any) => {
-//     const original = snap.data().original;
-
-//     functions.logger.log("Uppercasing", context.params.documentId, original);
-//     const uppercase = original.toUpperCase();
-//     return snap.ref.set({ uppercase }, { merge: true });
-//   });
