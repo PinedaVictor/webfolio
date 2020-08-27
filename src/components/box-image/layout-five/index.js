@@ -30,6 +30,7 @@ const BoxImage = ({
   desc,
   path,
   accordion,
+  items,
   visitExternal,
   ...boxStyles
 }) => {
@@ -83,15 +84,10 @@ const BoxImage = ({
                       More...
                     </AccordionItemButton>
                   </AccordionItemHeading>
-                  <AccordionItemPanel>
-                    {/* someList.map((item) => {
-                      <li>item</li>
-                    }) */}
-                    <li>IDK LETS SEE</li>
-                    <li>IDK LETS SEE</li>
-                    <li>IDK LETS SEE</li>
-                    <li>IDK LETS SEE</li>
-                    <li>IDK LETS SEE</li>
+                  <AccordionItemPanel key={0}>
+                    {items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
                   </AccordionItemPanel>
                 </AccordionItem>
               </Accordion>

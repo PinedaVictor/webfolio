@@ -5,6 +5,7 @@
   "excerpt": "We provide the most responsive and functional IT design for companies and businesses worldwide.",
   "newTab": false,
   "accordion": true,
+  "items": ["item1", "item2", "item3"],
   "icon": {
     "svg": "../../images/icons/linea-basic-spread-text-bookmark.svg",
     "img": "../../images/icons/icon-05-100x108.png",
