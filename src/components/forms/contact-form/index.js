@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import { useForm } from "react-hook-form";
 import { Row, Col } from "../../ui/wrapper";
 import useFormUrl from "../useFormUrl";
 import Form, { FormGroup, Input, Textarea, Error } from "../../ui/form";
 import Button from "../../ui/button";
+import * as firebase from "firebase/app";
+import "firebase/functions";
 
 const ContactForm = () => {
   const formUrl = useFormUrl();
@@ -26,21 +28,23 @@ const ContactForm = () => {
     }
   };
 
-  const onSubmit = (data, e) => {
-    const form = e.target;
+  const onSubmit = (data, event) => {
+    const form = event.target;
     setServerState({ submitting: true });
-    axios({
-      method: "post",
-      url: formUrl,
-      data: data,
-    })
-      .then((r) => {
+    event.preventDefault();
+    const sendMail = firebase.functions().httpsCallable("contactMe");
+    console.log("THIS IS FORM DATA");
+    console.log(data);
+    sendMail(data)
+      .then(() => {
         handleServerResponse(true, "Thanks! for contact with us", form);
       })
-      .catch((r) => {
-        handleServerResponse(false, r.response.data.error, form);
+      .catch((error) => {
+        console.log("THIS IS THE ERROR: ", error);
+        handleServerResponse(false, error, form);
       });
   };
+
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
       <Row gutters={{ lg: 20 }}>

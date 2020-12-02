@@ -13,7 +13,10 @@ import FeaturesArea from "../containers/index-resolutions/features-area";
 // import CTAArea from "../containers/global/cta-area/section-one";
 // import ClientsArea from "../containers/global/clients-area";
 import ContactFormArea from "../containers/contact-us/contact-form-area";
+import { firebaseConfig } from "../config/firebase";
+import * as firebase from "firebase/app";
 
+firebase.initializeApp(firebaseConfig);
 const IndexPage = ({ location }) => (
   <Layout location={location}>
     <SEO title="Resolutions" />

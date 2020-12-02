@@ -1,7 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
-import { TiSocialLinkedin } from "react-icons/ti";
+import {
+  // TiSocialFacebook,
+  // TiSocialTwitter,
+  // TiSocialInstagram,
+  TiSocialLinkedin,
+} from "react-icons/ti";
 import parse from "html-react-parser";
 import { Container } from "react-bootstrap";
 import Logo from "../../../../assets/images/logo/dark-logo-160x48.png";
@@ -47,7 +52,12 @@ const Footer = ({ copyrightStyle, ...props }) => {
   `);
   // const { phone, email, address, website } = siteInfo.site.siteMetadata.contact;
   const { copyright } = siteInfo.site.siteMetadata;
-  const { linkedin } = siteInfo.site.siteMetadata.social;
+  const {
+    // facebook,
+    // twitter,
+    // instagram,
+    linkedin,
+  } = siteInfo.site.siteMetadata.social;
   return (
     <FooterWrap {...props}>
       <FooterTop>
@@ -66,8 +76,8 @@ const Footer = ({ copyrightStyle, ...props }) => {
                                 </TextWidget> */}
               </FooterWidget>
             </Col>
-            <Col lg={2} md={4} sm={6}>
-              {/* <FooterWidget responsive={{ medium: { mb: '31px' } }}>
+            {/* <Col lg={2} md={4} sm={6}> */}
+            {/* <FooterWidget responsive={{ medium: { mb: '31px' } }}>
                                 <Heading as="h6" mt="-3px" mb="20px">IT Services</Heading>
                                 <FooterWidgetList>
                                     <li><Anchor path="/" color="textColor" hoverstyle="2">Managed IT</Anchor></li>
@@ -77,9 +87,9 @@ const Footer = ({ copyrightStyle, ...props }) => {
                                     <li><Anchor path="/" color="textColor" hoverstyle="2">Cyber Security</Anchor></li>
                                 </FooterWidgetList>
                             </FooterWidget> */}
-            </Col>
-            <Col lg={2} md={4} sm={6}>
-              {/* <FooterWidget responsive={{ medium: { mb: '27px' } }}>
+            {/* </Col> */}
+            {/* <Col lg={2} md={4} sm={6}> */}
+            {/* <FooterWidget responsive={{ medium: { mb: '27px' } }}>
                                 <Heading as="h6" mt="-3px" mb="20px">Quick links</Heading>
                                 <FooterWidgetList>
                                     <li><Anchor path="/" color="textColor" hoverstyle="2">Pick up locations</Anchor></li>
@@ -88,31 +98,57 @@ const Footer = ({ copyrightStyle, ...props }) => {
                                     <li><Anchor path="/" color="textColor" hoverstyle="2">Where to Find Us</Anchor></li>
                                 </FooterWidgetList>
                             </FooterWidget> */}
-            </Col>
-            <Col lg={2} md={4} sm={6}>
-              {/* <FooterWidget>
-                                <Heading as="h6" mt="-3px" mb="20px">Support</Heading>
-                                <FooterWidgetList>
-                                    <li><Anchor path="/" color="textColor" hoverstyle="2">Forum Support</Anchor></li>
-                                    <li><Anchor path="/" color="textColor" hoverstyle="2">Help &amp; FAQ</Anchor></li>
-                                    <li><Anchor path="/" color="textColor" hoverstyle="2">Contact Us</Anchor></li>
-                                    <li><Anchor path="/" color="textColor" hoverstyle="2">Pricing and plans</Anchor></li>
-                                    <li><Anchor path="/" color="textColor" hoverstyle="2">Cookies Policy</Anchor></li>
-                                </FooterWidgetList>
-                            </FooterWidget> */}
-            </Col>
-            <Col lg={2} md={4} sm={6}>
-              {/* <FooterWidget mt='50px' responsive={{ small: { mt: '34px' } }}>
-                                <FooterWidgetList>
-                                    <li>
-                                        <Button path="/" to="/" imgbutton="true" shadow="true"><img src={gplayImage} alt="Google Play" /></Button>
-                                    </li>
-                                    <li>
-                                        <Button path="/" to="/" imgbutton="true" shadow="true"><img src={appImage} alt="App Store" /></Button>
-                                    </li>
-                                </FooterWidgetList>
-                            </FooterWidget> */}
-            </Col>
+            {/* </Col> */}
+            {/* <Col lg={2} md={4} sm={6}>
+              <FooterWidget>
+                <Heading as="h6" mt="-3px" mb="20px">
+                  Support
+                </Heading>
+                <FooterWidgetList>
+                  <li>
+                    <Anchor path="/" color="textColor" hoverstyle="2">
+                      Forum Support
+                    </Anchor>
+                  </li>
+                  <li>
+                    <Anchor path="/" color="textColor" hoverstyle="2">
+                      Help &amp; FAQ
+                    </Anchor>
+                  </li>
+                  <li>
+                    <Anchor path="/" color="textColor" hoverstyle="2">
+                      Contact Us
+                    </Anchor>
+                  </li>
+                  <li>
+                    <Anchor path="/" color="textColor" hoverstyle="2">
+                      Pricing and plans
+                    </Anchor>
+                  </li>
+                  <li>
+                    <Anchor path="/" color="textColor" hoverstyle="2">
+                      Cookies Policy
+                    </Anchor>
+                  </li>
+                </FooterWidgetList>
+              </FooterWidget>
+            </Col> */}
+            {/* <Col lg={2} md={4} sm={6}>
+              <FooterWidget mt="50px" responsive={{ small: { mt: "34px" } }}>
+                <FooterWidgetList>
+                  <li>
+                    <Button path="/" to="/" imgbutton="true" shadow="true">
+                      <img src={gplayImage} alt="Google Play" />
+                    </Button>
+                  </li>
+                  <li>
+                    <Button path="/" to="/" imgbutton="true" shadow="true">
+                      <img src={appImage} alt="App Store" />
+                    </Button>
+                  </li>
+                </FooterWidgetList>
+              </FooterWidget>
+            </Col> */}
           </Row>
         </Container>
       </FooterTop>

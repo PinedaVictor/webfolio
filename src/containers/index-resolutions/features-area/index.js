@@ -15,6 +15,7 @@ const FeaturesArea = ({ headingStyle, linkStyle, featureBoxStyle }) => {
             path
             newTab
             accordion
+            items
             fields {
               slug
             }
@@ -42,6 +43,7 @@ const FeaturesArea = ({ headingStyle, linkStyle, featureBoxStyle }) => {
     }
   `);
   const features = featureData.allProjectsJson.edges;
+
   return (
     <SectionWrap>
       <Container>
@@ -61,6 +63,7 @@ const FeaturesArea = ({ headingStyle, linkStyle, featureBoxStyle }) => {
                 }
                 accordion={feature.node.accordion}
                 visitExternal={feature.node.newTab}
+                items={feature.node.accordion ? feature.node.items : [" "]}
               />
             </Col>
           ))}

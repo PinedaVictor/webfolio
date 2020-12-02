@@ -4,6 +4,7 @@
   "excerpt": "Research assistent at California State University, Northdige",
   "tagline": "Intersting",
   "accordion": true,
+  "items": ["first string", "second string", "third string"],
   "newTab": false,
   "icon": {
     "svg": "../../images/icons/linea-music-headphones.svg",

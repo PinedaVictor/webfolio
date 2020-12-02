@@ -30,6 +30,7 @@ const BoxImage = ({
   desc,
   path,
   accordion,
+  items,
   visitExternal,
   ...boxStyles
 }) => {
@@ -50,8 +51,8 @@ const BoxImage = ({
     hoverImage = <Image fluid={hoverImg.fluid} alt={title} />;
   } else {
     hoverImage = <img src={hoverImg} alt={title} />;
-  }  
-  return (    
+  }
+  return (
     <BoxImgWrapper {...boxStyle}>
       <BoxImgInner>
         {imageSrc && (
@@ -68,28 +69,25 @@ const BoxImage = ({
           )}
           {desc && <TextWrap {...descStyle}>{desc}</TextWrap>}
           {accordion && (
-            <AccordionWrap layout="two" style={{backgroundColor: "white", borderRadius: "10px", padding: "5px"}}>
+            <AccordionWrap
+              layout="two"
+              style={{
+                backgroundColor: "white",
+                borderRadius: "10px",
+                padding: "5px",
+              }}
+            >
               <Accordion allowZeroExpanded>
                 <AccordionItem id={1} key={2}>
                   <AccordionItemHeading>
-                    <AccordionItemButton style={{fontSize:'14px'}}>More...</AccordionItemButton>
+                    <AccordionItemButton style={{ fontSize: "14px" }}>
+                      More...
+                    </AccordionItemButton>
                   </AccordionItemHeading>
-                  <AccordionItemPanel>
-                      <li>
-                        IDK LETS SEE
-                      </li>
-                      <li>
-                        IDK LETS SEE
-                      </li>
-                      <li>
-                        IDK LETS SEE
-                      </li>
-                      <li>
-                        IDK LETS SEE
-                      </li>
-                      <li>
-                        IDK LETS SEE
-                      </li>
+                  <AccordionItemPanel key={0}>
+                    {items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
                   </AccordionItemPanel>
                 </AccordionItem>
               </Accordion>
