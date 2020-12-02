@@ -1,12 +1,12 @@
 import React, { Fragment, useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
-import { MdPhone, MdPlace, MdSearch } from "react-icons/md";
+// import { MdPhone, MdPlace, MdSearch } from "react-icons/md";
 import { Container, Row, Col } from "../../../../components/ui/wrapper";
 import Text from "../../../../components/ui/text";
-import Anchor from "../../../../components/ui/anchor";
+// import Anchor from "../../../../components/ui/anchor";
 import Logo from "../../../../components/logo";
-import Clickable from "../../../../components/ui/clickable";
+// import Clickable from "../../../../components/ui/clickable";
 import { MainMenu, MobileMenu } from "../../../../components/menu";
 import Flyout, {
   FlyoutHeader,
@@ -83,8 +83,8 @@ const Header = ({ props, ...styles }) => {
 
   const {
     noticeStyle,
-    phoneElStyle,
-    searchElStyle,
+    // phoneElStyle,
+    // searchElStyle,
     logoStyle,
     burgerBtnElStyle,
     transparent,

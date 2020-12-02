@@ -1,11 +1,11 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 // import { MdPlayArrow } from "react-icons/md";
 import { Container, Row, Col } from "../../../components/ui/wrapper";
 import Heading from "../../../components/ui/heading";
 import Text from "../../../components/ui/text";
 // import Button from "../../../components/ui/button";
-import ModalVideo from "../../../components/ui/modal-video";
+// import ModalVideo from "../../../components/ui/modal-video";
 import {
   HeroWrapper,
   HeroContent,
@@ -43,8 +43,8 @@ const HeroArea = (props) => {
     valueTwo,
     valueThree,
     bg_image,
-    link,
-    video_link,
+    // link,
+    // video_link,
   } = heroData.indexResolutionsJson;
   const { subtitleStyle, titleStyle } = props;
   //   const {
@@ -55,12 +55,12 @@ const HeroArea = (props) => {
   //     consult_btn,
   //     work_btn,
   //   } = props;
-  let video_arr, video_id, video_channel;
-  if (video_link) {
-    video_arr = video_link.split("=", -1);
-    video_id = video_arr[1];
-    video_channel = video_link.split(".")[1];
-  }
+  // let video_arr, video_id, video_channel;
+  // if (video_link) {
+  //   video_arr = video_link.split("=", -1);
+  //   video_id = video_arr[1];
+  //   video_channel = video_link.split(".")[1];
+  // }
   //   const [videoOpen, setVideoOpen] = useState(false);
   //   const modalVideoOpen = () => {
   //     setVideoOpen(true);

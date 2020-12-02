@@ -46,29 +46,24 @@ const FeaturesArea = ({ headingStyle, linkStyle, featureBoxStyle }) => {
     <SectionWrap>
       <Container>
         <Row>
-          {features.map(
-            (feature) => (
-              console.log("newTab feild: ", feature.node.newTab),
-              (
-                <Col lg={4} md={6} key={feature.node.fields.slug}>
-                  <FeatureBox
-                    {...featureBoxStyle}
-                    imageSrc={feature.node.icon.img_two.childImageSharp}
-                    hoverImg={feature.node.icon.img_hover.childImageSharp}
-                    title={feature.node.title}
-                    desc={feature.node.excerpt}
-                    path={
-                      feature.node.newTab
-                        ? feature.node.path
-                        : `/projects/${feature.node.fields.slug}`
-                    }
-                    accordion={feature.node.accordion}
-                    visitExternal={feature.node.newTab}
-                  />
-                </Col>
-              )
-            )
-          )}
+          {features.map((feature) => (
+            <Col lg={4} md={6} key={feature.node.fields.slug}>
+              <FeatureBox
+                {...featureBoxStyle}
+                imageSrc={feature.node.icon.img_two.childImageSharp}
+                hoverImg={feature.node.icon.img_hover.childImageSharp}
+                title={feature.node.title}
+                desc={feature.node.excerpt}
+                path={
+                  feature.node.newTab
+                    ? feature.node.path
+                    : `/projects/${feature.node.fields.slug}`
+                }
+                accordion={feature.node.accordion}
+                visitExternal={feature.node.newTab}
+              />
+            </Col>
+          ))}
         </Row>
         {/* TODO: Good place for get resume functionality */}
         <Row>
