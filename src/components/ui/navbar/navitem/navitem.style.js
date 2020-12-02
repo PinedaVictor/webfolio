@@ -2,7 +2,7 @@ import styled, {css}  from 'styled-components';
 import {device} from '../../../../theme'
 
 export const NavItemWrap = styled.li `
-    margin: 0 20px;  
+    margin: 0 20px;
     @media ${device.xlarge}{
         margin: 0 15px; 
     }

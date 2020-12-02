@@ -107,13 +107,12 @@ export const AccordionWrapper = styled.div`
     ${props => props.layout === 'two' && css`
         .accordion {
             border-width: 0px;
-            border-radius: 0;
+            border-radius: 0px;
             &__item{
                 border-bottom: none;
                 margin-bottom: 20px;
                 border: none;
-                border-top: 0 !important;
-                border-bottom: 1px solid #ebebeb;
+                border-top: 0 !important;           
             }
             &__heading{
                 padding: 0;

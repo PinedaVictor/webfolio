@@ -13,8 +13,8 @@ export const FooterWrap = styled.footer `
 `;
 
 export const FooterTop = styled.div `
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 50px;
+    padding-bottom: 0px;
     @media ${device.medium}{
         padding-top: 60px;
         padding-bottom: 60px;

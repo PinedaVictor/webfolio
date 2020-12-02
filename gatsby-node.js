@@ -38,7 +38,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
             value: slugify(node.name)
         });
     }
-    if (node.internal.type === 'ItServicesJson') {
+    if (node.internal.type === 'ProjectsJson') {
         createNodeField({
             node,
             name: "slug",
@@ -79,7 +79,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     const result = await graphql(`
         {
-            allItServicesJson {
+            allProjectsJson {
                 edges {
                     node {
                         fields {
@@ -193,10 +193,10 @@ exports.createPages = async ({ graphql, actions }) => {
 
     // Create Single IT Service page
 
-    const itservices = result.data.allItServicesJson.edges;
-    itservices.forEach(({ node }) => {
+    const projects = result.data.allProjectsJson.edges;
+    projects.forEach(({ node }) => {
         createPage({
-            path: `it-service/${node.fields.slug}`,
+            path: `projects/${node.fields.slug}`,
             component: servicePage,
             context: {
                 slug: node.fields.slug

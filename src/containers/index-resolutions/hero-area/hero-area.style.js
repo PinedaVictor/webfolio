@@ -33,7 +33,7 @@ export const HeroSeparator = styled.div `
 `;
 
 export const HeroContent = styled.div `
-    text-align: center;
+    text-align: left;
 `;
 
 export const HeroBtnGroup = styled.div `

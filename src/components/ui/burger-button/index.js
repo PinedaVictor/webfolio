@@ -5,7 +5,7 @@ import {BurgerButtonWrap} from './burger-button.style'
 const BurgerButton = ({onClick, ...props}) => {
     return (
         <BurgerButtonWrap className="burger-btn" type="button" onClick={onClick} {...props}>
-            <span></span>
+            <div></div>
         </BurgerButtonWrap>
     )
 }
