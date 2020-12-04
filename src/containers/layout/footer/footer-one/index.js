@@ -9,7 +9,7 @@ import {
 } from "react-icons/ti";
 import parse from "html-react-parser";
 import { Container } from "react-bootstrap";
-import Logo from "../../../../assets/images/logo/dark-logo-160x48.png";
+// import Logo from "../../../../assets/images/logo/logo.png";
 // import gplayImage from '../../../../assets//images/icons/aeroland-button-google-play.jpg'
 // import appImage from '../../../../assets//images/icons/aeroland-button-app-store.jpg'
 import { Row, Col } from "../../../../components/ui/wrapper";
@@ -22,7 +22,7 @@ import {
   FooterWrap,
   FooterTop,
   FooterWidget,
-  LogoWidget,
+  // LogoWidget,
   // TextWidget,
   // FooterWidgetList,
   FooterBottom,
@@ -65,9 +65,9 @@ const Footer = ({ copyrightStyle, ...props }) => {
           <Row>
             <Col lg={4} sm={6}>
               <FooterWidget responsive={{ medium: { mb: "31px" } }}>
-                <LogoWidget>
-                  <img src={Logo} alt="Logo" />
-                </LogoWidget>
+                {/* <LogoWidget>
+                  <img src={Logo} width="50%" height="50%" alt="Logo" />
+                </LogoWidget> */}
                 {/* <TextWidget>
                                     {address && <Text mb="10px">{address}</Text>}
                                     {email && <Text mb="10px"><Anchor path={`mailto:${email}`} color="textColor" hoverstyle="2">{email}</Anchor></Text>}
@@ -116,8 +116,7 @@ const Footer = ({ copyrightStyle, ...props }) => {
                     </Anchor>
                   </li>
                   <li>
-                    <Anchor path="/" color="textColor" hoverstyle="2">
-                      Contact Us
+                    <Anchor path="/" color="textColor" hoverstyle="2">                      Contact Us
                     </Anchor>
                   </li>
                   <li>

@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 // import { MdPlayArrow } from "react-icons/md";
 import { Container, Row, Col } from "../../../components/ui/wrapper";
 import Heading from "../../../components/ui/heading";
-import Text from "../../../components/ui/text";
+// import Text from "../../../components/ui/text";
 // import Button from "../../../components/ui/button";
 // import ModalVideo from "../../../components/ui/modal-video";
 import {
