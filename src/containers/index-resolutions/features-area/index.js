@@ -9,7 +9,7 @@ import { SectionWrap } from "./features-area.style";
 const FeaturesArea = ({ headingStyle, linkStyle, featureBoxStyle }) => {
   const featureData = useStaticQuery(graphql`
     query ResolutionsFeaturesQuery {
-      allProjectsJson(filter: { is_featured: { eq: true } }, limit: 6) {
+      allProjectsJson(filter: { is_featured: { eq: true } }, limit: 3) {
         edges {
           node {
             path

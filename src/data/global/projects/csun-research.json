@@ -12,7 +12,7 @@
     "img_two": "../../images/features/scalaJava.png",
     "img_hover": "../../images/features/scalaJava.png"
   },
-  "is_featured": true,
+  "is_featured": false,
   "banner_image": "../../images/banner/banner-02.jpg",
   "introText": {
     "heading": "Mitech specializes in <span>technological and IT-related services</span> such as product engineering, warranty management, building cloud, infrastructure, network, etc.",
