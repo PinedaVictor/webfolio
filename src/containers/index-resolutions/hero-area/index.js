@@ -68,6 +68,7 @@ const HeroArea = (props) => {
   //   const modalVideoClose = () => {
   //     setVideoOpen(false);
   //   };
+  // "rgba(251, 142, 111, 0.5)",
   return (
     <Fragment>
       <HeroWrapper fluid={bg_image.childImageSharp.fluid}>
@@ -75,10 +76,44 @@ const HeroArea = (props) => {
           <Row>
             <Col lg={12}>
               <HeroContent>
-                {valueOne && <Heading {...subtitleStyle}>{valueOne}</Heading>}
-                {valueTwo && <Heading {...titleStyle}>{valueTwo}</Heading>}
+                {valueOne && (
+                  <Heading {...subtitleStyle}>
+                    <mark
+                      style={{
+                        backgroundColor: "rgba(255, 80, 0, 0.6)",
+                        color: "white",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      {valueOne}
+                    </mark>
+                  </Heading>
+                )}
+                {valueTwo && (
+                  <Heading {...titleStyle}>
+                    <mark
+                      style={{
+                        backgroundColor: "rgba(255, 80, 0, 0.6)",
+                        color: "white",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      {valueTwo}
+                    </mark>
+                  </Heading>
+                )}
                 {valueThree && (
-                  <Heading {...subtitleStyle}>{valueThree}</Heading>
+                  <Heading {...subtitleStyle}>
+                    <mark
+                      style={{
+                        backgroundColor: "rgba(255, 80, 0, 0.6)",
+                        color: "white",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      {valueThree}
+                    </mark>
+                  </Heading>
                 )}
                 <HeroBtnGroup>
                   {/* {link && <Button {...btnStyle} {...consult_btn}>Free Consultation</Button>} */}
@@ -119,7 +154,7 @@ HeroArea.defaultProps = {
         fontSize: "30px",
       },
       small: {
-        fontSize: "22px",
+        fontSize: "30px",
       },
     },
   },
@@ -140,10 +175,10 @@ HeroArea.defaultProps = {
         fontSize: "60px",
       },
       small: {
-        fontSize: "50px",
+        fontSize: "60px",
       },
       xsmall: {
-        fontSize: "40px",
+        fontSize: "50px",
         mb: "20px",
       },
     },
