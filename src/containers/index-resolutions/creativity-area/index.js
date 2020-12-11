@@ -5,7 +5,7 @@ import { Container } from "react-bootstrap";
 export const CreativityArea = () => {
   return (
     <SectionWrap>
-      <Container fluid style={{ backgroundColor: "red" }}>
+      <Container fluid style={{ backgroundColor: "black" }}>
         lldlfj
       </Container>
     </SectionWrap>
