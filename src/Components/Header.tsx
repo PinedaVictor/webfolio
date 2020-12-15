@@ -1,6 +1,7 @@
 import React from "react";
-import { siteTheme } from "../Global/styles";
+import "./header.scss";
+import { Container } from "react-bootstrap";
 
 export const Header: React.FC = () => {
-  return <></>;
+  return <Container className="wrapper"></Container>;
 };
