@@ -29,18 +29,25 @@ export const Header: React.FC = () => {
 
   return (
     <Container fluid className="HeroWrapper">
-      <Row style={{ backgroundColor: "blue" }}>
-        <Col>
-          <animated.div style={fade}>
+      <Row
+        style={{
+          backgroundColor: "blue",
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+        }}
+      >
+        <Col xs={6} sm={6} style={{ backgroundColor: "grey" }}>
+          {/* <animated.div style={fade}>
             <IDK className="initials" />
-          </animated.div>
+          </animated.div> */}
           {transitionOne.map(
             ({ item, props, key }) => (
               console.log("The props::::", item),
               (
                 <animated.div key={key} style={props}>
                   <p style={{ color: "red" }}>the</p>
-                  <IDK className="initials" />
+                  {/* <IDK className="initials" /> */}
                 </animated.div>
               )
             )
@@ -50,7 +57,7 @@ export const Header: React.FC = () => {
           {transitionTwo.map(({ item, props, key }) => (
             <animated.div key={key} style={props}>
               <p style={{ color: "blue" }}>the</p>
-              <IDK className="initials" />
+              {/* <IDK className="initials" /> */}
             </animated.div>
           ))}
         </Col>
