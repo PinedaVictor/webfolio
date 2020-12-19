@@ -1,0 +1,29 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 98.96 26.5">
+    <defs>
+        <style>
+            .background {
+                fill: url(#linear-gradient);
+                color: #000000
+            }
+
+            .text {
+                font-size: 23.7px;
+                font-family: OCRAExtended, OCR A Extended;
+            }
+        </style>
+        <linearGradient id="linear-gradient" y1="13.25" x2="98.96" y2="13.25" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#000d2a" />
+            <stop offset="0.01" stop-color="#00122f" />
+            <stop offset="0.14" stop-color="#00415a" />
+            <stop offset="0.27" stop-color="#006a80" />
+            <stop offset="0.4" stop-color="#008b9e" />
+            <stop offset="0.54" stop-color="#00a4b6" />
+            <stop offset="0.68" stop-color="#00b7c7" />
+            <stop offset="0.83" stop-color="#00c1d1" />
+            <stop offset="0.99" stop-color="#00c5d4" />
+        </linearGradient>
+    </defs>
+    <rect class="background" width="98.96" height="26.5" rx="7.7" />
+    <text class="text" transform="translate(6.4 20.93) scale(0.67 1)">Integrity</text>
+</svg>

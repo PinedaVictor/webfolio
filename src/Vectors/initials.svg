@@ -1,0 +1,32 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 93.52 57.54">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: none;
+                stroke-miterlimit: 10;
+                stroke-width: 3px;
+                stroke: url(#linear-gradient);
+            }
+
+            .cls-2 {
+                fill: url(#linear-gradient-2);
+            }
+
+            .cls-3 {
+                font-size: 52.29px;
+                font-family: OCRAExtended, OCR A Extended;
+            }
+        </style>
+        <linearGradient id="linear-gradient" x1="7.67" y1="31.92" x2="93.52" y2="31.92" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#000d2a" />
+            <stop offset="0.4" stop-color="#005d74" />
+            <stop offset="0.81" stop-color="#00a8b9" />
+            <stop offset="0.99" stop-color="#00c5d4" />
+        </linearGradient>
+        <linearGradient id="linear-gradient-2" x1="0" y1="24.13" x2="80.84" y2="24.13" xlink:href="#linear-gradient" />
+    </defs>
+    <rect class="cls-1" x="10.17" y="8.79" width="80.84" height="46.25" rx="7.7" />
+    <rect class="cls-2" y="1.01" width="80.84" height="46.25" rx="7.7" /><text class="cls-3"
+        transform="translate(11.89 43.11) scale(0.57 1)">V.P.</text>
+</svg>

@@ -1,9 +1,9 @@
 // Main style sheet
 // 1. Headeer
-// 2.
+// 2. Projects
 
 // Constants
-$PrimaryColor: #000;
+$PrimaryColor: #000000;
 // ----------- Header -------------
 .HeroWrapper {
   background-color: $PrimaryColor;
@@ -12,8 +12,16 @@ $PrimaryColor: #000;
 }
 
 .initials {
-  max-width: 150px;
-  max-height: 150px;
+  max-width: 350px;
+  max-height: 350px;
+  // font-family: ;
   // margin: "auto";
+}
+.integrity {
+  color: $PrimaryColor;
+}
+
+.creativity {
+  width: 50px;
 }
 // ----------- END Header -------------
