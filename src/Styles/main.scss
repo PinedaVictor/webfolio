@@ -8,20 +8,17 @@ $PrimaryColor: #000000;
 .HeroWrapper {
   background-color: $PrimaryColor;
   height: 500px;
+
   // display: flex;
 }
 
 .initials {
   max-width: 175px;
-  max-height: 175px;
   min-width: 150px;
-  min-height: 150px;
 }
 .integrity {
-  max-width: 375px;
-  max-height: 275px;
+  max-width: 250px;
   min-width: 250px;
-  min-height: 150px;
 }
 .creativity {
   max-width: 375px;

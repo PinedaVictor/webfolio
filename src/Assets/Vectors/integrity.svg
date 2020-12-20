@@ -24,6 +24,6 @@
             <stop offset="0.99" stop-color="#00c5d4" />
         </linearGradient>
     </defs>
-    <rect class="background" width="98.96" height="26.5" rx="7.7" />
+    <rect class="background" width="98.96" height="26.5" rx="3.7" />
     <text class="text" transform="translate(6.4 20.93) scale(0.67 1)">Integrity</text>
 </svg>
