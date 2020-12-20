@@ -12,16 +12,19 @@ $PrimaryColor: #000000;
 }
 
 .initials {
-  max-width: 350px;
-  max-height: 350px;
-  // font-family: ;
-  // margin: "auto";
+  max-width: 175px;
+  max-height: 175px;
+  min-width: 150px;
+  min-height: 150px;
 }
 .integrity {
-  color: $PrimaryColor;
+  max-width: 375px;
+  max-height: 275px;
+  min-width: 250px;
+  min-height: 150px;
 }
-
 .creativity {
-  width: 50px;
+  max-width: 375px;
+  max-height: 275px;
 }
 // ----------- END Header -------------

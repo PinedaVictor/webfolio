@@ -2,16 +2,16 @@
     viewBox="0 0 97.57 25.4">
     <defs>
         <style>
-            .cls-1 {
-                fill: url(#linear-gradient);
+            .fill {
+                fill: url(#gradient);
             }
 
-            .cls-2 {
+            .text3 {
                 font-size: 23.1px;
                 font-family: OCRAExtended, OCR A Extended;
             }
         </style>
-        <linearGradient id="linear-gradient" x1="0.63" y1="12.7" x2="98.21" y2="12.7" gradientUnits="userSpaceOnUse">
+        <linearGradient id="gradient" x1="0.63" y1="12.7" x2="98.21" y2="12.7" gradientUnits="userSpaceOnUse">
             <stop offset="0" stop-color="#001c70" />
             <stop offset="0.15" stop-color="#3b2a61" />
             <stop offset="0.32" stop-color="#763852" />
@@ -22,6 +22,6 @@
             <stop offset="0.99" stop-color="#ff592e" />
         </linearGradient>
     </defs>
-    <rect class="cls-1" width="97.57" height="25.4" rx="7.7" /><text class="cls-2"
+    <rect class="fill" width="97.57" height="25.4" rx="7.7" /><text class="text3"
         transform="translate(2.14 20.18) scale(0.67 1)">Creativity</text>
 </svg>

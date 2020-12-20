@@ -2,11 +2,11 @@
     viewBox="0 0 97.17 17.03">
     <defs>
         <style>
-            .cls-1 {
+            .backgroundFill {
                 fill: url(#linear-gradient);
             }
 
-            .cls-2 {
+            .textStyle {
                 font-size: 15.97px;
                 font-family: OCRAExtended, OCR A Extended;
             }
@@ -23,6 +23,6 @@
             <stop offset="0.99" stop-color="#00c5d4" />
         </linearGradient>
     </defs>
-    <rect class="cls-1" width="97.17" height="17.03" rx="3.34" /><text class="cls-2"
+    <rect class="backgroundFill" width="97.17" height="17.03" rx="3.34" /><text class="textStyle"
         transform="translate(4.17 13.69) scale(0.77 1)">Perseverance</text>
 </svg>
