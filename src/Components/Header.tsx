@@ -45,7 +45,7 @@ export const Header: React.FC = () => {
         <Col
           xs={12}
           sm={6}
-          md={4}
+          md={3}
           style={{
             backgroundColor: "",
             paddingTop: "10px",
@@ -65,7 +65,7 @@ export const Header: React.FC = () => {
         <Col
           xs={12}
           sm={12}
-          md={6}
+          md={7}
           style={{
             backgroundColor: "",
             padding: "10px",
@@ -88,12 +88,12 @@ export const Header: React.FC = () => {
         </Col>
         <Col style={{ backgroundColor: "red" }}>
           <animated.div style={fade}>
-            <Creativity />
+            <Creativity className="creativity" />
           </animated.div>
         </Col>
         <Col xs={12}>
           <animated.div style={fade}>
-            <Perseverance />
+            <Perseverance className="perseverance" />
           </animated.div>
         </Col>
       </Row>

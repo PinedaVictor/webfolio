@@ -3,7 +3,7 @@
     <defs>
         <style>
             .backgroundFill {
-                fill: url(#linear-gradient);
+                fill: url(#linear-gradient-PER);
             }
 
             .textStyle {
@@ -11,7 +11,7 @@
                 font-family: OCRAExtended, OCR A Extended;
             }
         </style>
-        <linearGradient id="linear-gradient" y1="8.51" x2="97.17" y2="8.51" gradientUnits="userSpaceOnUse">
+        <linearGradient id="linear-gradient-PER" y1="8.51" x2="97.17" y2="8.51" gradientUnits="userSpaceOnUse">
             <stop offset="0" stop-color="#000d2a" />
             <stop offset="0.01" stop-color="#00122f" />
             <stop offset="0.14" stop-color="#00415a" />
