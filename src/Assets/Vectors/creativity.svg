@@ -22,6 +22,6 @@
             <stop offset="0.99" stop-color="#ff592e" />
         </linearGradient>
     </defs>
-    <rect class="fill" width="97.57" height="25.4" rx="7.7" /><text class="text3"
+    <rect class="fill" width="97.57" height="25.4" rx="3.0" /><text class="text3"
         transform="translate(2.14 20.18) scale(0.67 1)">Creativity</text>
 </svg>

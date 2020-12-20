@@ -21,13 +21,13 @@ export const Header: React.FC = () => {
 
   const transitionOne = useTransition(items, (item) => item, {
     from: {
-      transform: "translate3d(-500px, 0, 0)",
+      transform: "translate3d(-800px, 0, 0)",
     },
-    enter: { transform: "translate3d(25%,0px,0)" },
+    enter: { transform: "translate3d(20%,0px,0)" },
   });
   const transitionTwo = useTransition(items, (item) => item, {
     from: {
-      transform: "translate3d(-500px, 0px, 0)",
+      transform: "translate3d(-800px, 0px, 0)",
     },
     enter: { transform: "translate3d(0px, 0px, 0px)" },
   });
@@ -41,11 +41,12 @@ export const Header: React.FC = () => {
           flexWrap: "wrap",
         }}
       >
-        <Col xs={2} sm={2} md={2} style={{ backgroundColor: "" }}></Col>
+        <Col xs={1} sm={1} md={1} style={{ backgroundColor: "" }}></Col>
         <Col
           xs={12}
           sm={6}
-          md={3}
+          md={5}
+          lg={5}
           style={{
             backgroundColor: "",
             paddingTop: "10px",
@@ -64,19 +65,18 @@ export const Header: React.FC = () => {
         </Col>
         <Col
           xs={12}
-          sm={12}
-          md={7}
+          sm={1}
+          md={6}
           style={{
             backgroundColor: "",
             padding: "10px",
-            paddingTop: "35px",
+            paddingTop: "55px",
           }}
         >
           <div
             style={{
               backgroundColor: "",
               maxWidth: "250px",
-              marginLeft: "25%",
             }}
           >
             {transitionTwo.map(({ item, props, key }) => (
@@ -86,12 +86,24 @@ export const Header: React.FC = () => {
             ))}
           </div>
         </Col>
-        <Col style={{ backgroundColor: "red" }}>
+      </Row>
+      <Row
+        style={{
+          backgroundColor: "",
+          paddingBottom: "10px",
+          paddingTop: "20px",
+        }}
+      >
+        <Col xs={0} sm={3} md={4} lg={7} style={{ backgroundColor: "" }}></Col>
+        <Col>
           <animated.div style={fade}>
             <Creativity className="creativity" />
           </animated.div>
         </Col>
-        <Col xs={12}>
+      </Row>
+      <Row style={{ paddingTop: "20px" }}>
+        <Col xs={0} sm={2} md={3} lg={8} style={{ backgroundColor: "" }}></Col>
+        <Col>
           <animated.div style={fade}>
             <Perseverance className="perseverance" />
           </animated.div>
