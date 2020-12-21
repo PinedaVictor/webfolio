@@ -33,7 +33,7 @@ export const Projects: React.FC = () => {
             float: "right",
           }}
         >
-          More...
+          Projects Archive...
         </p>
       </div>
     </Container>
