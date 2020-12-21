@@ -1,11 +1,11 @@
 import React from "react";
-import "../Styles/main.scss";
+import "../../Styles/main.scss";
 import {
   Creativity,
   Initials,
   Integrity,
   Perseverance,
-} from "../Assets/Vectors";
+} from "../../Assets/vectors";
 import { Container, Col, Row } from "react-bootstrap";
 import { useTransition, useSpring, animated } from "react-spring";
 
