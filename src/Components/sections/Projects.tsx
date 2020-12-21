@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 import { ProjectCard } from "../ui/Card";
 
 export const Projects: React.FC = () => {
-  const projects = [1, 2, 3, 4, 5, 6];
+  const projects = [1, 2, 3];
   return (
     <Container fluid style={{ backgroundColor: "", maxWidth: "80rem" }}>
       <div
@@ -21,6 +21,20 @@ export const Projects: React.FC = () => {
         {projects.map((item, index) => (
           <ProjectCard key={index} />
         ))}
+      </div>
+      <div style={{ textAlign: "center" }}>
+        <p
+          style={{
+            color: "#ff592e",
+            fontWeight: "bold",
+            fontFamily: "OCRAExtended, OCR A Extended",
+            display: "block",
+            // margin: "auto",
+            float: "right",
+          }}
+        >
+          More...
+        </p>
       </div>
     </Container>
   );
