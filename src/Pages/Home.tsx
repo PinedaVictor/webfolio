@@ -1,10 +1,10 @@
 import React from "react";
-import { Header, Projects } from "../Components/sections";
+import { Hero, Projects } from "../Components/sections";
 
 export const Home: React.FC = () => {
   return (
     <>
-      <Header />
+      <Hero />
       <Projects />
     </>
   );

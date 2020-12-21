@@ -9,7 +9,7 @@ import {
 import { Container, Col, Row } from "react-bootstrap";
 import { useTransition, useSpring, animated } from "react-spring";
 
-export const Header: React.FC = () => {
+export const Hero: React.FC = () => {
   const items = ["the"];
   const fade = useSpring({
     from: { opacity: 0 },
