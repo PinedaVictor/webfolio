@@ -1,7 +1,10 @@
-import React from "react";
-import { Row } from "react-bootstrap";
+import React, { useState } from "react";
+import { Row, Button } from "react-bootstrap";
+import { Drawer } from "../ui/Drawer";
 
 export const Header: React.FC = () => {
+  const [drawer, toggle] = useState(false);
+
   return (
     <Row
       style={{
@@ -13,7 +16,8 @@ export const Header: React.FC = () => {
         height: "60px",
       }}
     >
-      {/* <p>I am the Header</p> */}
+      <Button onClick={() => toggle(!drawer)}></Button>
+      {drawer && <Drawer />}
     </Row>
   );
 };
