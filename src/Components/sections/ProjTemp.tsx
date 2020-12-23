@@ -3,7 +3,7 @@ import { Container, Col } from "react-bootstrap";
 import { ProjectCard } from "../ui/ProjectCard";
 
 export const Temp: React.FC = () => {
-  const FeaturedProjects = [1, 2, 2, 2];
+  const FeaturedProjects = [1, 2, 3, 4];
   return (
     <Container
       fluid
