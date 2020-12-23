@@ -19,7 +19,7 @@ export const Drawer: React.FC<DrawerProps> = (props: DrawerProps) => {
       right: 0,
     },
     enter: { transform: "translate3d(0px, 0px, 0px)" },
-    leave: { transform: "translate3d(500px, 0px, 0px)" },
+    leave: { transform: "translate3d(260px, 0px, 0px)" },
   });
 
   return (
