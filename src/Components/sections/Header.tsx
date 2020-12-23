@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Button, Container } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { Drawer } from "../ui/Drawer";
 
 export const Header: React.FC = () => {
@@ -8,7 +8,7 @@ export const Header: React.FC = () => {
   return (
     <div
       style={{
-        backgroundColor: "white",
+        backgroundColor: "black",
         top: "0",
         position: "fixed",
         width: "100%",

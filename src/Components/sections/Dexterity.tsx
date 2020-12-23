@@ -5,9 +5,11 @@ export const Dexterity: React.FC = () => {
     <Container
       fluid
       style={{
-        backgroundColor: "red",
+        backgroundColor: "",
         marginTop: "35px",
         marginBottom: "30px",
+        margin: "0",
+        padding: "0",
       }}
     >
       <Row>
@@ -25,12 +27,15 @@ export const Dexterity: React.FC = () => {
       </Row>
       <Row
         style={{
-          backgroundColor: "",
+          backgroundColor: "red",
           marginLeft: "2%",
           marginRight: "2%",
           display: "flex",
           flexDirection: "row",
           flexWrap: "wrap",
+          margin: "0",
+          padding: "0",
+          width: "100%",
         }}
       >
         <Col
@@ -42,6 +47,7 @@ export const Dexterity: React.FC = () => {
           style={{
             backgroundColor: "#0cce6b",
             height: "20rem",
+            // maxHeight: "35rem",
           }}
         ></Col>
         <Col
@@ -53,6 +59,7 @@ export const Dexterity: React.FC = () => {
           style={{
             backgroundColor: "#ffb400",
             height: "20rem",
+            // maxHeight: "35rem",
           }}
         ></Col>
       </Row>
