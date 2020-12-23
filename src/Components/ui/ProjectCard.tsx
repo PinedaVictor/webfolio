@@ -9,7 +9,7 @@ export const ProjectCard: React.FC = () => {
       duration: 425,
     },
     from: {
-      transform: "translate3d(0, 20em, 0)",
+      transform: "translate3d(0, 30em, 0)",
       opacity: 1,
       width: "100%",
       backgroundColor: "red",
@@ -17,7 +17,7 @@ export const ProjectCard: React.FC = () => {
       position: "absolute",
       left: "0",
     },
-    enter: { transform: "translate3d(0, 3em, 0)" },
+    enter: { transform: "translate3d(0, -30em, 0)" },
     leave: { transform: "translate3d(0, 30em, 0)" },
   });
   return (
@@ -34,6 +34,18 @@ export const ProjectCard: React.FC = () => {
         padding: "0",
       }}
     >
+      <div style={{ backgroundColor: "green", height: "55px" }}>Icons</div>
+      <div style={{ backgroundColor: "orange", height: "100%" }}>
+        SVG or img
+      </div>
+      {transition.map(
+        ({ item, key, props }) =>
+          item && (
+            <Col key={key} sm={12}>
+              <animated.div key={key} style={props}></animated.div>
+            </Col>
+          )
+      )}
       <Button
         style={{
           position: "absolute",
@@ -44,14 +56,6 @@ export const ProjectCard: React.FC = () => {
         }}
         onClick={() => toggle(!info)}
       ></Button>
-      {transition.map(
-        ({ item, key, props }) =>
-          item && (
-            <Col key={key} sm={12}>
-              <animated.div key={key} style={props}></animated.div>
-            </Col>
-          )
-      )}
     </Col>
   );
 };
