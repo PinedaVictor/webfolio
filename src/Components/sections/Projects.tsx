@@ -22,7 +22,7 @@ export const Projects: React.FC = () => {
           <ProjectCard key={index} />
         ))}
       </div>
-      <div style={{ textAlign: "center" }}>
+      <div>
         <p
           style={{
             color: "#ff592e",
