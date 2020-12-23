@@ -16,8 +16,12 @@ export const Header: React.FC = () => {
         height: "60px",
       }}
     >
-      <Button onClick={() => toggle(!drawer)}></Button>
-      {drawer && <Drawer />}
+      <Button
+        onClick={() => {
+          toggle(!drawer);
+        }}
+      ></Button>
+      <Drawer control={drawer} />
     </Row>
   );
 };

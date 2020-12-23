@@ -52,16 +52,11 @@ export const Hero: React.FC = () => {
             paddingTop: "10px",
           }}
         >
-          {transitionOne.map(
-            ({ item, props, key }) => (
-              console.log("The props::::", item),
-              (
-                <animated.div key={key} style={props}>
-                  <Initials className="initials" />
-                </animated.div>
-              )
-            )
-          )}
+          {transitionOne.map(({ props, key }) => (
+            <animated.div key={key} style={props}>
+              <Initials className="initials" />
+            </animated.div>
+          ))}
         </Col>
         <Col
           xs={12}
@@ -79,7 +74,7 @@ export const Hero: React.FC = () => {
               maxWidth: "250px",
             }}
           >
-            {transitionTwo.map(({ item, props, key }) => (
+            {transitionTwo.map(({ props, key }) => (
               <animated.div key={key} style={props}>
                 <Integrity className="integrity" />
               </animated.div>

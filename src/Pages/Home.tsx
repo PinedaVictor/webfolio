@@ -1,11 +1,13 @@
 import React from "react";
-import { Hero, Projects, Header } from "../Components/sections";
+import { Hero, Projects } from "../Components/sections";
+import { Layout } from "../Components/ui/Layout";
 export const Home: React.FC = () => {
   return (
     <>
-      <Header />
-      <Hero />
-      <Projects />
+      <Layout>
+        <Hero />
+        <Projects />
+      </Layout>
     </>
   );
 };
