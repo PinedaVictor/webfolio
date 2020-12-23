@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
           toggle(!drawer);
         }}
       ></Button>
-      <Arduino />
+      {/* <Arduino /> */}
       <Drawer control={drawer} />
     </div>
   );
