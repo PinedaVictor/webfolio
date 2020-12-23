@@ -42,7 +42,18 @@ export const ProjectCard: React.FC = () => {
         ({ item, key, props }) =>
           item && (
             <Col key={key} sm={12}>
-              <animated.div key={key} style={props}></animated.div>
+              <animated.div key={key} style={props}>
+                <div
+                  style={{
+                    backgroundColor: "black",
+                    width: "100%",
+                    height: "60px",
+                  }}
+                ></div>
+                <div style={{ backgroundColor: "grey", height: "100%" }}>
+                  idk
+                </div>
+              </animated.div>
             </Col>
           )
       )}
