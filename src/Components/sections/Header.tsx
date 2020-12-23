@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { Row, Button } from "react-bootstrap";
+import { Row, Button, Container } from "react-bootstrap";
 import { Drawer } from "../ui/Drawer";
 
 export const Header: React.FC = () => {
   const [drawer, toggle] = useState(false);
 
   return (
-    <Row
+    <div
       style={{
-        backgroundColor: "black",
+        backgroundColor: "white",
         top: "0",
         position: "fixed",
         width: "100%",
@@ -22,6 +22,6 @@ export const Header: React.FC = () => {
         }}
       ></Button>
       <Drawer control={drawer} />
-    </Row>
+    </div>
   );
 };

@@ -22,8 +22,9 @@ export const Hero: React.FC = () => {
   const transitionOne = useTransition(items, (item) => item, {
     from: {
       transform: "translate3d(-800px, 0, 0)",
+      width: "300px",
     },
-    enter: { transform: "translate3d(20%,0px,0)" },
+    enter: { transform: "translate3d(20px,0px,0)" },
   });
   const transitionTwo = useTransition(items, (item) => item, {
     from: {
@@ -39,6 +40,7 @@ export const Hero: React.FC = () => {
           display: "flex",
           flexDirection: "row",
           flexWrap: "wrap",
+          backgroundColor: "",
         }}
       >
         <Col xs={1} sm={1} md={1} style={{ backgroundColor: "" }}></Col>
@@ -90,7 +92,7 @@ export const Hero: React.FC = () => {
         }}
       >
         <Col xs={0} sm={3} md={4} lg={7} style={{ backgroundColor: "" }}></Col>
-        <Col>
+        <Col style={{ backgroundColor: "" }}>
           <animated.div style={fade}>
             <Creativity className="creativity" />
           </animated.div>

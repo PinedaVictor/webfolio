@@ -8,7 +8,6 @@ export const Projects: React.FC = () => {
   return (
     <Container fluid style={{ backgroundColor: "", maxWidth: "80rem" }}>
       <div
-        className="wrapper"
         style={{
           backgroundColor: "",
           display: "flex",
