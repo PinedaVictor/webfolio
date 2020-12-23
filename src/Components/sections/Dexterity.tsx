@@ -13,17 +13,17 @@ export const Dexterity: React.FC = () => {
       }}
     >
       <Row>
-        <h4
+        {/* <h4
           style={{
             color: "#00a6ed",
             fontWeight: "bold",
             fontFamily: "OCRAExtended, OCR A Extended",
             display: "block",
-            marginLeft: "2%",
+            // marginLeft: "2%",
           }}
         >
           Dexterity
-        </h4>
+        </h4> */}
       </Row>
       <Row
         style={{
