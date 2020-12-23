@@ -1,40 +1,24 @@
 import React from "react";
-import "../../Styles/main.scss";
-import { Container } from "react-bootstrap";
-import { ProjectCard } from "../ui/Card";
+import { Container, Col } from "react-bootstrap";
+import { ProjectCard } from "../ui/ProjectCard";
 
-export const Projects: React.FC = () => {
-  const projects = [1, 2, 3];
+export const FeaturedProjects: React.FC = () => {
+  const FeaturedProjects = [1, 2, 3, 4];
   return (
-    <Container fluid style={{ backgroundColor: "", maxWidth: "80rem" }}>
-      <div
-        style={{
-          backgroundColor: "",
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          margin: "auto",
-          maxWidth: "80rem",
-        }}
-      >
-        {projects.map((item, index) => (
-          <ProjectCard key={index} />
-        ))}
-      </div>
-      <div>
-        <p
-          style={{
-            color: "#ff592e",
-            fontWeight: "bold",
-            fontFamily: "OCRAExtended, OCR A Extended",
-            display: "block",
-            // margin: "auto",
-            float: "right",
-          }}
-        >
-          Projects Archive...
-        </p>
-      </div>
+    <Container
+      fluid
+      style={{
+        backgroundColor: "red",
+        margin: "0",
+        padding: "0",
+        display: "flex",
+        flexWrap: "wrap",
+        flexDirection: "row",
+      }}
+    >
+      {FeaturedProjects.map((item) => (
+        <ProjectCard key={item} />
+      ))}
     </Container>
   );
 };

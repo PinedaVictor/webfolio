@@ -1,14 +1,12 @@
 import React from "react";
 import { Layout } from "../Components/ui/Layout";
-import { Hero, Projects, Dexterity } from "../Components/sections";
-import { Temp } from "../Components/sections/ProjTemp";
+import { Hero, FeaturedProjects, Dexterity } from "../Components/sections";
 
 export const Home: React.FC = () => {
   return (
     <Layout>
       <Hero />
-      {/* <Projects /> */}
-      <Temp />
+      <FeaturedProjects />
       <Dexterity />
     </Layout>
   );
