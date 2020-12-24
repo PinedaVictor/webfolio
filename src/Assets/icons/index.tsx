@@ -1,9 +1,9 @@
 export { ReactComponent as Arduino } from "./arduino.svg";
-export { ReactComponent as Firebase } from "./firebase.svg";
+export { ReactComponent as FirebaseIcon } from "./firebase.svg";
 export { ReactComponent as Java } from "./java.svg";
 export { ReactComponent as Nx } from "./nx.svg";
 export { ReactComponent as Pi } from "./raspberry.svg";
-export { ReactComponent as React } from "./react.svg";
+export { ReactComponent as ReactIcon } from "./react.svg";
 export { ReactComponent as Sass } from "./sass.svg";
 export { ReactComponent as Scala } from "./scala.svg";
 export { ReactComponent as Ts } from "./typescript.svg";

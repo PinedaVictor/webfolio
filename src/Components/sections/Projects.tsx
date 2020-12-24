@@ -10,7 +10,7 @@ export const FeaturedProjects: React.FC = () => {
     <Container
       fluid
       style={{
-        backgroundColor: "red",
+        // backgroundColor: "red",
         margin: "0",
         padding: "0",
         display: "flex",
