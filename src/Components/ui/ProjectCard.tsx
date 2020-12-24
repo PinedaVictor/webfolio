@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Col, Button } from "react-bootstrap";
 import { useTransition, animated } from "react-spring";
 import { IoMdArrowRoundUp, IoMdClose } from "react-icons/io";
-
-import img from "../../Assets/images/3.jpg";
 interface ProjectCardProps {
   data: any;
 }
@@ -33,12 +31,19 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
   });
 
   const ProjectDisplay = () => {
+    let gig = "";
+    props.data.map(
+      (item: any) => (
+        console.log("THE ITEM:::", item.backgroundImg),
+        (gig = item.backgroundImg)
+      )
+    );
     return (
       <div
         style={{
           width: "100%",
           height: "100%",
-          backgroundImage: `url(${img})`,
+          backgroundImage: `url(${gig})`,
           backgroundSize: "100vh 100%",
           backgroundRepeat: "no-repeat",
         }}
