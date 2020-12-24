@@ -1,9 +1,11 @@
 import React from "react";
-import { Container, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { ProjectCard } from "../ui/ProjectCard";
+import { happiibook, Foodie } from "../../Data/projects";
 
 export const FeaturedProjects: React.FC = () => {
-  const FeaturedProjects = [1, 2, 3, 4];
+  const FeaturedProjects = [happiibook, Foodie, Foodie, Foodie];
+
   return (
     <Container
       fluid
@@ -16,8 +18,8 @@ export const FeaturedProjects: React.FC = () => {
         flexDirection: "row",
       }}
     >
-      {FeaturedProjects.map((item) => (
-        <ProjectCard key={item} />
+      {FeaturedProjects.map((item, index) => (
+        <ProjectCard key={index} data={item} />
       ))}
     </Container>
   );

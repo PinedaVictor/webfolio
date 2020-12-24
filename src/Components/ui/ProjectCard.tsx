@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { Col, Button } from "react-bootstrap";
 import { useTransition, animated } from "react-spring";
+interface ProjectCardProps {
+  data: any;
+}
 
-export const ProjectCard: React.FC = () => {
+export const ProjectCard: React.FC<ProjectCardProps> = (
+  props: ProjectCardProps
+) => {
   const [info, toggle] = useState(false);
   const transition = useTransition(info, null, {
     config: {
@@ -20,6 +25,37 @@ export const ProjectCard: React.FC = () => {
     enter: { transform: "translate3d(0, -30em, 0)" },
     leave: { transform: "translate3d(0, 30em, 0)" },
   });
+
+  console.log("Being passed to card::::", props.data);
+
+  const ProjectDisplay = () => {
+    return (
+      <div style={{ backgroundColor: "orange", height: "100%" }}>
+        <div style={{ backgroundColor: "green", height: "55px" }}>Title</div>
+        SVG or img
+      </div>
+    );
+  };
+
+  const ProjectContent = () => {
+    return (
+      <div style={{ backgroundColor: "grey", height: "100%" }}>
+        <div
+          style={{
+            backgroundColor: "black",
+            width: "100%",
+            height: "60px",
+            color: "red",
+          }}
+        >
+          THE INFO HEADER
+          {/* It works */}
+          {props.data.map((item: any) => console.log("Inside func::::", item))}
+        </div>
+        CONTENT
+      </div>
+    );
+  };
   return (
     <Col
       xs={12}
@@ -34,25 +70,13 @@ export const ProjectCard: React.FC = () => {
         padding: "0",
       }}
     >
-      <div style={{ backgroundColor: "green", height: "55px" }}>Icons</div>
-      <div style={{ backgroundColor: "orange", height: "100%" }}>
-        SVG or img
-      </div>
+      <ProjectDisplay />
       {transition.map(
         ({ item, key, props }) =>
           item && (
             <Col key={key} sm={12}>
               <animated.div key={key} style={props}>
-                <div
-                  style={{
-                    backgroundColor: "black",
-                    width: "100%",
-                    height: "60px",
-                  }}
-                ></div>
-                <div style={{ backgroundColor: "grey", height: "100%" }}>
-                  idk
-                </div>
+                <ProjectContent />
               </animated.div>
             </Col>
           )
@@ -66,7 +90,7 @@ export const ProjectCard: React.FC = () => {
           margin: "10px",
         }}
         onClick={() => toggle(!info)}
-      ></Button>
+      />
     </Col>
   );
 };

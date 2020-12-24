@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { Drawer } from "../ui/Drawer";
-import { Arduino } from "../../Assets/icons";
 
 export const Header: React.FC = () => {
   const [drawer, toggle] = useState(false);
@@ -21,8 +20,7 @@ export const Header: React.FC = () => {
         onClick={() => {
           toggle(!drawer);
         }}
-      ></Button>
-      {/* <Arduino /> */}
+      />
       <Drawer control={drawer} />
     </div>
   );
