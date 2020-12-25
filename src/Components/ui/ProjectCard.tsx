@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Col, Button } from "react-bootstrap";
 import { useTransition, animated } from "react-spring";
 import { IoMdArrowRoundUp, IoMdClose } from "react-icons/io";
+
 interface ProjectCardProps {
   data: any;
 }
@@ -10,6 +11,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
   props: ProjectCardProps
 ) => {
   const [info, toggle] = useState(false);
+
+  let projectData: any = {};
+  const project = props.data.map((data: any) => (projectData = data));
+  console.log("Project Data:::", project);
+
   const transition = useTransition(info, null, {
     config: {
       duration: 450,
@@ -34,8 +40,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
     let gig = "";
     props.data.map(
       (item: any) => (
-        console.log("THE ITEM:::", item.backgroundImg),
-        (gig = item.backgroundImg)
+        console.log("THE ITEM:::", item), (gig = item.backgroundImg)
       )
     );
     return (
@@ -52,11 +57,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
           style={{
             color: "white",
             fontSize: "120px",
-            fontFamily: "fantasy",
+            fontFamily: "sans-serif",
             overflow: "hidden",
+            fontWeight: "bold",
           }}
         >
-          Mobile App
+          {projectData.type}
         </p>
       </div>
     );
