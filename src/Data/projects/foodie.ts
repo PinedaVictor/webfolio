@@ -1,12 +1,13 @@
 import img from "../../Assets/images/8.jpg";
 import { IoLogoFirebase } from "react-icons/io5";
 import { FaReact } from "react-icons/fa";
+import { BsCodeSlash } from "react-icons/bs";
 
 export const Foodie = [
   {
     title: "Foodie",
     type: "Mobile App",
-    icons: [IoLogoFirebase, FaReact],
+    icons: [IoLogoFirebase, FaReact, BsCodeSlash],
     hasBackground_IMG: false,
     backgroundImg: img,
     cruces: [

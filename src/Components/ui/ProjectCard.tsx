@@ -3,6 +3,7 @@ import { Col, Button } from "react-bootstrap";
 import { useTransition, animated } from "react-spring";
 import { IoMdArrowRoundUp, IoMdClose } from "react-icons/io";
 import { GrStackOverflow } from "react-icons/gr";
+import { LeftBrace } from "../../Assets/icons";
 
 interface ProjectCardProps {
   data: any;
@@ -107,6 +108,23 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
             >
               {"=>"}
             </p>
+          </div>
+          <div
+            style={{
+              backgroundColor: "grey",
+              height: "100%",
+            }}
+          >
+            <LeftBrace
+              style={{
+                backgroundColor: "",
+                // width: "20px",
+                height: "55px",
+                marginTop: "5px",
+                marginLeft: "4px",
+                fill: "white",
+              }}
+            />
           </div>
           <div
             style={{

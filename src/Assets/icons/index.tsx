@@ -7,3 +7,4 @@ export { ReactComponent as ReactIcon } from "./react.svg";
 export { ReactComponent as Sass } from "./sass.svg";
 export { ReactComponent as Scala } from "./scala.svg";
 export { ReactComponent as Ts } from "./typescript.svg";
+export { ReactComponent as LeftBrace } from "./leftBrace.svg";
