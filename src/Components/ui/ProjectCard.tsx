@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Col, Button } from "react-bootstrap";
 import { useTransition, animated } from "react-spring";
 import { IoMdArrowRoundUp, IoMdClose } from "react-icons/io";
+import { GrStackOverflow } from "react-icons/gr";
 
 interface ProjectCardProps {
   data: any;
@@ -73,15 +74,59 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
       <div style={{ backgroundColor: "orange", height: "100%" }}>
         <div
           style={{
-            backgroundColor: "black",
-            width: "100%",
+            backgroundColor: "green",
             height: "60px",
-            color: "red",
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
           }}
         >
-          Tech Stack
-          {/* It works */}
-          {props.data.map((item: any) => console.log("Inside func::::", item))}
+          <div
+            style={{
+              backgroundColor: "grey",
+              display: "block",
+              height: "100%",
+            }}
+          >
+            <GrStackOverflow
+              size="3rem"
+              color="white"
+              style={{ margin: "auto", display: "block", paddingTop: "15px" }}
+            />
+          </div>
+          <div>
+            <p
+              style={{
+                backgroundColor: "grey",
+                fontSize: "30px",
+                fontWeight: "bold",
+                paddingTop: "10px",
+                fontFamily: "OCRAExtended, OCR A Extended",
+                color: "white",
+              }}
+            >
+              {"=>"}
+            </p>
+          </div>
+          <div
+            style={{
+              backgroundColor: "grey",
+              height: "100%",
+              width: "80%",
+              display: "flex",
+              flexWrap: "wrap",
+              flexDirection: "row",
+            }}
+          >
+            {projectData.icons.map((Icon: any) => (
+              <Icon
+                key={1}
+                size="3rem"
+                color="white"
+                style={{ display: "block", paddingTop: "15px" }}
+              />
+            ))}
+          </div>
         </div>
         CONTENT
       </div>

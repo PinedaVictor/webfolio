@@ -4,7 +4,7 @@ import { ProjectCard } from "../ui/ProjectCard";
 import { happiibook, Foodie, UIS, Research } from "../../Data/projects";
 
 export const FeaturedProjects: React.FC = () => {
-  const FeaturedProjects = [happiibook, Foodie, UIS, Research];
+  const FeaturedProjects = [Foodie, Foodie, Foodie, Foodie];
 
   return (
     <Container
