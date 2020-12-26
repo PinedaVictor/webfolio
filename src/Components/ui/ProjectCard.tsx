@@ -112,7 +112,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
             style={{
               backgroundColor: "grey",
               height: "100%",
-              width: "80%",
               display: "flex",
               flexWrap: "wrap",
               flexDirection: "row",
