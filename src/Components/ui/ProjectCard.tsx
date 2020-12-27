@@ -3,7 +3,7 @@ import { Col, Button } from "react-bootstrap";
 import { useTransition, animated } from "react-spring";
 import { IoMdArrowRoundUp, IoMdClose } from "react-icons/io";
 import { GrStackOverflow } from "react-icons/gr";
-import { LeftBrace } from "../../Assets/icons";
+import { LeftBrace, RightBrace } from "../../Assets/icons";
 
 interface ProjectCardProps {
   data: any;
@@ -72,33 +72,40 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
 
   const ProjectContent = () => {
     return (
-      <div style={{ backgroundColor: "orange", height: "100%" }}>
+      <div style={{ backgroundColor: "black", height: "100%", color: "white" }}>
         <div
           style={{
-            backgroundColor: "green",
-            height: "60px",
+            backgroundColor: "black",
+            height: "70px",
             display: "flex",
             flexDirection: "row",
             flexWrap: "wrap",
+            borderBottom: "4px solid white",
           }}
         >
           <div
             style={{
-              backgroundColor: "grey",
+              // backgroundColor: "#00c5d4",
               display: "block",
               height: "100%",
             }}
           >
             <GrStackOverflow
               size="3rem"
-              color="white"
-              style={{ margin: "auto", display: "block", paddingTop: "15px" }}
+              color="#101726"
+              style={{
+                margin: "auto",
+                display: "block",
+                padding: "10px",
+                backgroundColor: "#00c5d4",
+                borderRadius: "50%",
+              }}
             />
           </div>
           <div>
             <p
               style={{
-                backgroundColor: "grey",
+                // backgroundColor: "#101726",
                 fontSize: "30px",
                 fontWeight: "bold",
                 paddingTop: "10px",
@@ -109,9 +116,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
               {"=>"}
             </p>
           </div>
-          <div
+          {/* <div
             style={{
-              backgroundColor: "grey",
+              backgroundColor: "black",
               height: "100%",
             }}
           >
@@ -119,31 +126,51 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
               style={{
                 backgroundColor: "",
                 // width: "20px",
-                height: "55px",
+                height: "50px",
                 marginTop: "5px",
                 marginLeft: "4px",
                 fill: "white",
               }}
             />
-          </div>
+          </div> */}
           <div
             style={{
-              backgroundColor: "grey",
+              // backgroundColor: "#101726",
               height: "100%",
               display: "flex",
               flexWrap: "wrap",
               flexDirection: "row",
+              padding: "5px",
             }}
           >
-            {projectData.icons.map((Icon: any) => (
-              <Icon
-                key={1}
-                size="3rem"
-                color="white"
-                style={{ display: "block", paddingTop: "15px" }}
-              />
+            {projectData.icons.map((Icon: any, index: number) => (
+              <div key={index} style={{ paddingLeft: "7px" }}>
+                <Icon
+                  key={index}
+                  size="3rem"
+                  color="#101726"
+                  style={{
+                    display: "block",
+                    padding: "5px",
+                    backgroundColor: "#00c5d4",
+                    borderRadius: "50%",
+                  }}
+                />
+              </div>
             ))}
           </div>
+          {/* <div style={{ height: "100%", backgroundColor: "black" }}>
+            <RightBrace
+              style={{
+                backgroundColor: "",
+                // width: "20px",
+                height: "50px",
+                marginTop: "5px",
+                marginLeft: "4px",
+                fill: "white",
+              }}
+            />
+          </div> */}
         </div>
         CONTENT
       </div>
