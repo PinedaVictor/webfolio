@@ -5,6 +5,7 @@ import { IoMdArrowRoundUp, IoMdClose } from "react-icons/io";
 import { GrStackOverflow } from "react-icons/gr";
 import { BiCoinStack } from "react-icons/bi";
 import { LeftBrace, RightBrace, LB } from "../../Assets/icons";
+import { Code } from "../../Assets/vectors";
 
 interface ProjectCardProps {
   data: any;
@@ -78,7 +79,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
     return (
       <div
         style={{
-          backgroundColor: "white",
+          backgroundColor: "black",
           height: "100%",
           color: "white",
           // borderTop: "2px solid white",
@@ -95,7 +96,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
             padding: "0px",
           }}
         ></div> */}
-        <div
+        {/* <div
           style={{
             // backgroundColor: "black",
             height: "70px",
@@ -104,8 +105,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
             flexWrap: "wrap",
             // borderBottom: "4px solid white",
           }}
-        >
-          {/* <div
+        > */}
+        {/* <div
             style={{
               // backgroundColor: "#00c5d4",
               display: "block",
@@ -113,18 +114,21 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
               padding: "5px",
             }}
           > */}
-          <GrStackOverflow
-            size="15rem"
-            color="#101726"
-            style={{
-              margin: "auto",
-              display: "block",
-              padding: "10px",
-              backgroundColor: "#00c5d4",
-              // borderRadius: "30%",
-            }}
-          />
-        </div>
+        {/* <GrStackOverflow
+          size="15rem"
+          color="black"
+          style={{
+            margin: "auto",
+            display: "block",
+            padding: "10px",
+            backgroundColor: "red",
+            // borderRadius: "30%",
+            zIndex: 1,
+          }}
+        /> */}
+        <Code style={{ display: "block", height: "100vh" }} />
+        {/* </div> */}
+
         {/* <div>
             <p
               style={{
