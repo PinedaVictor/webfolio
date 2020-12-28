@@ -3,7 +3,8 @@ import { Col, Button } from "react-bootstrap";
 import { useTransition, animated } from "react-spring";
 import { IoMdArrowRoundUp, IoMdClose } from "react-icons/io";
 import { GrStackOverflow } from "react-icons/gr";
-import { LeftBrace, RightBrace } from "../../Assets/icons";
+import { BiCoinStack } from "react-icons/bi";
+import { LeftBrace, RightBrace, LB } from "../../Assets/icons";
 
 interface ProjectCardProps {
   data: any;
@@ -71,38 +72,60 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
   };
 
   const ProjectContent = () => {
+    // main 011126
+    // 011638
+    // 001c70
     return (
-      <div style={{ backgroundColor: "black", height: "100%", color: "white" }}>
+      <div
+        style={{
+          backgroundColor: "white",
+          height: "100%",
+          color: "white",
+          // borderTop: "2px solid white",
+          // padding: "5px",
+        }}
+      >
+        {/* <div
+          style={{
+            backgroundImage:
+              "linear-gradient(to left, #011C40, #00C5D4, #011C40)",
+            height: "5px",
+            marginBottom: "5px",
+            width: "100%",
+            padding: "0px",
+          }}
+        ></div> */}
         <div
           style={{
-            backgroundColor: "black",
+            // backgroundColor: "black",
             height: "70px",
             display: "flex",
             flexDirection: "row",
             flexWrap: "wrap",
-            borderBottom: "4px solid white",
+            // borderBottom: "4px solid white",
           }}
         >
-          <div
+          {/* <div
             style={{
               // backgroundColor: "#00c5d4",
               display: "block",
               height: "100%",
+              padding: "5px",
             }}
-          >
-            <GrStackOverflow
-              size="3rem"
-              color="#101726"
-              style={{
-                margin: "auto",
-                display: "block",
-                padding: "10px",
-                backgroundColor: "#00c5d4",
-                borderRadius: "50%",
-              }}
-            />
-          </div>
-          <div>
+          > */}
+          <GrStackOverflow
+            size="15rem"
+            color="#101726"
+            style={{
+              margin: "auto",
+              display: "block",
+              padding: "10px",
+              backgroundColor: "#00c5d4",
+              // borderRadius: "30%",
+            }}
+          />
+        </div>
+        {/* <div>
             <p
               style={{
                 // backgroundColor: "#101726",
@@ -115,25 +138,25 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
             >
               {"=>"}
             </p>
-          </div>
-          {/* <div
+          </div> */}
+        {/* <div
             style={{
               backgroundColor: "black",
               height: "100%",
             }}
           >
-            <LeftBrace
+            <LB
               style={{
                 backgroundColor: "",
                 // width: "20px",
-                height: "50px",
+                height: "45px",
                 marginTop: "5px",
                 marginLeft: "4px",
                 fill: "white",
               }}
             />
           </div> */}
-          <div
+        {/* <div
             style={{
               // backgroundColor: "#101726",
               height: "100%",
@@ -148,18 +171,18 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
                 <Icon
                   key={index}
                   size="3rem"
-                  color="#101726"
+                  color="black"
                   style={{
                     display: "block",
                     padding: "5px",
-                    backgroundColor: "#00c5d4",
+                    backgroundColor: "#00C5D4",
                     borderRadius: "50%",
                   }}
                 />
               </div>
             ))}
-          </div>
-          {/* <div style={{ height: "100%", backgroundColor: "black" }}>
+          </div> */}
+        {/* <div style={{ height: "100%", backgroundColor: "black" }}>
             <RightBrace
               style={{
                 backgroundColor: "",
@@ -171,8 +194,18 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
               }}
             />
           </div> */}
-        </div>
-        CONTENT
+        {/* </div> */}
+        {/* <h5>Company: Foodie Senior Design Project</h5>
+        <h5>
+          About: Foodie is a mobile application which enables food enthusiasts
+          to explore highly rated and interesting restaurants in their area
+          according to their culinary interests.
+        </h5>
+        <ul style={{ fontSize: "18px" }}>
+          {projectData.cruces.map((crux: string, index: number) => (
+            <li key={index}>{crux}</li>
+          ))}
+        </ul> */}
       </div>
     );
   };

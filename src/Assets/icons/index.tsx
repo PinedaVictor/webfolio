@@ -9,3 +9,4 @@ export { ReactComponent as Scala } from "./scala.svg";
 export { ReactComponent as Ts } from "./typescript.svg";
 export { ReactComponent as LeftBrace } from "./leftBrace.svg";
 export { ReactComponent as RightBrace } from "./rightBrace.svg";
+export { ReactComponent as LB } from "./LB.svg";
