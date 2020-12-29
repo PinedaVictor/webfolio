@@ -32,6 +32,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
       height: "33rem",
       position: "absolute",
       left: "0",
+      overflow: "hidden",
     },
     enter: {
       transform: "translate3d(0, -33em, 0)",
@@ -73,76 +74,77 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
   };
 
   const ProjectContent = () => {
-    // main 011126
-    // 011638
-    // 001c70
     return (
       <div
         style={{
           backgroundColor: "black",
           height: "100%",
+          display: "flex",
+          // flexDirection: "column",
         }}
       >
         <div
-          style={{ left: "0", width: "85%", height: "100vh", opacity: "40%" }}
+          style={{
+            width: "50%",
+            backgroundColor: "#000d2a",
+          }}
         >
-          <Code />
+          {/* <div
+            style={{
+              backgroundColor: "red",
+              // position: "absolute",
+              bottom: "0",
+              left: "0",
+              margin: "auto",
+              width: "45%",
+            }}
+          > */}
+          <GrStackOverflow
+            size="23rem"
+            color="white"
+            style={{
+              // marginTop: "40%",
+              maxWidth: "100%",
+              width: "100%",
+              margin: "auto",
+              // height: "100%",
+              padding: "15px",
+            }}
+          />
+          <p>Tech Stack</p>
         </div>
         <div
           style={{
-            position: "absolute",
             left: "0",
-            bottom: "0",
-            backgroundColor: "#ff592e",
-            borderTopRightRadius: "50px",
-            borderBottomRightRadius: "50px",
-            // boxShadow: "5px 3px 5px black",
-            padding: "10px",
+            width: "65%",
+            height: "100vh",
+            opacity: "40%",
           }}
         >
-          <GrStackOverflow size="5rem" color="#011126" />
-          {/* <TechStack
-            style={{
-              height: "10rem",
-              width: "10rem",
-              paddingLeft: "10px",
-            }}
-          /> */}
+          <Code />
         </div>
-        {/* <div
-          style={{
-            position: "absolute",
-            right: "0",
-            top: "30%",
-            backgroundColor: "red",
-            borderTopLeftRadius: "25%",
-            borderBottomLeftRadius: "25%",
-            // boxShadow: "5px 3px 5px black",
-            // display: "flex",
-            // flexDirection: "row",
-            // flexWrap: "wrap",
-          }}
-        > */}
+        {/* <div style={{ marginTop: "10px" }}> */}
         {projectData.icons.map((Icon: any, index: number) => (
           <div
             key={index}
             style={{
               position: "absolute",
-              top: `${1 + index * 20}%`,
+              top: `${(1 + index) * 20}%`,
               right: "0",
-              backgroundColor: "#000d2a",
+              backgroundColor: "black",
               padding: "10px",
               paddingRight: `${100 / (index + 1 * 2)}%`,
               borderTopLeftRadius: "50px",
               borderBottomLeftRadius: "50px",
               display: "flex",
+              boxShadow: "-5px 2px 0px #004FFF",
             }}
           >
             <Icon
-              size="4rem"
+              size="3rem"
               style={{
                 fill: "#000d2a",
-                backgroundColor: "#00c5d4",
+                backgroundColor: "#ff592e",
                 borderRadius: "50%",
                 padding: "5px",
               }}
