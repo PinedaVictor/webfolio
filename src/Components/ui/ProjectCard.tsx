@@ -4,8 +4,8 @@ import { useTransition, animated } from "react-spring";
 import { IoMdArrowRoundUp, IoMdClose } from "react-icons/io";
 import { GrStackOverflow } from "react-icons/gr";
 import { BiCoinStack } from "react-icons/bi";
-import { LeftBrace, RightBrace, LB } from "../../Assets/icons";
-import { Code } from "../../Assets/vectors";
+import { LeftBrace, RightBrace, LB, FirebaseIcon } from "../../Assets/icons";
+import { Code, TechStack } from "../../Assets/vectors";
 
 interface ProjectCardProps {
   data: any;
@@ -81,135 +81,85 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
         style={{
           backgroundColor: "black",
           height: "100%",
-          color: "white",
-          // borderTop: "2px solid white",
-          // padding: "5px",
         }}
       >
-        {/* <div
+        <div
+          style={{ left: "0", width: "85%", height: "100vh", opacity: "40%" }}
+        >
+          <Code />
+        </div>
+        <div
           style={{
-            backgroundImage:
-              "linear-gradient(to left, #011C40, #00C5D4, #011C40)",
-            height: "5px",
-            marginBottom: "5px",
-            width: "100%",
-            padding: "0px",
+            position: "absolute",
+            left: "0",
+            bottom: "0",
+            backgroundColor: "#ff592e",
+            borderTopRightRadius: "50px",
+            borderBottomRightRadius: "50px",
+            // boxShadow: "5px 3px 5px black",
+            padding: "10px",
           }}
-        ></div> */}
+        >
+          <GrStackOverflow size="5rem" color="#011126" />
+          {/* <TechStack
+            style={{
+              height: "10rem",
+              width: "10rem",
+              paddingLeft: "10px",
+            }}
+          /> */}
+        </div>
         {/* <div
           style={{
-            // backgroundColor: "black",
-            height: "70px",
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "wrap",
-            // borderBottom: "4px solid white",
+            position: "absolute",
+            right: "0",
+            top: "30%",
+            backgroundColor: "red",
+            borderTopLeftRadius: "25%",
+            borderBottomLeftRadius: "25%",
+            // boxShadow: "5px 3px 5px black",
+            // display: "flex",
+            // flexDirection: "row",
+            // flexWrap: "wrap",
           }}
         > */}
-        {/* <div
+        {projectData.icons.map((Icon: any, index: number) => (
+          <div
+            key={index}
             style={{
-              // backgroundColor: "#00c5d4",
-              display: "block",
-              height: "100%",
-              padding: "5px",
+              position: "absolute",
+              top: `${1 + index * 20}%`,
+              right: "0",
+              backgroundColor: "#000d2a",
+              padding: "10px",
+              paddingRight: `${100 / (index + 1 * 2)}%`,
+              borderTopLeftRadius: "50px",
+              borderBottomLeftRadius: "50px",
+              display: "flex",
             }}
-          > */}
-        {/* <GrStackOverflow
-          size="15rem"
-          color="black"
-          style={{
-            margin: "auto",
-            display: "block",
-            padding: "10px",
-            backgroundColor: "red",
-            // borderRadius: "30%",
-            zIndex: 1,
-          }}
-        /> */}
-        <Code style={{ display: "block", height: "100vh" }} />
-        {/* </div> */}
-
-        {/* <div>
+          >
+            <Icon
+              size="4rem"
+              style={{
+                fill: "#000d2a",
+                backgroundColor: "#00c5d4",
+                borderRadius: "50%",
+                padding: "5px",
+              }}
+            />
             <p
               style={{
-                // backgroundColor: "#101726",
-                fontSize: "30px",
-                fontWeight: "bold",
-                paddingTop: "10px",
-                fontFamily: "OCRAExtended, OCR A Extended",
+                // backgroundColor: "red",
+                margin: "auto",
                 color: "white",
+                paddingLeft: "10px",
               }}
             >
-              {"=>"}
+              FIRREE
             </p>
-          </div> */}
-        {/* <div
-            style={{
-              backgroundColor: "black",
-              height: "100%",
-            }}
-          >
-            <LB
-              style={{
-                backgroundColor: "",
-                // width: "20px",
-                height: "45px",
-                marginTop: "5px",
-                marginLeft: "4px",
-                fill: "white",
-              }}
-            />
-          </div> */}
-        {/* <div
-            style={{
-              // backgroundColor: "#101726",
-              height: "100%",
-              display: "flex",
-              flexWrap: "wrap",
-              flexDirection: "row",
-              padding: "5px",
-            }}
-          >
-            {projectData.icons.map((Icon: any, index: number) => (
-              <div key={index} style={{ paddingLeft: "7px" }}>
-                <Icon
-                  key={index}
-                  size="3rem"
-                  color="black"
-                  style={{
-                    display: "block",
-                    padding: "5px",
-                    backgroundColor: "#00C5D4",
-                    borderRadius: "50%",
-                  }}
-                />
-              </div>
-            ))}
-          </div> */}
-        {/* <div style={{ height: "100%", backgroundColor: "black" }}>
-            <RightBrace
-              style={{
-                backgroundColor: "",
-                // width: "20px",
-                height: "50px",
-                marginTop: "5px",
-                marginLeft: "4px",
-                fill: "white",
-              }}
-            />
-          </div> */}
+          </div>
+        ))}
         {/* </div> */}
-        {/* <h5>Company: Foodie Senior Design Project</h5>
-        <h5>
-          About: Foodie is a mobile application which enables food enthusiasts
-          to explore highly rated and interesting restaurants in their area
-          according to their culinary interests.
-        </h5>
-        <ul style={{ fontSize: "18px" }}>
-          {projectData.cruces.map((crux: string, index: number) => (
-            <li key={index}>{crux}</li>
-          ))}
-        </ul> */}
       </div>
     );
   };

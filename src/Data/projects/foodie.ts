@@ -7,7 +7,7 @@ export const Foodie = [
   {
     title: "Foodie",
     type: "Mobile App",
-    icons: [IoLogoFirebase, FaReact, BsCodeSlash],
+    icons: [FaReact, BsCodeSlash, IoLogoFirebase],
     hasBackground_IMG: false,
     backgroundImg: img,
     cruces: [
