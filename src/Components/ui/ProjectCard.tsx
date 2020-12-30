@@ -15,7 +15,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
 
   let projectData: any = {};
   const project = props.data.map((data: any) => (projectData = data));
-  console.log("Project Data:::", project);
+  // console.log("Project Data:::", project);
 
   const transition = useTransition(info, null, {
     config: {
@@ -40,11 +40,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
 
   const ProjectDisplay = () => {
     let gig = "";
-    props.data.map(
-      (item: any) => (
-        console.log("THE ITEM:::", item), (gig = item.backgroundImg)
-      )
-    );
+    props.data.map((item: any) => (gig = item.backgroundImg));
     return (
       <div
         style={{
