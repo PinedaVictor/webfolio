@@ -5,7 +5,7 @@ import { IoMdArrowRoundUp, IoMdClose } from "react-icons/io";
 import { GrStackOverflow } from "react-icons/gr";
 import { BiCoinStack } from "react-icons/bi";
 import { LeftBrace, RightBrace, LB, FirebaseIcon } from "../../Assets/icons";
-import { Code, TechStack } from "../../Assets/vectors";
+import { Code, TechStack, Stack } from "../../Assets/vectors";
 
 interface ProjectCardProps {
   data: any;
@@ -79,46 +79,73 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
         style={{
           backgroundColor: "black",
           height: "100%",
-          display: "flex",
-          // flexDirection: "column",
         }}
       >
         <div
           style={{
+            float: "left",
             width: "50%",
-            backgroundColor: "#000d2a",
+            height: "100%",
+            // backgroundColor: "#000d2a",
+            // backgroundColor: "#011C40",
+            backgroundColor: "#022563",
           }}
         >
           {/* <div
             style={{
-              backgroundColor: "red",
-              // position: "absolute",
-              bottom: "0",
-              left: "0",
-              margin: "auto",
-              width: "45%",
+              backgroundColor: "grey",
+              // height: "100%",
+              // margin: "auto",
+              // width: "100%",
             }}
           > */}
-          <GrStackOverflow
-            size="23rem"
+          {/* <GrStackOverflow
+            size="19rem"
             color="white"
             style={{
               // marginTop: "40%",
               maxWidth: "100%",
               width: "100%",
               margin: "auto",
-              // height: "100%",
-              padding: "15px",
+              // height: "90%",
+              padding: "10px",
+              // paddingTop: "35px",
+              backgroundColor: "red",
             }}
           />
-          <p>Tech Stack</p>
+          <p
+            style={{
+              color: "white",
+              // backgroundColor: "red",
+              width: "100%",
+              margin: "auto",
+              textAlign: "center",
+              // position: "absolute",
+              // bottom: "0",
+              float: "left",
+              fontSize: "30px",
+              // paddingTop: "-100px",
+            }}
+          >
+            Tech Stack
+          </p> */}
+          {/* </div> */}
+          {/* <TechStack /> */}
+          <Stack
+            style={{
+              width: "100%",
+              height: "100%",
+              padding: "10px",
+              // margin: "auto",
+            }}
+          />
         </div>
         <div
           style={{
-            left: "0",
-            width: "65%",
+            marginLeft: "50%",
+            // width: "65%",
             height: "100vh",
-            opacity: "40%",
+            opacity: "60%",
           }}
         >
           <Code />
