@@ -7,7 +7,11 @@ export const Foodie = [
   {
     title: "Foodie",
     type: "Mobile App",
-    icons: [FaReact, BsCodeSlash, IoLogoFirebase],
+    icons: [
+      { icon: FaReact, Framework: "React" },
+      { icon: BsCodeSlash, Framework: "NativeBase" },
+      { icon: IoLogoFirebase, Framework: "Firebase" },
+    ],
     hasBackground_IMG: false,
     backgroundImg: img,
     cruces: [

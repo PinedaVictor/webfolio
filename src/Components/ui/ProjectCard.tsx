@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import { Col, Button } from "react-bootstrap";
 import { useTransition, animated } from "react-spring";
 import { IoMdArrowRoundUp, IoMdClose } from "react-icons/io";
-import { GrStackOverflow } from "react-icons/gr";
-import { BiCoinStack } from "react-icons/bi";
-import { LeftBrace, RightBrace, LB, FirebaseIcon } from "../../Assets/icons";
-import { Code, TechStack, Stack } from "../../Assets/vectors";
+import { Code, TechStack } from "../../Assets/vectors";
 
 interface ProjectCardProps {
   data: any;
@@ -86,77 +83,32 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
             float: "left",
             width: "50%",
             height: "100%",
-            // backgroundColor: "#000d2a",
-            // backgroundColor: "#011C40",
-            backgroundColor: "#022563",
+            backgroundColor: "#000d2a",
           }}
         >
-          {/* <div
-            style={{
-              backgroundColor: "grey",
-              // height: "100%",
-              // margin: "auto",
-              // width: "100%",
-            }}
-          > */}
-          {/* <GrStackOverflow
-            size="19rem"
-            color="white"
-            style={{
-              // marginTop: "40%",
-              maxWidth: "100%",
-              width: "100%",
-              margin: "auto",
-              // height: "90%",
-              padding: "10px",
-              // paddingTop: "35px",
-              backgroundColor: "red",
-            }}
-          />
-          <p
-            style={{
-              color: "white",
-              // backgroundColor: "red",
-              width: "100%",
-              margin: "auto",
-              textAlign: "center",
-              // position: "absolute",
-              // bottom: "0",
-              float: "left",
-              fontSize: "30px",
-              // paddingTop: "-100px",
-            }}
-          >
-            Tech Stack
-          </p> */}
-          {/* </div> */}
-          {/* <TechStack /> */}
-          <Stack
+          <TechStack
             style={{
               width: "100%",
               height: "100%",
-              padding: "10px",
-              // margin: "auto",
+              marginTop: "2.5rem",
             }}
           />
         </div>
         <div
           style={{
             marginLeft: "50%",
-            // width: "65%",
             height: "100vh",
             opacity: "60%",
           }}
         >
           <Code />
         </div>
-        {/* <div style={{ marginTop: "10px" }}> */}
         {projectData.icons.map((Icon: any, index: number) => (
           <div
             key={index}
             style={{
               position: "absolute",
-              top: `${(1 + index) * 20}%`,
+              top: `${(0 + index) * 20}%`,
               right: "0",
               backgroundColor: "black",
               padding: "10px",
@@ -167,28 +119,26 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
               boxShadow: "-5px 2px 0px #004FFF",
             }}
           >
-            <Icon
+            <Icon.icon
               size="3rem"
               style={{
                 fill: "#000d2a",
                 backgroundColor: "#ff592e",
                 borderRadius: "50%",
                 padding: "5px",
+                marginRight: "10px",
               }}
             />
             <p
               style={{
-                // backgroundColor: "red",
                 margin: "auto",
                 color: "white",
-                paddingLeft: "10px",
               }}
             >
-              FIRREE
+              {Icon.Framework}
             </p>
           </div>
         ))}
-        {/* </div> */}
       </div>
     );
   };
