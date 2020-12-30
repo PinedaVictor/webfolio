@@ -129,6 +129,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
               style={{
                 margin: "auto",
                 color: "white",
+                letterSpacing: "1px",
               }}
             >
               {Icon.Framework}
