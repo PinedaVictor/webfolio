@@ -11,10 +11,10 @@ export const Home: React.FC = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  console.log("Y FUCK Offset:::", yOffset);
+  console.log("Y Offset:::", yOffset);
   return (
     <Layout>
-      <Hero />
+      <Hero yOffset={yOffset} />
       <FeaturedProjects />
       <Dexterity />
     </Layout>
