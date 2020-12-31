@@ -5,6 +5,7 @@ import {
   Initials,
   Integrity,
   Perseverance,
+  CPU,
 } from "../../Assets/vectors";
 import { Container, Col, Row } from "react-bootstrap";
 import { useTransition, useSpring, animated } from "react-spring";
@@ -133,16 +134,23 @@ export const Hero: React.FC<HeroProps> = (props: HeroProps) => {
           </Col>
         </Row>
       </div>
-      <p
+      <Row
         style={{
-          bottom: "0",
-          backgroundColor: "green",
-          marginTop: "100vh",
-          transform: `translateY(-${props.yOffset * 5}px)`,
+          backgroundColor: "",
+          // height: "100vh",
         }}
       >
-        Projects
-      </p>
+        <CPU
+          style={{
+            width: "100%",
+            height: "100%",
+            // backgroundColor: "black",
+            // marginTop: "-10rem",
+
+            transform: `translateY(-${props.yOffset * 1}px)`,
+          }}
+        />
+      </Row>
     </Container>
   );
 };
