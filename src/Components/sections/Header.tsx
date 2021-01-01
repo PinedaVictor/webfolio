@@ -8,7 +8,7 @@ export const Header: React.FC = () => {
   return (
     <div
       style={{
-        backgroundColor: "black",
+        backgroundColor: "transparent",
         top: "0",
         position: "fixed",
         width: "100%",

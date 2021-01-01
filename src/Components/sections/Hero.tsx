@@ -42,9 +42,7 @@ export const Hero: React.FC<HeroProps> = (props: HeroProps) => {
     <Container fluid className="HeroWrapper" style={{ backgroundColor: "" }}>
       <div
         style={{
-          transform: `translate3d(-${props.yOffset * 5}px,${
-            props.yOffset * 2
-          }px,0px)`,
+          transform: `translate3d(-${props.yOffset * 5}px,${0}px,0px)`,
           zIndex: 1,
           position: "relative",
           backgroundColor: "",
@@ -142,7 +140,7 @@ export const Hero: React.FC<HeroProps> = (props: HeroProps) => {
       <Row
         style={{
           backgroundColor: "",
-          height: "100vh",
+          // height: "100vh",
         }}
       >
         <CPU
