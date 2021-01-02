@@ -16,6 +16,7 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = (props) => {
+  const screenSize = props.viewPortWidth;
   const [CPUMarginTop, setCPUMarginTop] = useState(0);
   const items = ["the"];
   const fade = useSpring({
@@ -49,16 +50,18 @@ export const Hero: React.FC<HeroProps> = (props) => {
   // };
 
   useEffect(() => {
-    const marginTop = 0;
-    console.log("View port prop in HERO::::", props.viewPortWidth);
-    console.log("Y offset prop in HERO::::", props.yOffset);
-    console.log("Without useing state:::", window.visualViewport.width);
-    // if (1 > 0) {
-    //   marginTop = 50;
-    //   console.log("I am getting to here", marginTop);
-    // }
-    console.log("Setting the marginTop::::", marginTop);
-  }, [props.viewPortWidth]);
+    let marginTop = 0;
+    // console.log("View port prop in HERO::::", props.viewPortWidth);
+    // console.log("Y offset prop in HERO::::", props.yOffset);
+    // console.log("Without useing state:::", window.visualViewport.width);
+    console.log("Calling if in hero in useEffect with:::", screenSize);
+    if (screenSize > 0 && screenSize <= 375) {
+      marginTop = -10;
+      console.log("I am getting to here", marginTop);
+    }
+    setCPUMarginTop(marginTop);
+    // console.log("Setting the marginTop::::", marginTop);
+  }, [screenSize]);
 
   return (
     <Container fluid className="HeroWrapper" style={{ backgroundColor: "" }}>
@@ -171,7 +174,7 @@ export const Hero: React.FC<HeroProps> = (props) => {
             // height: "100%",
             // backgroundColor: "black",
             // marginTop: "-43rem",
-            // marginTop: `${CPUMarginTop}`,
+            marginTop: `${CPUMarginTop}rem`,
             transform: `translateY(-${props.yOffset * 1}px)`,
             zIndex: 0,
           }}

@@ -7,10 +7,19 @@ export const Home: React.FC = () => {
   const [viewPortWidth, setViewPortWidth] = useState(
     window.visualViewport.width
   );
+
+  const [viewPort, setViewPort] = useState<{ width: number; height: number }>({
+    width: window.visualViewport.width,
+    height: window.visualViewport.height,
+  });
+
   const handleScroll = () => setYOffset(window.pageYOffset);
 
   const handleViewPortResize = () => {
-    setViewPortWidth(window.visualViewport.width);
+    setViewPort({
+      width: window.visualViewport.width,
+      height: window.visualViewport.height,
+    });
   };
 
   useEffect(() => {
@@ -23,8 +32,11 @@ export const Home: React.FC = () => {
     return () => window.removeEventListener("resize", handleViewPortResize);
   }, []);
 
-  console.log("The view:::", viewPortWidth);
-  console.log("Y set:::", yOffset);
+  // console.log("The view:::", viewPortWidth);
+  // console.log("Y set:::", yOffset);
+  // console.log("The vieport height::::", window.visualViewport.height);
+
+  console.log("The view port object::::", viewPort);
   return (
     <Layout>
       <Hero yOffset={yOffset} viewPortWidth={viewPortWidth} />
