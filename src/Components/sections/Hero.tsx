@@ -40,27 +40,42 @@ export const Hero: React.FC<HeroProps> = (props) => {
     enter: { transform: "translate3d(0px, 0px, 0px)" },
   });
 
-  // const handleCPUMarginTop = () => {
-  //   let marginTop = 0;
-  //   if (props.viewPortWidth > 0 && props.viewPortWidth <= 375) {
-  //     marginTop = 0.3;
-  //   }
-  //   console.log("Setting the marginTop::::", marginTop);
-  // };
+  useEffect(() => {
+    console.log("View port prop in hero in useEffect with:::", props.viewPort);
+    let marginTop = 0;
+    const width = props.viewPort.width;
+    const height = props.viewPort.height;
 
-  // useEffect(() => {
-  //   let marginTop = 0;
-  //   // console.log("View port prop in HERO::::", props.viewPortWidth);
-  //   // console.log("Y offset prop in HERO::::", props.yOffset);
-  //   // console.log("Without useing state:::", window.visualViewport.width);
-  //   console.log("Calling if in hero in useEffect with:::", screenSize);
-  //   if (screenSize > 0 && screenSize <= 375) {
-  //     marginTop = -10;
-  //     console.log("I am getting to here", marginTop);
-  //   }
-  //   setCPUMarginTop(marginTop);
-  //   // console.log("Setting the marginTop::::", marginTop);
-  // }, [screenSize]);
+    // Surface duo
+    if (width == 540 && height == 720) {
+      marginTop = -13;
+    }
+    // Ipad Pro
+    if (width >= 1000 && width <= 1050 && height >= 1300 && height <= 1400) {
+      marginTop = 10;
+    }
+
+    if (width > 0 && width <= 375 && height == 812) {
+      marginTop = 1.5;
+    } else if (width > 0 && width <= 375 && height <= 600) {
+      marginTop = -9.4;
+    } else if (width > 0 && width <= 375 && height > 600 && height <= 700) {
+      marginTop = -7.7;
+    } else if (width > 0 && width > 375 && width <= 430 && height <= 750) {
+      marginTop = -5.5;
+    } else if (
+      width > 0 &&
+      width > 375 &&
+      width <= 430 &&
+      height > 750 &&
+      height <= 850
+    ) {
+      marginTop = 1;
+    } else if (width > 1400) {
+      marginTop = -44;
+    }
+    setCPUMarginTop(marginTop);
+  }, [props.viewPort]);
 
   return (
     <Container fluid className="HeroWrapper" style={{ backgroundColor: "" }}>

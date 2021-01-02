@@ -28,11 +28,6 @@ export const Home: React.FC = () => {
     return () => window.removeEventListener("resize", handleViewPortResize);
   }, []);
 
-  // console.log("The view:::", viewPortWidth);
-  // console.log("Y set:::", yOffset);
-  // console.log("The vieport height::::", window.visualViewport.height);
-
-  console.log("The view port object::::", viewPort);
   return (
     <Layout>
       <Hero yOffset={yOffset} viewPort={viewPort} />
