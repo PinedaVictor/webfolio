@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../Styles/main.scss";
 import {
   Creativity,
@@ -12,9 +12,11 @@ import { useTransition, useSpring, animated } from "react-spring";
 
 interface HeroProps {
   yOffset: number;
+  viewPortWidth: number;
 }
 
 export const Hero: React.FC<HeroProps> = (props) => {
+  const [CPUMarginTop, setCPUMarginTop] = useState(0);
   const items = ["the"];
   const fade = useSpring({
     from: { opacity: 0 },
@@ -37,6 +39,26 @@ export const Hero: React.FC<HeroProps> = (props) => {
     },
     enter: { transform: "translate3d(0px, 0px, 0px)" },
   });
+
+  // const handleCPUMarginTop = () => {
+  //   let marginTop = 0;
+  //   if (props.viewPortWidth > 0 && props.viewPortWidth <= 375) {
+  //     marginTop = 0.3;
+  //   }
+  //   console.log("Setting the marginTop::::", marginTop);
+  // };
+
+  useEffect(() => {
+    const marginTop = 0;
+    console.log("View port prop in HERO::::", props.viewPortWidth);
+    console.log("Y offset prop in HERO::::", props.yOffset);
+    console.log("Without useing state:::", window.visualViewport.width);
+    // if (1 > 0) {
+    //   marginTop = 50;
+    //   console.log("I am getting to here", marginTop);
+    // }
+    console.log("Setting the marginTop::::", marginTop);
+  }, [props.viewPortWidth]);
 
   return (
     <Container fluid className="HeroWrapper" style={{ backgroundColor: "" }}>
@@ -148,7 +170,8 @@ export const Hero: React.FC<HeroProps> = (props) => {
             width: "100%",
             // height: "100%",
             // backgroundColor: "black",
-            marginTop: "-43rem",
+            // marginTop: "-43rem",
+            // marginTop: `${CPUMarginTop}`,
             transform: `translateY(-${props.yOffset * 1}px)`,
             zIndex: 0,
           }}

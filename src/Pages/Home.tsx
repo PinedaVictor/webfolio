@@ -3,10 +3,12 @@ import { Layout } from "../Components/ui/Layout";
 import { Hero, FeaturedProjects, Dexterity } from "../Components/sections";
 
 export const Home: React.FC = () => {
-  const [yOffset, setYOffset] = useState(0);
-  const [viewPortWidth, setViewPortWidth] = useState(0);
+  const [yOffset, setYOffset] = useState(window.pageYOffset);
+  const [viewPortWidth, setViewPortWidth] = useState(
+    window.visualViewport.width
+  );
   const handleScroll = () => setYOffset(window.pageYOffset);
-  const view = window.visualViewport.width;
+
   const handleViewPortResize = () => {
     setViewPortWidth(window.visualViewport.width);
   };
@@ -20,10 +22,12 @@ export const Home: React.FC = () => {
     window.addEventListener("resize", handleViewPortResize);
     return () => window.removeEventListener("resize", handleViewPortResize);
   }, []);
-  console.log("The view:::", view);
+
+  console.log("The view:::", viewPortWidth);
+  console.log("Y set:::", yOffset);
   return (
     <Layout>
-      <Hero yOffset={yOffset} />
+      <Hero yOffset={yOffset} viewPortWidth={viewPortWidth} />
       <FeaturedProjects />
       <Dexterity />
     </Layout>
