@@ -151,7 +151,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
         border: "1px solid black",
         margin: "0",
         padding: "0",
-        zIndex: 2,
+        // zIndex: 1,
       }}
     >
       <ProjectDisplay />
@@ -170,7 +170,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
           position: "absolute",
           right: "0",
           bottom: "0",
-          zIndex: 1,
+          // zIndex: 1,
           margin: "10px",
           borderRadius: "50%",
           width: "2.7rem",

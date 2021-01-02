@@ -82,7 +82,7 @@ export const Hero: React.FC<HeroProps> = (props) => {
       <div
         style={{
           transform: `translate3d(-${props.yOffset * 5}px,${0}px,0px)`,
-          zIndex: 1,
+          // zIndex: 1,
           position: "relative",
           backgroundColor: "",
         }}
@@ -190,7 +190,7 @@ export const Hero: React.FC<HeroProps> = (props) => {
             // marginTop: "-43rem",
             marginTop: `${CPUMarginTop}rem`,
             transform: `translateY(-${props.yOffset * 1}px)`,
-            zIndex: 0,
+            zIndex: -1,
           }}
         />
       </Row>

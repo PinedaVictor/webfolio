@@ -28,7 +28,7 @@ export const Header: React.FC = () => {
           backgroundColor: "black",
           border: "2px solid white",
           borderRadius: "50%",
-          float: "right",
+          // float: "right",
         }}
       >
         <CgMenu size="2rem" />

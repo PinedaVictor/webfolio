@@ -58,7 +58,7 @@ export const Dexterity: React.FC = () => {
           xl={6}
           style={{
             backgroundColor: "#ffb400",
-            height: "40rem",
+            height: "60rem",
             // maxHeight: "35rem",
           }}
         ></Col>
