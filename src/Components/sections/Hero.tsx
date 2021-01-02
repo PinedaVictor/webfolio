@@ -14,7 +14,7 @@ interface HeroProps {
   yOffset: number;
 }
 
-export const Hero: React.FC<HeroProps> = (props: HeroProps) => {
+export const Hero: React.FC<HeroProps> = (props) => {
   const items = ["the"];
   const fade = useSpring({
     from: { opacity: 0 },
