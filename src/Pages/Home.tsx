@@ -4,10 +4,6 @@ import { Hero, FeaturedProjects, Dexterity } from "../Components/sections";
 
 export const Home: React.FC = () => {
   const [yOffset, setYOffset] = useState(window.pageYOffset);
-  const [viewPortWidth, setViewPortWidth] = useState(
-    window.visualViewport.width
-  );
-
   const [viewPort, setViewPort] = useState<{ width: number; height: number }>({
     width: window.visualViewport.width,
     height: window.visualViewport.height,
@@ -39,7 +35,7 @@ export const Home: React.FC = () => {
   console.log("The view port object::::", viewPort);
   return (
     <Layout>
-      <Hero yOffset={yOffset} viewPortWidth={viewPortWidth} />
+      <Hero yOffset={yOffset} viewPort={viewPort} />
       <FeaturedProjects />
       <Dexterity />
     </Layout>
