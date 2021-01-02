@@ -151,6 +151,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
         border: "1px solid black",
         margin: "0",
         padding: "0",
+        zIndex: 2,
       }}
     >
       <ProjectDisplay />
