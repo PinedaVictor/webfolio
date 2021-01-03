@@ -36,9 +36,9 @@ export const Drawer: React.FC<DrawerProps> = (props: DrawerProps) => {
               <div style={{ color: "white", fontSize: "20px" }}>
                 <ul>
                   <li>Home</li>
-                  <li>Home</li>
-                  <li>Home</li>
-                  <li>Home</li>
+                  <li>Projects Archieve</li>
+                  <li>Resume</li>
+                  <li>Contact</li>
                 </ul>
               </div>
               <div>Happy Face Svg with Stay up below it</div>
