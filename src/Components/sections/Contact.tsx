@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 export const Contact: React.FC = () => {
   return (
@@ -48,7 +48,7 @@ export const Contact: React.FC = () => {
           style={{
             // backgroundColor: "#0cce6b",
             // backgroundColor: "#000d2a",
-            height: "40rem",
+            height: "10rem",
             // maxHeight: "35rem",
           }}
         >
@@ -61,12 +61,35 @@ export const Contact: React.FC = () => {
           lg={6}
           xl={6}
           style={{
-            // backgroundColor: "aqua",
+            backgroundColor: "black",
             height: "40rem",
             // maxHeight: "35rem",
           }}
         >
           {/* Oj ff592e */}
+
+          <Form style={{ maxWidth: "35rem", margin: "auto", marginTop: "15%" }}>
+            <Form.Group controlId="name">
+              <Form.Control type="name" placeholder="Name" />
+            </Form.Group>
+            <Form.Group controlId="formBasicEmail">
+              <Form.Control type="email" placeholder="Email" />
+              {/* <Form.Text className="text-muted">
+                {"Your email will NOT be shared with anyone else."}
+              </Form.Text> */}
+            </Form.Group>
+
+            <Form.Group controlId="formBasicEmail">
+              <Form.Control type="subject" placeholder="Subject" />
+            </Form.Group>
+
+            <Form.Group controlId="exampleForm.ControlTextarea1">
+              <Form.Control as="textarea" rows={3} placeholder="Message" />
+            </Form.Group>
+            <Button variant="primary" type="submit">
+              Submit
+            </Button>
+          </Form>
         </Col>
       </Row>
     </Container>
