@@ -90,12 +90,14 @@ export const Contact: React.FC = () => {
           md={6}
           lg={6}
           xl={6}
-          style={{
-            // backgroundColor: "#0cce6b",
-            // backgroundColor: "#000d2a",
-            height: "40rem",
-            // maxHeight: "35rem",
-          }}
+          style={
+            {
+              // backgroundColor: "#0cce6b",
+              // backgroundColor: "#000d2a",
+              // height: "40rem",
+              // maxHeight: "35rem",
+            }
+          }
         >
           <div>
             {/* <IoMdChatboxes
@@ -188,30 +190,29 @@ export const Contact: React.FC = () => {
           xl={5}
           //   className="contactButton"
           style={{
-            // backgroundColor: "red",
+            backgroundColor: "red",
             // height: "10rem",
-            maxHeight: "34rem",
+            maxHeight: "504rem",
           }}
         >
-          <div>
-            <Button
-              className="idk"
-              onClick={() => toggleForm(!form)}
-              style={{
-                height: "90%",
-                width: "90%",
-                // borderRadius: "50%",
-                // marginTop: "25%",
-                // marginLeft: "25%",
-                position: "absolute",
-                fontSize: "3rem",
-                color: "white",
-                fontWeight: "bolder",
-              }}
-            >
-              Contact
-            </Button>
-          </div>
+          <Button
+            className="idk"
+            onClick={() => toggleForm(!form)}
+            style={{
+              height: "90%",
+              width: "90%",
+              // borderRadius: "50%",
+              // marginTop: "25%",
+              // marginLeft: "25%",
+              // position: "absolute",
+              fontSize: "3rem",
+              color: "white",
+              fontWeight: "bolder",
+            }}
+          >
+            Contact
+          </Button>
+
           {transition.map(
             ({ item, key, props }) =>
               item && (
