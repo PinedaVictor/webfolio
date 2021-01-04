@@ -11,7 +11,7 @@ export const Dexterity: React.FC = () => {
     <Container
       fluid
       style={{
-        // backgroundColor: "red",
+        backgroundColor: "black",
         // backgroundColor: "#000d2a",
         marginBottom: "30px",
         margin: "0",

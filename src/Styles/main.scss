@@ -1,6 +1,7 @@
 // Main style sheet
 // 1. Headeer
 // 2. Projects
+// 3. Contact
 
 // Constants
 $PrimaryColor: #000000;
@@ -37,3 +38,35 @@ $Orange: #ff592e;
   // padding-right: 10%;
 }
 // ----------- END Projects -------
+// ----------- Contact ------------
+.contactButton {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 300% 300%;
+  animation: gradient 5s ease infinite;
+}
+.idk {
+  border-style: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 300% 300%;
+  border-width: 3px;
+  border-color: #23d5ab;
+  animation: gradient 5s ease infinite;
+  background-color: black;
+}
+.idk:hover {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 300% 300%;
+  animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+// ----------- END Contact --------
