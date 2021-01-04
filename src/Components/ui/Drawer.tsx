@@ -36,7 +36,7 @@ export const Drawer: React.FC<DrawerProps> = (props: DrawerProps) => {
               <div style={{ color: "white", fontSize: "20px" }}>
                 <ul>
                   <li>Home</li>
-                  <li>Projects Archieve</li>
+                  <li>All Projects</li>
                   <li>Resume</li>
                   <li>Contact</li>
                 </ul>

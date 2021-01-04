@@ -51,9 +51,7 @@ export const Contact: React.FC = () => {
             height: "10rem",
             // maxHeight: "35rem",
           }}
-        >
-          {/* aqua 00c5d4 */}
-        </Col>
+        ></Col>
         <Col
           xs={12}
           sm={12}
@@ -66,8 +64,6 @@ export const Contact: React.FC = () => {
             // maxHeight: "35rem",
           }}
         >
-          {/* Oj ff592e */}
-
           <Form style={{ maxWidth: "35rem", margin: "auto", marginTop: "15%" }}>
             <Form.Group controlId="name">
               <Form.Control type="name" placeholder="Name" />
