@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { GiPencilBrush } from "react-icons/gi";
 import { AiFillCode, AiOutlineCode } from "react-icons/ai";
-import { FaFileCode, FaCode } from "react-icons/fa";
-import { GrCode } from "react-icons/gr";
-import { BiCodeAlt, BiCodeCurly } from "react-icons/bi";
+// import { FaFileCode, FaCode } from "react-icons/fa";
+// import { GrCode } from "react-icons/gr";
+// import { BiCodeAlt, BiCodeCurly } from "react-icons/bi";
+import { ParallaxContext } from "../Parallax";
 
 export const Dexterity: React.FC = () => {
+  const ParallaxAttributes = useContext(ParallaxContext);
   return (
     <Container
       fluid

@@ -8,9 +8,9 @@ import { ParallaxContext } from "../Parallax";
 export const Contact: React.FC = () => {
   const [form, toggleForm] = useState(false);
 
-  const ParallaxProperties = useContext(ParallaxContext);
+  const ParallaxAttributes = useContext(ParallaxContext);
 
-  console.log("The parallax properties::::", ParallaxProperties);
+  console.log("The parallax properties::::", ParallaxAttributes);
 
   const transition = useTransition(form, null, {
     config: {
@@ -128,21 +128,21 @@ export const Contact: React.FC = () => {
           width: "100%",
         }}
       >
-        <Col lg={1}></Col>
+        {/* <Col md={3}></Col> */}
         <Col
           xs={12}
           sm={12}
-          md={6}
+          md={7}
           lg={6}
           xl={6}
-          style={
-            {
-              // backgroundColor: "#0cce6b",
-              // backgroundColor: "#000d2a",
-              // height: "40rem",
-              // maxHeight: "35rem",
-            }
-          }
+          style={{
+            // backgroundColor: "#0cce6b",
+            // backgroundColor: "#000d2a",
+            // height: "40rem",
+            // height: "100%",
+            // width: "100%",
+            margin: "auto",
+          }}
         >
           <div>
             <p
@@ -202,15 +202,16 @@ export const Contact: React.FC = () => {
         <Col
           xs={11}
           sm={11}
-          md={4}
-          lg={4}
-          xl={4}
+          md={6}
+          lg={5}
+          xl={5}
           className="contactButton"
           style={{
             backgroundColor: "red",
             height: "20rem",
             borderRadius: "25px",
             margin: "auto",
+            marginTop: "15px",
           }}
         >
           <div style={{ width: "100%", height: "100%", position: "absolute" }}>
