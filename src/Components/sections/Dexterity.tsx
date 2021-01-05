@@ -5,10 +5,18 @@ import { AiFillCode, AiOutlineCode } from "react-icons/ai";
 // import { FaFileCode, FaCode } from "react-icons/fa";
 // import { GrCode } from "react-icons/gr";
 // import { BiCodeAlt, BiCodeCurly } from "react-icons/bi";
+import { Pi } from "../../Assets/icons";
 import { ParallaxContext } from "../Parallax";
 
 export const Dexterity: React.FC = () => {
   const ParallaxAttributes = useContext(ParallaxContext);
+
+  console.log("The YOFFSET::::", ParallaxAttributes.yOffset);
+  console.log("The viewport Width:::", ParallaxAttributes.viewPort);
+  console.log(
+    "Transform::::",
+    (ParallaxAttributes.yOffset / ParallaxAttributes.viewPort.width) * 100
+  );
   return (
     <Container
       fluid
@@ -18,21 +26,9 @@ export const Dexterity: React.FC = () => {
         marginBottom: "30px",
         margin: "0",
         padding: "0",
+        overflow: "hidden",
       }}
     >
-      {/* <Row>
-        <h4
-          style={{
-            color: "#00a6ed",
-            fontWeight: "bold",
-            fontFamily: "OCRAExtended, OCR A Extended",
-            display: "block",
-            // marginLeft: "2%",
-          }}
-        >
-          Dexterity
-        </h4>
-      </Row> */}
       <Row
         style={{
           // backgroundColor: "red",
@@ -44,6 +40,8 @@ export const Dexterity: React.FC = () => {
           margin: "0",
           padding: "0",
           width: "100%",
+          marginTop: "80rem",
+          transform: `translateY(-${ParallaxAttributes.yOffset / 2.5}px)`,
         }}
       >
         <Col
@@ -73,6 +71,15 @@ export const Dexterity: React.FC = () => {
               Software
             </p>
           </div>
+          <Pi
+            width="5rem"
+            height="5rem"
+            style={{
+              marginTop: "80rem",
+              position: "absolute",
+              transform: `translateY(-${ParallaxAttributes.yOffset / 2}px)`,
+            }}
+          />
           <AiOutlineCode
             style={{
               width: "100%",
@@ -92,6 +99,7 @@ export const Dexterity: React.FC = () => {
             // backgroundColor: "aqua",
             height: "40rem",
             // maxHeight: "35rem",
+            overflow: "hidden",
           }}
         >
           {/* Oj ff592e */}
@@ -107,6 +115,21 @@ export const Dexterity: React.FC = () => {
               Design
             </p>
           </div>
+          {/* <div> */}
+          <Pi
+            width="5rem"
+            height="5rem"
+            style={{
+              // marginTop: "80rem",
+              marginLeft: "-35rem",
+              left: "0",
+              position: "absolute",
+              transform: `translateX(${
+                (ParallaxAttributes.yOffset / 375) * 100
+              }px)`,
+            }}
+          />
+          {/* </div> */}
           <GiPencilBrush
             style={{ width: "100%", height: "100%", fill: "#ffb400" }}
           />

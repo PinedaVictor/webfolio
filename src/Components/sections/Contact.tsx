@@ -8,9 +8,9 @@ import { ParallaxContext } from "../Parallax";
 export const Contact: React.FC = () => {
   const [form, toggleForm] = useState(false);
 
-  const ParallaxAttributes = useContext(ParallaxContext);
+  // const ParallaxAttributes = useContext(ParallaxContext);
 
-  console.log("The parallax properties::::", ParallaxAttributes);
+  // console.log("The parallax properties::::", ParallaxAttributes);
 
   const transition = useTransition(form, null, {
     config: {
@@ -112,7 +112,8 @@ export const Contact: React.FC = () => {
         margin: "0",
         padding: "0",
         marginTop: "33px",
-        paddingBottom: "55px",
+        paddingBottom: "5rem",
+        paddingTop: "5rem",
       }}
     >
       <Row

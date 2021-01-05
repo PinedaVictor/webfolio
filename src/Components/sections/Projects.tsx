@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { ProjectCard } from "../ui/ProjectCard";
-import { happiibook, Foodie, UIS, Research } from "../../Data/projects";
+import { Foodie } from "../../Data/projects";
 
 export const FeaturedProjects: React.FC = () => {
   const FeaturedProjects = [Foodie, Foodie, Foodie, Foodie];
@@ -15,6 +15,7 @@ export const FeaturedProjects: React.FC = () => {
         display: "flex",
         flexWrap: "wrap",
         flexDirection: "row",
+        overflow: "hidden",
       }}
     >
       {FeaturedProjects.map((item, index) => (
