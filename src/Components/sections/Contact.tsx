@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../Styles/main.scss";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import { IoMdChatboxes } from "react-icons/io";
+import { IoMdClose } from "react-icons/io";
 import { useTransition, animated } from "react-spring";
 
 export const Contact: React.FC = () => {
@@ -12,17 +12,17 @@ export const Contact: React.FC = () => {
       duration: 450,
     },
     from: {
-      //   transform: "translate3d(0, 0em, 0)",
       opacity: 0,
       width: "100%",
-      backgroundColor: "red",
+      backgroundColor: "black",
       height: "33rem",
       position: "absolute",
       left: "0",
       overflow: "hidden",
+      borderRadius: "25px",
+      boxShadow: "10px 10px 20px black, -10px 10px 20px black",
     },
     enter: {
-      //   transform: "translate3d(0, -33em, 0)",
       opacity: 1,
     },
     leave: { opacity: 0 },
@@ -30,12 +30,48 @@ export const Contact: React.FC = () => {
 
   const ContactForm = () => {
     return (
-      <div style={{}}>
-        <Form style={{ maxWidth: "35rem", margin: "auto", marginTop: "15%" }}>
+      <Col
+        xs={12}
+        sm={12}
+        md={12}
+        lg={12}
+        xl={12}
+        style={{
+          height: "20rem",
+          borderRadius: "25px",
+          margin: "auto",
+        }}
+      >
+        <Button
+          style={{
+            width: "3rem",
+            height: "3rem",
+            float: "right",
+            marginBottom: "10px",
+            border: "2px solid white",
+            backgroundColor: "black",
+            borderRadius: "25px",
+            marginRight: "3%",
+          }}
+          onClick={() => toggleForm(!form)}
+        >
+          <IoMdClose size="2rem" style={{ marginLeft: "-5px" }} />
+        </Button>
+        <Form style={{ maxWidth: "35rem", margin: "auto" }}>
           <Form.Group controlId="name">
             <Form.Control type="name" placeholder="Name" />
           </Form.Group>
           <Form.Group controlId="formBasicEmail">
+            <Form.Text
+              style={{
+                color: "white",
+                letterSpacing: "1.5px",
+                paddingBottom: "3px",
+                paddingLeft: "2.5px",
+              }}
+            >
+              {"Your email will NOT be shared anyone else."}
+            </Form.Text>
             <Form.Control type="email" placeholder="Email" />
           </Form.Group>
 
@@ -46,12 +82,19 @@ export const Contact: React.FC = () => {
           <Form.Group controlId="exampleForm.ControlTextarea1">
             <Form.Control as="textarea" rows={3} placeholder="Message" />
           </Form.Group>
-          <Button variant="primary" type="submit">
+          <Button
+            style={{
+              marginLeft: "2%",
+              backgroundColor: "black",
+              border: "2px solid white",
+            }}
+            variant="primary"
+            type="submit"
+          >
             Submit
           </Button>
         </Form>
-        <Button onClick={() => toggleForm(!form)} />
-      </div>
+      </Col>
     );
   };
   return (
@@ -80,11 +123,6 @@ export const Contact: React.FC = () => {
           width: "100%",
         }}
       >
-        {/* <IoMdChatboxes
-          size="35rem"
-          style={{ fill: "white", paddingLeft: "5%" }}
-        />
-        <Button style={{ height: "2rem", width: "6rem" }}>Contact</Button> */}
         <Col lg={1}></Col>
         <Col
           xs={12}
@@ -102,23 +140,14 @@ export const Contact: React.FC = () => {
           }
         >
           <div>
-            {/* <IoMdChatboxes
-              size="35rem"
-              style={{
-                // backgroundColor: "green",
-                // maxHeight: "100%",
-                maxWidth: "100%",
-                fill: "white",
-              }}
-            /> */}
             <p
               style={{
                 fontSize: "5rem",
                 overflowWrap: "break-word",
-                // padding: "50px",
                 margin: "0",
                 lineHeight: "5rem",
                 color: "white",
+                fontFamily: "Arial",
               }}
             >
               {
@@ -130,10 +159,8 @@ export const Contact: React.FC = () => {
               style={{
                 height: "10px",
                 marginTop: "5px",
-                // marginBottom: "5px",
                 borderRadius: "20px",
                 width: "25%",
-                // float: "right",
               }}
             />
             <div
@@ -144,7 +171,6 @@ export const Contact: React.FC = () => {
                 marginBottom: "5px",
                 borderRadius: "20px",
                 width: "50%",
-                // float: "right",
               }}
             />
             <div
@@ -154,7 +180,6 @@ export const Contact: React.FC = () => {
                 marginTop: "10px",
                 marginBottom: "5px",
                 borderRadius: "20px",
-                // float: "right",
                 width: "75%",
               }}
             />
@@ -165,58 +190,51 @@ export const Contact: React.FC = () => {
                 marginTop: "10px",
                 marginBottom: "5px",
                 borderRadius: "20px",
-                // float: "right",
-                // width: "75%",
               }}
             />
           </div>
-          {/* <Button
-            onClick={() => toggleForm(!form)}
-            style={{
-              height: "10rem",
-              width: "10rem",
-              borderRadius: "50%",
-              position: "absolute",
-              right: "0",
-              //   top: "40%",
-            }}
-          >
-            Contact
-          </Button> */}
         </Col>
         <Col
-          xs={12}
-          sm={12}
-          md={5}
-          lg={5}
-          xl={5}
+          xs={11}
+          sm={11}
+          md={4}
+          lg={4}
+          xl={4}
           className="contactButton"
           style={{
             backgroundColor: "red",
-            // height: "25re",
-            // maxHeight: "504rem",
+            height: "20rem",
+            borderRadius: "25px",
+            margin: "auto",
           }}
         >
-          {/* <div style={{ margin: "auto" }}>
+          <div style={{ width: "100%", height: "100%", position: "absolute" }}>
             <Button
-              className="idk"
               onClick={() => toggleForm(!form)}
               style={{
-                height: "10rem",
-                width: "10rem",
-                // borderRadius: "50%",
-                // marginTop: "50%",
-                // marginLeft: "25%",
+                backgroundColor: "black",
+                border: "3px solid white",
+                top: "5%",
                 position: "absolute",
-                // fontSize: "3rem",
-                color: "white",
-                fontWeight: "bolder",
+                borderRadius: "25px",
+                width: "15rem",
+                height: "15rem",
+                boxShadow: "20px 20px 40px black",
               }}
             >
-              Contact
+              <p
+                style={{
+                  margin: "auto",
+                  textAlign: "center",
+                  fontSize: "3rem",
+                  fontWeight: "bold",
+                  fontFamily: "Arial",
+                }}
+              >
+                Contact
+              </p>
             </Button>
-          </div> */}
-          <p>Contact</p>
+          </div>
           {transition.map(
             ({ item, key, props }) =>
               item && (
