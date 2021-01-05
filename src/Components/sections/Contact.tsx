@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "../../Styles/main.scss";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { IoMdClose } from "react-icons/io";
 import { useTransition, animated } from "react-spring";
+import { ParallaxContext } from "../Parallax";
 
 export const Contact: React.FC = () => {
   const [form, toggleForm] = useState(false);
+
+  const ParallaxProperties = useContext(ParallaxContext);
+
+  console.log("The parallax properties::::", ParallaxProperties);
 
   const transition = useTransition(form, null, {
     config: {

@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { Layout } from "../Components/ui/Layout";
-import {
-  Hero,
-  FeaturedProjects,
-  Dexterity,
-  Contact,
-} from "../Components/sections";
-import { Parallax } from "../Components/Parallax";
+import React, { createContext, useState, useEffect } from "react";
 
-export const Home: React.FC = () => {
+type ParallaxType = {
+  yOffset: number;
+  viewPort: { width: number; height: number };
+};
+
+export const ParallaxContext = createContext<ParallaxType>({
+  yOffset: 0,
+  viewPort: { width: 0, height: 0 },
+});
+
+export const Parallax: React.FC = (props) => {
   const [yOffset, setYOffset] = useState(window.pageYOffset);
   const [viewPort, setViewPort] = useState<{ width: number; height: number }>({
     width: window.visualViewport.width,
@@ -33,15 +35,9 @@ export const Home: React.FC = () => {
     window.addEventListener("resize", handleViewPortResize);
     return () => window.removeEventListener("resize", handleViewPortResize);
   }, []);
-
   return (
-    <Layout>
-      <Parallax>
-        <Hero yOffset={yOffset} viewPort={viewPort} />
-        <FeaturedProjects />
-        <Dexterity />
-        <Contact />
-      </Parallax>
-    </Layout>
+    <ParallaxContext.Provider value={{ yOffset, viewPort }}>
+      {props.children}
+    </ParallaxContext.Provider>
   );
 };
