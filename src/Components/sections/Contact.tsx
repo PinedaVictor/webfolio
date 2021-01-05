@@ -70,7 +70,7 @@ export const Contact: React.FC = () => {
                 paddingLeft: "2.5px",
               }}
             >
-              {"Your email will NOT be shared anyone else."}
+              {"Your email will NOT be shared with anyone else."}
             </Form.Text>
             <Form.Control type="email" placeholder="Email" />
           </Form.Group>
