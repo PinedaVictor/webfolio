@@ -185,7 +185,7 @@ export const Hero: React.FC<HeroProps> = (props) => {
         <CPU
           style={{
             width: "100%",
-            // height: "100%",
+            height: "100%",
             // backgroundColor: "black",
             // marginTop: "-43rem",
             marginTop: `${CPUMarginTop}rem`,
