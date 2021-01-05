@@ -30,7 +30,7 @@ export const Contact: React.FC = () => {
 
   const ContactForm = () => {
     return (
-      <div>
+      <div style={{}}>
         <Form style={{ maxWidth: "35rem", margin: "auto", marginTop: "15%" }}>
           <Form.Group controlId="name">
             <Form.Control type="name" placeholder="Name" />
@@ -63,6 +63,8 @@ export const Contact: React.FC = () => {
         marginBottom: "30px",
         margin: "0",
         padding: "0",
+        marginTop: "33px",
+        paddingBottom: "55px",
       }}
     >
       <Row
@@ -188,31 +190,33 @@ export const Contact: React.FC = () => {
           md={5}
           lg={5}
           xl={5}
-          //   className="contactButton"
+          className="contactButton"
           style={{
             backgroundColor: "red",
-            // height: "10rem",
-            maxHeight: "504rem",
+            // height: "25re",
+            // maxHeight: "504rem",
           }}
         >
-          <Button
-            className="idk"
-            onClick={() => toggleForm(!form)}
-            style={{
-              height: "90%",
-              width: "90%",
-              // borderRadius: "50%",
-              // marginTop: "25%",
-              // marginLeft: "25%",
-              // position: "absolute",
-              fontSize: "3rem",
-              color: "white",
-              fontWeight: "bolder",
-            }}
-          >
-            Contact
-          </Button>
-
+          {/* <div style={{ margin: "auto" }}>
+            <Button
+              className="idk"
+              onClick={() => toggleForm(!form)}
+              style={{
+                height: "10rem",
+                width: "10rem",
+                // borderRadius: "50%",
+                // marginTop: "50%",
+                // marginLeft: "25%",
+                position: "absolute",
+                // fontSize: "3rem",
+                color: "white",
+                fontWeight: "bolder",
+              }}
+            >
+              Contact
+            </Button>
+          </div> */}
+          <p>Contact</p>
           {transition.map(
             ({ item, key, props }) =>
               item && (
