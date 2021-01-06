@@ -47,9 +47,9 @@ export const Dexterity: React.FC = () => {
         <Col
           xs={12}
           sm={12}
-          md={6}
-          lg={6}
-          xl={6}
+          md={12}
+          lg={12}
+          xl={12}
           style={{
             // backgroundColor: "#0cce6b",
             // backgroundColor: "#000d2a",
@@ -71,6 +71,17 @@ export const Dexterity: React.FC = () => {
               Software
             </p>
           </div>
+          <AiOutlineCode
+            style={{
+              width: "100%",
+              height: "100%",
+              fill: "#0cce6b",
+              // backgroundColor: "red",
+              position: "absolute",
+              left: "-60rem",
+              transform: `translateX(${ParallaxAttributes.yOffset / 3.2}px)`,
+            }}
+          />
           <Pi
             width="5rem"
             height="5rem"
@@ -80,21 +91,13 @@ export const Dexterity: React.FC = () => {
               transform: `translateY(-${ParallaxAttributes.yOffset / 2}px)`,
             }}
           />
-          <AiOutlineCode
-            style={{
-              width: "100%",
-              height: "100%",
-              fill: "#0cce6b",
-              // backgroundColor: "red",
-            }}
-          />
         </Col>
         <Col
           xs={12}
           sm={12}
-          md={6}
-          lg={6}
-          xl={6}
+          md={12}
+          lg={12}
+          xl={12}
           style={{
             // backgroundColor: "aqua",
             height: "40rem",
@@ -131,7 +134,14 @@ export const Dexterity: React.FC = () => {
           />
           {/* </div> */}
           <GiPencilBrush
-            style={{ width: "100%", height: "100%", fill: "#ffb400" }}
+            style={{
+              width: "100%",
+              height: "100%",
+              fill: "#ffb400",
+              right: "-80rem",
+              position: "absolute",
+              transform: `translateX(-${ParallaxAttributes.yOffset / 2.5}px)`,
+            }}
           />
         </Col>
       </Row>
