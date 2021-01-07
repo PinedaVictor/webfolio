@@ -5,7 +5,7 @@ import { AiFillCode, AiOutlineCode } from "react-icons/ai";
 // import { FaFileCode, FaCode } from "react-icons/fa";
 // import { GrCode } from "react-icons/gr";
 // import { BiCodeAlt, BiCodeCurly } from "react-icons/bi";
-import { Pi } from "../../Assets/icons";
+import { Pi, Icons } from "../../Assets/icons";
 import { ParallaxContext } from "../Parallax";
 
 export const Dexterity: React.FC = () => {
@@ -55,6 +55,7 @@ export const Dexterity: React.FC = () => {
             // backgroundColor: "#000d2a",
             height: "40rem",
             // maxHeight: "35rem",
+            overflow: "hidden",
           }}
         >
           {/* aqua 00c5d4 */}
@@ -86,7 +87,7 @@ export const Dexterity: React.FC = () => {
             width="5rem"
             height="5rem"
             style={{
-              marginTop: "80rem",
+              marginTop: "105rem",
               position: "absolute",
               transform: `translateY(-${ParallaxAttributes.yOffset / 2}px)`,
             }}
@@ -124,12 +125,23 @@ export const Dexterity: React.FC = () => {
             height="5rem"
             style={{
               // marginTop: "80rem",
-              marginLeft: "-35rem",
-              left: "0",
+              // marginLeft: "-35rem",
+              // left: "",
+              right: "0",
               position: "absolute",
-              transform: `translateX(${
-                (ParallaxAttributes.yOffset / 375) * 100
-              }px)`,
+              transform: `translateX(-${ParallaxAttributes.yOffset / 50}px)`,
+            }}
+          />
+          <Icons
+            width="100%"
+            height="100%"
+            style={{
+              // marginTop: "80rem",
+              // marginLeft: "-35rem",
+              // left: "",
+              right: "-85rem",
+              position: "absolute",
+              transform: `translateX(-${ParallaxAttributes.yOffset / 2.5}px)`,
             }}
           />
           {/* </div> */}
