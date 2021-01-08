@@ -5,3 +5,4 @@ export { ReactComponent as Perseverance } from "./perseverance.svg";
 export { ReactComponent as Code } from "./Code.svg";
 export { ReactComponent as TechStack } from "./TechStack.svg";
 export { ReactComponent as CPU } from "./CPU.svg";
+export { ReactComponent as TechEye } from "./TechEye.svg";

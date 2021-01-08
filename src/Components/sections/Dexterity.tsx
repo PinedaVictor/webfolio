@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, ReactComponentElement } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { GiPencilBrush } from "react-icons/gi";
 import { AiFillCode, AiOutlineCode } from "react-icons/ai";
@@ -11,13 +11,15 @@ import {
   FirebaseIcon,
   Sass,
   Nx,
-  LB,
   ReactIcon,
   Scala,
   Java,
+  Arduino,
+  Ts,
 } from "../../Assets/icons";
+import { TechEye } from "../../Assets/vectors";
 import { ParallaxContext } from "../Parallax";
-import gig from "../../Assets/images/one.jpg";
+import gig from "../../Assets/images/Edit.png";
 export const Dexterity: React.FC = () => {
   const ParallaxAttributes = useContext(ParallaxContext);
 
@@ -29,11 +31,39 @@ export const Dexterity: React.FC = () => {
   );
 
   const DexIcons = () => {
-    const icons = [Pi, FirebaseIcon, Sass, Nx, ReactIcon, Scala, Java];
+    const icons = [
+      Pi,
+      Sass,
+      Scala,
+      Java,
+      Arduino,
+      Ts,
+      ReactIcon,
+      FirebaseIcon,
+      Nx,
+    ];
     return (
-      <div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap-reverse",
+        }}
+      >
         {icons.map((Icon: any, index) => (
-          <Icon width="5rem" height="5rem" key={index} />
+          <Col
+            xs={4}
+            sm={2}
+            lg={2}
+            key={index}
+            style={{
+              // paddingLeft: "15px",
+              padding: "10px",
+              // width: "6rem",
+            }}
+          >
+            <Icon width="5rem" height="5rem" />
+          </Col>
         ))}
       </div>
     );
@@ -59,18 +89,19 @@ export const Dexterity: React.FC = () => {
           lg={12}
           xl={12}
           style={{
-            backgroundColor: "red",
+            // backgroundColor: "red",
             // transform: `translateY(-${ParallaxAttributes.yOffset / 2.5}px)`,
             // marginTop: "65rem",
             height: "20rem",
           }}
         >
           <p style={{ textAlign: "center" }}>Dexterity</p>
+          {/* <TechEye width="100vw" /> */}
         </Col>
       </Row>
       <Row
         style={{
-          backgroundColor: "blue",
+          // backgroundColor: "blue",
           marginLeft: "2%",
           marginRight: "2%",
           display: "flex",
@@ -88,11 +119,12 @@ export const Dexterity: React.FC = () => {
           xs={12}
           sm={12}
           md={12}
-          lg={12}
-          xl={12}
+          lg={6}
+          xl={6}
           style={{
             // backgroundColor: "#0cce6b",
-            backgroundColor: "#000d2a",
+            // backgroundColor: "#000d2a",
+            // backgroundColor: "black",
             height: "45rem",
             // maxHeight: "35rem",
             overflow: "hidden",
@@ -107,9 +139,15 @@ export const Dexterity: React.FC = () => {
               backgroundRepeat: "no-repeat",
               position: "absolute",
               left: "0",
+              // backgroundColor: "red",
             }}
           />
-          <div style={{ position: "absolute" }}>
+          <div
+            style={{
+              position: "absolute",
+              bottom: "0",
+            }}
+          >
             <DexIcons />
           </div>
           <div style={{ position: "absolute" }}>
@@ -125,7 +163,7 @@ export const Dexterity: React.FC = () => {
               Software
             </p>
           </div>
-          <div
+          {/* <div
             style={{
               position: "absolute",
               left: "0",
@@ -133,21 +171,21 @@ export const Dexterity: React.FC = () => {
               height: "100%",
               // backgroundColor: "green",
             }}
-          >
-            <AiOutlineCode
-              // size="22rem"
-              style={{
-                width: "100%",
-                height: "100%",
-                fill: "#0cce6b",
-                // backgroundColor: "red",
-                position: "absolute",
-                marginTop: "3rem",
-                left: "-60rem",
-                transform: `translateX(${ParallaxAttributes.yOffset / 3.2}px)`,
-              }}
-            />
-          </div>
+          > */}
+          <AiOutlineCode
+            size="22rem"
+            style={{
+              // width: "100%",
+              // height: "100%",
+              fill: "#0cce6b",
+              // backgroundColor: "red",
+              position: "absolute",
+              marginTop: "3rem",
+              // left: "-10vw",
+              // transform: `translateX(${ParallaxAttributes.yOffset / 3.0}px)`,
+            }}
+          />
+          {/* </div> */}
         </Col>
         <Col
           xs={12}
@@ -188,26 +226,16 @@ export const Dexterity: React.FC = () => {
               // transform: `translateX(-${ParallaxAttributes.yOffset / 50}px)`,
             }}
           />
-          <Icons
-            width="100%"
-            height="100%"
-            style={{
-              // marginTop: "80rem",
-              // marginLeft: "-35rem",
-              // left: "",
-              // right: "-85rem",
-              position: "absolute",
-              // transform: `translateX(-${ParallaxAttributes.yOffset / 2.5}px)`,
-            }}
-          />
           {/* </div> */}
           <GiPencilBrush
+            size="20rem"
             style={{
-              width: "100%",
-              height: "100%",
+              // width: "100%",
+              // height: "100%",
               fill: "#ffb400",
               // right: "-80rem",
               position: "absolute",
+              top: "3rem",
               // transform: `translateX(-${ParallaxAttributes.yOffset / 2.5}px)`,
             }}
           />
