@@ -27,11 +27,29 @@ export const Dexterity: React.FC = () => {
         margin: "0",
         padding: "0",
         overflow: "hidden",
+        // height: "100vh",
       }}
     >
+      <Row>
+        <Col
+          xs={12}
+          sm={12}
+          md={12}
+          lg={12}
+          xl={12}
+          style={{
+            backgroundColor: "red",
+            // transform: `translateY(-${ParallaxAttributes.yOffset / 2.5}px)`,
+            // marginTop: "65rem",
+            height: "20rem",
+          }}
+        >
+          <p style={{ textAlign: "center" }}>Dexterity</p>
+        </Col>
+      </Row>
       <Row
         style={{
-          // backgroundColor: "red",
+          backgroundColor: "blue",
           marginLeft: "2%",
           marginRight: "2%",
           display: "flex",
@@ -40,8 +58,9 @@ export const Dexterity: React.FC = () => {
           margin: "0",
           padding: "0",
           width: "100%",
-          marginTop: "80rem",
-          transform: `translateY(-${ParallaxAttributes.yOffset / 2.5}px)`,
+          // marginTop: "10rem",
+          // backgroundColor: "blue",
+          // transform: `translateY(-${ParallaxAttributes.yOffset / 2.5}px)`,
         }}
       >
         <Col
@@ -52,7 +71,7 @@ export const Dexterity: React.FC = () => {
           xl={12}
           style={{
             // backgroundColor: "#0cce6b",
-            // backgroundColor: "#000d2a",
+            backgroundColor: "#000d2a",
             height: "40rem",
             // maxHeight: "35rem",
             overflow: "hidden",
@@ -74,22 +93,13 @@ export const Dexterity: React.FC = () => {
           </div>
           <AiOutlineCode
             style={{
-              width: "100%",
+              width: "50%",
               height: "100%",
               fill: "#0cce6b",
               // backgroundColor: "red",
               position: "absolute",
-              left: "-60rem",
-              transform: `translateX(${ParallaxAttributes.yOffset / 3.2}px)`,
-            }}
-          />
-          <Pi
-            width="5rem"
-            height="5rem"
-            style={{
-              marginTop: "105rem",
-              position: "absolute",
-              transform: `translateY(-${ParallaxAttributes.yOffset / 2}px)`,
+              // left: "-60rem",
+              // transform: `translateX(${ParallaxAttributes.yOffset / 3.2}px)`,
             }}
           />
         </Col>
@@ -97,8 +107,8 @@ export const Dexterity: React.FC = () => {
           xs={12}
           sm={12}
           md={12}
-          lg={12}
-          xl={12}
+          lg={6}
+          xl={6}
           style={{
             // backgroundColor: "aqua",
             height: "40rem",
@@ -129,7 +139,7 @@ export const Dexterity: React.FC = () => {
               // left: "",
               right: "0",
               position: "absolute",
-              transform: `translateX(-${ParallaxAttributes.yOffset / 50}px)`,
+              // transform: `translateX(-${ParallaxAttributes.yOffset / 50}px)`,
             }}
           />
           <Icons
@@ -139,9 +149,9 @@ export const Dexterity: React.FC = () => {
               // marginTop: "80rem",
               // marginLeft: "-35rem",
               // left: "",
-              right: "-85rem",
+              // right: "-85rem",
               position: "absolute",
-              transform: `translateX(-${ParallaxAttributes.yOffset / 2.5}px)`,
+              // transform: `translateX(-${ParallaxAttributes.yOffset / 2.5}px)`,
             }}
           />
           {/* </div> */}
@@ -150,9 +160,9 @@ export const Dexterity: React.FC = () => {
               width: "100%",
               height: "100%",
               fill: "#ffb400",
-              right: "-80rem",
+              // right: "-80rem",
               position: "absolute",
-              transform: `translateX(-${ParallaxAttributes.yOffset / 2.5}px)`,
+              // transform: `translateX(-${ParallaxAttributes.yOffset / 2.5}px)`,
             }}
           />
         </Col>
