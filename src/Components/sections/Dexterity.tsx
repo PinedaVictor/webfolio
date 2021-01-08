@@ -5,9 +5,19 @@ import { AiFillCode, AiOutlineCode } from "react-icons/ai";
 // import { FaFileCode, FaCode } from "react-icons/fa";
 // import { GrCode } from "react-icons/gr";
 // import { BiCodeAlt, BiCodeCurly } from "react-icons/bi";
-import { Pi, Icons } from "../../Assets/icons";
+import {
+  Pi,
+  Icons,
+  FirebaseIcon,
+  Sass,
+  Nx,
+  LB,
+  ReactIcon,
+  Scala,
+  Java,
+} from "../../Assets/icons";
 import { ParallaxContext } from "../Parallax";
-
+import gig from "../../Assets/images/one.jpg";
 export const Dexterity: React.FC = () => {
   const ParallaxAttributes = useContext(ParallaxContext);
 
@@ -17,6 +27,17 @@ export const Dexterity: React.FC = () => {
     "Transform::::",
     (ParallaxAttributes.yOffset / ParallaxAttributes.viewPort.width) * 100
   );
+
+  const DexIcons = () => {
+    const icons = [Pi, FirebaseIcon, Sass, Nx, ReactIcon, Scala, Java];
+    return (
+      <div>
+        {icons.map((Icon: any, index) => (
+          <Icon width="5rem" height="5rem" key={index} />
+        ))}
+      </div>
+    );
+  };
   return (
     <Container
       fluid
@@ -72,12 +93,25 @@ export const Dexterity: React.FC = () => {
           style={{
             // backgroundColor: "#0cce6b",
             backgroundColor: "#000d2a",
-            height: "40rem",
+            height: "45rem",
             // maxHeight: "35rem",
             overflow: "hidden",
           }}
         >
-          {/* aqua 00c5d4 */}
+          <div
+            style={{
+              width: "100vw",
+              height: "100vh",
+              backgroundImage: `url(${gig})`,
+              backgroundSize: "100vh 100%",
+              backgroundRepeat: "no-repeat",
+              position: "absolute",
+              left: "0",
+            }}
+          />
+          <div style={{ position: "absolute" }}>
+            <DexIcons />
+          </div>
           <div style={{ position: "absolute" }}>
             <p
               style={{
@@ -91,17 +125,29 @@ export const Dexterity: React.FC = () => {
               Software
             </p>
           </div>
-          <AiOutlineCode
+          <div
             style={{
-              width: "50%",
-              height: "100%",
-              fill: "#0cce6b",
-              // backgroundColor: "red",
               position: "absolute",
-              // left: "-60rem",
-              // transform: `translateX(${ParallaxAttributes.yOffset / 3.2}px)`,
+              left: "0",
+              width: "100%",
+              height: "100%",
+              // backgroundColor: "green",
             }}
-          />
+          >
+            <AiOutlineCode
+              // size="22rem"
+              style={{
+                width: "100%",
+                height: "100%",
+                fill: "#0cce6b",
+                // backgroundColor: "red",
+                position: "absolute",
+                marginTop: "3rem",
+                left: "-60rem",
+                transform: `translateX(${ParallaxAttributes.yOffset / 3.2}px)`,
+              }}
+            />
+          </div>
         </Col>
         <Col
           xs={12}
