@@ -11,3 +11,5 @@ export { ReactComponent as LeftBrace } from "./leftBrace.svg";
 export { ReactComponent as RightBrace } from "./rightBrace.svg";
 export { ReactComponent as LB } from "./LB.svg";
 export { ReactComponent as Icons } from "./Icons.svg";
+export { ReactComponent as Ai } from "./ai.svg";
+export { ReactComponent as Ps } from "./ps.svg";
