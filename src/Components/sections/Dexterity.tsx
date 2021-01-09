@@ -1,13 +1,12 @@
-import React, { useContext, ReactComponentElement } from "react";
+import React, { useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { GiPencilBrush } from "react-icons/gi";
-import { AiFillCode, AiOutlineCode } from "react-icons/ai";
+import { AiOutlineCode } from "react-icons/ai";
 // import { FaFileCode, FaCode } from "react-icons/fa";
 // import { GrCode } from "react-icons/gr";
 // import { BiCodeAlt, BiCodeCurly } from "react-icons/bi";
 import {
   Pi,
-  Icons,
   FirebaseIcon,
   Sass,
   Nx,
@@ -17,9 +16,12 @@ import {
   Arduino,
   Ts,
 } from "../../Assets/icons";
-import { TechEye, CPU, TechStack, Wave } from "../../Assets/vectors";
+import { Wave } from "../../Assets/vectors";
 import { ParallaxContext } from "../Parallax";
-import gig from "../../Assets/images/Edit.png";
+// import gig from "../../Assets/images/Edit.png";
+
+type SVGIcon = React.FC<React.SVGProps<SVGSVGElement>>;
+
 export const Dexterity: React.FC = () => {
   const ParallaxAttributes = useContext(ParallaxContext);
 
@@ -50,7 +52,7 @@ export const Dexterity: React.FC = () => {
           flexWrap: "wrap-reverse",
         }}
       >
-        {icons.map((Icon: any, index) => (
+        {icons.map((Icon: SVGIcon, index) => (
           <Col
             xs={4}
             sm={2}

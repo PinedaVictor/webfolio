@@ -3,7 +3,9 @@ import { Col, Button } from "react-bootstrap";
 import { useTransition, animated } from "react-spring";
 import { IoMdArrowRoundUp, IoMdClose } from "react-icons/io";
 import { Code, TechStack } from "../../Assets/vectors";
+import { IconType } from "react-icons";
 
+type FrameworkIcon = { icon: IconType; Framework: string };
 interface ProjectCardProps {
   data: any;
 }
@@ -99,7 +101,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
         >
           <Code />
         </div>
-        {projectData.icons.map((Icon: any, index: number) => (
+        {projectData.icons.map((Icon: FrameworkIcon, index: number) => (
           <div
             key={index}
             style={{
