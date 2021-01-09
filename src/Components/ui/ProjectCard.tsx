@@ -172,8 +172,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
           bottom: "0",
           // zIndex: 1,
           margin: "10px",
-          borderRadius: "50%",
-          width: "2.7rem",
+          borderRadius: "50px",
+          // width: "10rem",
+          width: info ? "2.7rem" : "10rem",
           height: "2.7rem",
           backgroundColor: "black",
           display: "flex",
@@ -184,6 +185,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
         }}
         onClick={() => toggle(!info)}
       >
+        {!info && (
+          <p
+            style={{ margin: "auto", fontWeight: "bold", letterSpacing: "1px" }}
+          >
+            Tech Stack
+          </p>
+        )}
         <div
           style={{
             right: "0",
