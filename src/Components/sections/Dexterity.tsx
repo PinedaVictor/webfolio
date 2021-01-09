@@ -17,7 +17,7 @@ import {
   Arduino,
   Ts,
 } from "../../Assets/icons";
-import { TechEye } from "../../Assets/vectors";
+import { TechEye, CPU, TechStack, Wave } from "../../Assets/vectors";
 import { ParallaxContext } from "../Parallax";
 import gig from "../../Assets/images/Edit.png";
 export const Dexterity: React.FC = () => {
@@ -54,6 +54,7 @@ export const Dexterity: React.FC = () => {
           <Col
             xs={4}
             sm={2}
+            // md={4}
             lg={2}
             key={index}
             style={{
@@ -124,24 +125,11 @@ export const Dexterity: React.FC = () => {
           style={{
             // backgroundColor: "#0cce6b",
             // backgroundColor: "#000d2a",
-            // backgroundColor: "black",
-            height: "45rem",
+            height: "40rem",
             // maxHeight: "35rem",
             overflow: "hidden",
           }}
         >
-          <div
-            style={{
-              width: "100vw",
-              height: "100vh",
-              backgroundImage: `url(${gig})`,
-              backgroundSize: "100vh 100%",
-              backgroundRepeat: "no-repeat",
-              position: "absolute",
-              left: "0",
-              // backgroundColor: "red",
-            }}
-          />
           <div
             style={{
               position: "absolute",
@@ -154,38 +142,27 @@ export const Dexterity: React.FC = () => {
             <p
               style={{
                 fontSize: "3rem",
-                color: "#0cce6b",
                 fontFamily: "OCRAExtended, OCR A Extended",
-                // backgroundColor: "red",
                 textAlign: "center",
+                color: "white",
               }}
             >
               Software
             </p>
           </div>
-          {/* <div
-            style={{
-              position: "absolute",
-              left: "0",
-              width: "100%",
-              height: "100%",
-              // backgroundColor: "green",
-            }}
-          > */}
           <AiOutlineCode
-            size="22rem"
+            size="20rem"
+            color="white"
             style={{
-              // width: "100%",
-              // height: "100%",
-              fill: "#0cce6b",
-              // backgroundColor: "red",
               position: "absolute",
               marginTop: "3rem",
-              // left: "-10vw",
-              // transform: `translateX(${ParallaxAttributes.yOffset / 3.0}px)`,
             }}
           />
-          {/* </div> */}
+          <Wave width="80rem" style={{ marginLeft: "-10rem" }} />
+          <Wave
+            width="80rem"
+            style={{ marginTop: "-5rem", marginLeft: "-15rem" }}
+          />
         </Col>
         <Col
           xs={12}
@@ -205,7 +182,8 @@ export const Dexterity: React.FC = () => {
             <p
               style={{
                 fontSize: "3rem",
-                color: "#ffb400",
+                // color: "#ffb400",
+                color: "white",
                 fontFamily: "OCRAExtended, OCR A Extended",
                 textAlign: "center",
               }}
@@ -213,26 +191,13 @@ export const Dexterity: React.FC = () => {
               Design
             </p>
           </div>
-          {/* <div> */}
-          <Pi
-            width="5rem"
-            height="5rem"
-            style={{
-              // marginTop: "80rem",
-              // marginLeft: "-35rem",
-              // left: "",
-              right: "0",
-              position: "absolute",
-              // transform: `translateX(-${ParallaxAttributes.yOffset / 50}px)`,
-            }}
-          />
-          {/* </div> */}
           <GiPencilBrush
             size="20rem"
+            color="white"
             style={{
               // width: "100%",
               // height: "100%",
-              fill: "#ffb400",
+              // fill: "#ffb400",
               // right: "-80rem",
               position: "absolute",
               top: "3rem",
