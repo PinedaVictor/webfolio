@@ -13,3 +13,4 @@ export { ReactComponent as LB } from "./LB.svg";
 export { ReactComponent as Icons } from "./Icons.svg";
 export { ReactComponent as Ai } from "./ai.svg";
 export { ReactComponent as Ps } from "./ps.svg";
+export { ReactComponent as Figma } from "./figma.svg";
