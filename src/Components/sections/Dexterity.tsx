@@ -15,8 +15,11 @@ import {
   Java,
   Arduino,
   Ts,
+  Ai,
+  Ps,
+  Figma,
 } from "../../Assets/icons";
-import { Wave } from "../../Assets/vectors";
+import { Wave, Sq, WaveRight } from "../../Assets/vectors";
 import { ParallaxContext } from "../Parallax";
 // import gig from "../../Assets/images/Edit.png";
 
@@ -32,7 +35,7 @@ export const Dexterity: React.FC = () => {
     (ParallaxAttributes.yOffset / ParallaxAttributes.viewPort.width) * 100
   );
 
-  const DexIcons = () => {
+  const DexSoftwareIcons = () => {
     const icons = [
       Pi,
       Sass,
@@ -58,6 +61,35 @@ export const Dexterity: React.FC = () => {
             sm={2}
             // md={4}
             lg={2}
+            key={index}
+            style={{
+              // paddingLeft: "15px",
+              padding: "10px",
+              // width: "6rem",
+            }}
+          >
+            <Icon width="5rem" height="5rem" />
+          </Col>
+        ))}
+      </div>
+    );
+  };
+
+  const DexFrameworkIcons = (props: { icons: SVGIcon[] }) => {
+    return (
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap-reverse",
+        }}
+      >
+        {props.icons.map((Icon: SVGIcon, index: number) => (
+          <Col
+            xs={4}
+            sm={3}
+            // md={4}
+            lg={4}
             key={index}
             style={{
               // paddingLeft: "15px",
@@ -138,7 +170,7 @@ export const Dexterity: React.FC = () => {
               bottom: "0",
             }}
           >
-            <DexIcons />
+            <DexSoftwareIcons />
           </div>
           <div style={{ position: "absolute" }}>
             <p
@@ -180,6 +212,14 @@ export const Dexterity: React.FC = () => {
           }}
         >
           {/* Oj ff592e */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: "0",
+            }}
+          >
+            <DexFrameworkIcons icons={[Ai, Ps, Figma]} />
+          </div>
           <div style={{ position: "absolute" }}>
             <p
               style={{
@@ -205,6 +245,10 @@ export const Dexterity: React.FC = () => {
               top: "3rem",
               // transform: `translateX(-${ParallaxAttributes.yOffset / 2.5}px)`,
             }}
+          />
+          <Sq
+            width="80rem"
+            style={{ marginLeft: "-21rem", marginTop: "-12rem" }}
           />
         </Col>
       </Row>
