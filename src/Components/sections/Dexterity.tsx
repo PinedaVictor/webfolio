@@ -19,7 +19,7 @@ import {
   Ps,
   Figma,
 } from "../../Assets/icons";
-import { Wave, Sq, WaveRight } from "../../Assets/vectors";
+import { Wave, Sq } from "../../Assets/vectors";
 import { ParallaxContext } from "../Parallax";
 // import gig from "../../Assets/images/Edit.png";
 
@@ -247,8 +247,8 @@ export const Dexterity: React.FC = () => {
             }}
           />
           <Sq
-            width="80rem"
-            style={{ marginLeft: "-21rem", marginTop: "-12rem" }}
+            width="50rem"
+            style={{ marginLeft: "-1rem", marginTop: "-1rem" }}
           />
         </Col>
       </Row>
