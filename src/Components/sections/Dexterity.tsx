@@ -21,7 +21,7 @@ import {
 } from "../../Assets/icons";
 import { Wave, Sq } from "../../Assets/vectors";
 import { ParallaxContext } from "../Parallax";
-// import gig from "../../Assets/images/Edit.png";
+import gig from "../../Assets/images/meBlueHat.png";
 
 type SVGIcon = React.FC<React.SVGProps<SVGSVGElement>>;
 
@@ -209,8 +209,33 @@ export const Dexterity: React.FC = () => {
             height: "40rem",
             // maxHeight: "35rem",
             overflow: "hidden",
+            // backgroundImage: `url(${gig})`,
+            // backgroundSize: "100vh 100%",
           }}
         >
+          {/* <div
+            style={{
+              width: "100%",
+              height: "100%",
+              backgroundImage: `url(${gig})`,
+              backgroundSize: "100vh 100%",
+              backgroundRepeat: "no-repeat",
+              position: "absolute",
+            }}
+          /> */}
+          <img
+            src={gig}
+            width="700px"
+            height="700rem"
+            style={{
+              position: "absolute",
+              // marginTop: "-20rem",
+              // marginLeft: "-20rem",
+              // float: "right",
+              right: "-8rem",
+              bottom: "0",
+            }}
+          />
           {/* Oj ff592e */}
           <div
             style={{
@@ -233,7 +258,7 @@ export const Dexterity: React.FC = () => {
               Design
             </p>
           </div>
-          <GiPencilBrush
+          {/* <GiPencilBrush
             size="20rem"
             color="white"
             style={{
@@ -245,11 +270,11 @@ export const Dexterity: React.FC = () => {
               top: "3rem",
               // transform: `translateX(-${ParallaxAttributes.yOffset / 2.5}px)`,
             }}
-          />
-          <Sq
+          /> */}
+          {/* <Sq
             width="50rem"
             style={{ marginLeft: "-1rem", marginTop: "-1rem" }}
-          />
+          /> */}
         </Col>
       </Row>
     </Container>
