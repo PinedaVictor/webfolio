@@ -21,7 +21,7 @@ import {
 } from "../../Assets/icons";
 import { Wave, Sq } from "../../Assets/vectors";
 import { ParallaxContext } from "../Parallax";
-import gig from "../../Assets/images/meBlueHat.png";
+import gig from "../../Assets/images/me2MocLa.png";
 
 type SVGIcon = React.FC<React.SVGProps<SVGSVGElement>>;
 
@@ -97,7 +97,7 @@ export const Dexterity: React.FC = () => {
               // width: "6rem",
             }}
           >
-            <Icon width="5rem" height="5rem" />
+            <Icon width="3rem" height="3rem" />
           </Col>
         ))}
       </div>
@@ -243,7 +243,7 @@ export const Dexterity: React.FC = () => {
               bottom: "0",
             }}
           >
-            <DexFrameworkIcons icons={[Ai, Ps, Figma]} />
+            <DexFrameworkIcons icons={[Ai, Ps]} />
           </div>
           <div style={{ position: "absolute" }}>
             <p
