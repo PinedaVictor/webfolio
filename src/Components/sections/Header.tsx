@@ -11,7 +11,6 @@ export const Header: React.FC = () => {
     <div
       style={{
         backgroundColor: "transparent",
-        // backgroundColor: "red",
         top: "0",
         position: "fixed",
         width: "100%",
@@ -26,28 +25,17 @@ export const Header: React.FC = () => {
           toggle(!drawer);
         }}
         style={{
-          // padding: "10px",
-          // margin: "0",
           backgroundColor: "black",
           border: "2px solid white",
           borderRadius: "15px",
           marginLeft: "-33px",
           width: "3.7rem",
-          // height: "3rem",
         }}
       >
         {drawer ? (
           <IoMdClose size="2.5rem" style={{ paddingLeft: "7px" }} />
         ) : (
-          <CgMenu
-            size="2.5rem"
-            style={
-              {
-                // backgroundColor: "red",
-                // paddingBottom: "5px",
-              }
-            }
-          />
+          <CgMenu size="2.5rem" />
         )}
       </Button>
       <Drawer control={drawer} />

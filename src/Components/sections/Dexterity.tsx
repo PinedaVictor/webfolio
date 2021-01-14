@@ -2,9 +2,6 @@ import React, { useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { GiBiceps } from "react-icons/gi";
 import { AiOutlineCode } from "react-icons/ai";
-// import { FaFileCode, FaCode } from "react-icons/fa";
-// import { GrCode } from "react-icons/gr";
-// import { BiCodeAlt, BiCodeCurly } from "react-icons/bi";
 import {
   Pi,
   FirebaseIcon,
