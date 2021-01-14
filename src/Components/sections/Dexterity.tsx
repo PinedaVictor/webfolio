@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { GiPencilBrush } from "react-icons/gi";
+import { GiBiceps } from "react-icons/gi";
 import { AiOutlineCode } from "react-icons/ai";
 // import { FaFileCode, FaCode } from "react-icons/fa";
 // import { GrCode } from "react-icons/gr";
@@ -17,11 +17,11 @@ import {
   Ts,
   Ai,
   Ps,
-  Figma,
+  // Figma,
 } from "../../Assets/icons";
-import { Wave, Sq } from "../../Assets/vectors";
+import { Wave } from "../../Assets/vectors";
 import { ParallaxContext } from "../Parallax";
-import gig from "../../Assets/images/me2MocLa.png";
+import gig from "../../Assets/images/me2Back.png";
 
 type SVGIcon = React.FC<React.SVGProps<SVGSVGElement>>;
 
@@ -97,7 +97,7 @@ export const Dexterity: React.FC = () => {
               // width: "6rem",
             }}
           >
-            <Icon width="3rem" height="3rem" />
+            <Icon width="5rem" height="5rem" />
           </Col>
         ))}
       </div>
@@ -127,11 +127,41 @@ export const Dexterity: React.FC = () => {
             // backgroundColor: "red",
             // transform: `translateY(-${ParallaxAttributes.yOffset / 2.5}px)`,
             // marginTop: "65rem",
-            height: "20rem",
+            // height: "20rem",
+            marginTop: "5rem",
+            marginBottom: "5rem",
           }}
         >
-          <p style={{ textAlign: "center" }}>Dexterity</p>
-          {/* <TechEye width="100vw" /> */}
+          <p
+            style={{
+              textAlign: "center",
+              color: "white",
+              fontSize: "10vw",
+              width: "100%",
+              fontFamily: "OCRAExtended, OCR A Extended",
+            }}
+          >
+            Dexterity
+          </p>
+          <div
+            style={{
+              margin: "auto",
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              width: "100%",
+            }}
+          >
+            <GiBiceps
+              size="5rem"
+              color="white"
+              style={{
+                borderRadius: "50%",
+                backgroundColor: "#00c5d4",
+              }}
+            />
+          </div>
         </Col>
       </Row>
       <Row
@@ -157,10 +187,7 @@ export const Dexterity: React.FC = () => {
           lg={6}
           xl={6}
           style={{
-            // backgroundColor: "#0cce6b",
-            // backgroundColor: "#000d2a",
             height: "40rem",
-            // maxHeight: "35rem",
             overflow: "hidden",
           }}
         >
@@ -205,7 +232,6 @@ export const Dexterity: React.FC = () => {
           lg={6}
           xl={6}
           style={{
-            // backgroundColor: "aqua",
             height: "40rem",
             // maxHeight: "35rem",
             overflow: "hidden",
@@ -213,16 +239,6 @@ export const Dexterity: React.FC = () => {
             // backgroundSize: "100vh 100%",
           }}
         >
-          {/* <div
-            style={{
-              width: "100%",
-              height: "100%",
-              backgroundImage: `url(${gig})`,
-              backgroundSize: "100vh 100%",
-              backgroundRepeat: "no-repeat",
-              position: "absolute",
-            }}
-          /> */}
           <img
             src={gig}
             width="700px"
@@ -236,7 +252,6 @@ export const Dexterity: React.FC = () => {
               bottom: "0",
             }}
           />
-          {/* Oj ff592e */}
           <div
             style={{
               position: "absolute",
@@ -249,7 +264,6 @@ export const Dexterity: React.FC = () => {
             <p
               style={{
                 fontSize: "3rem",
-                // color: "#ffb400",
                 color: "white",
                 fontFamily: "OCRAExtended, OCR A Extended",
                 textAlign: "center",
@@ -258,23 +272,6 @@ export const Dexterity: React.FC = () => {
               Design
             </p>
           </div>
-          {/* <GiPencilBrush
-            size="20rem"
-            color="white"
-            style={{
-              // width: "100%",
-              // height: "100%",
-              // fill: "#ffb400",
-              // right: "-80rem",
-              position: "absolute",
-              top: "3rem",
-              // transform: `translateX(-${ParallaxAttributes.yOffset / 2.5}px)`,
-            }}
-          /> */}
-          {/* <Sq
-            width="50rem"
-            style={{ marginLeft: "-1rem", marginTop: "-1rem" }}
-          /> */}
         </Col>
       </Row>
     </Container>
