@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../../Styles/main.scss";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { IoMdClose } from "react-icons/io";
+import { BiMessageRoundedDetail } from "react-icons/bi";
 import { useTransition, animated } from "react-spring";
 
 export const Contact: React.FC = () => {
@@ -228,10 +229,54 @@ export const Contact: React.FC = () => {
         margin: "0",
         padding: "0",
         marginTop: "33px",
-        // paddingBottom: "5rem",
-        // paddingTop: "5rem",
+        overflow: "hidden",
       }}
     >
+      <Row>
+        <Col
+          xs={12}
+          sm={12}
+          md={12}
+          lg={12}
+          xl={12}
+          style={{
+            marginTop: "5rem",
+            marginBottom: "5rem",
+          }}
+        >
+          <p
+            style={{
+              textAlign: "center",
+              color: "white",
+              fontSize: "10vw",
+              width: "100%",
+              fontFamily: "OCRAExtended, OCR A Extended",
+            }}
+          >
+            Contact
+          </p>
+          <div
+            style={{
+              margin: "auto",
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              width: "100%",
+            }}
+          >
+            <BiMessageRoundedDetail
+              size="5rem"
+              color="white"
+              style={{
+                borderRadius: "50%",
+                backgroundColor: "#00c5d4",
+                padding: "7px",
+              }}
+            />
+          </div>
+        </Col>
+      </Row>
       <Row
         style={{
           // backgroundColor: "red",
@@ -285,7 +330,7 @@ export const Contact: React.FC = () => {
                 fontFamily: "Arial",
               }}
             >
-              Contact
+              Email
             </p>
           </Button>
           <div
@@ -368,7 +413,7 @@ export const Contact: React.FC = () => {
                   fontFamily: "Arial",
                 }}
               >
-                Resume
+                Get Resume
               </p>
             </Button>
           </div>

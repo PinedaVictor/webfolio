@@ -1,4 +1,5 @@
 import React from "react";
+import "../../Styles/main.scss";
 import { Row, Col, Container } from "react-bootstrap";
 
 export const Footer: React.FC = () => {
@@ -8,23 +9,20 @@ export const Footer: React.FC = () => {
       style={{
         height: "15rem",
         backgroundColor: "",
-        borderTop: "2px solid white",
       }}
     >
       <Row style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
-        <Col xs={12} sm={12} md={6} lg={6} style={{ backgroundColor: "" }}>
-          <p
-            style={{
-              fontFamily: "OCRAExtended, OCR A Extended",
-              fontSize: "60px",
-              color: "#00c5d4",
-              width: "100%",
-              textAlign: "center",
-            }}
-          >
-            V.P.
-          </p>
-        </Col>
+        <div
+          className="contactButton"
+          style={{ height: "2px", width: "100%" }}
+        />
+        <Col
+          xs={12}
+          sm={12}
+          md={6}
+          lg={6}
+          style={{ backgroundColor: "" }}
+        ></Col>
         <Col xs={12} sm={12} md={6} lg={6} style={{ backgroundColor: "green" }}>
           <ul>
             <li>Home</li>
