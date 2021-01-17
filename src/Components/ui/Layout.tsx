@@ -1,5 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import { Footer } from "../sections/Footer";
 // import { Header } from "../sections/Header";
 export const Layout: React.FC = (props) => {
   return (
@@ -7,6 +8,7 @@ export const Layout: React.FC = (props) => {
       {/* TODO: When site grows implement more navigation */}
       {/* <Header /> */}
       {props.children}
+      <Footer />
     </Container>
   );
 };
