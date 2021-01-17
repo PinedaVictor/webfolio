@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { ProjectCard } from "../ui/ProjectCard";
 import { Foodie } from "../../Data/projects";
 
@@ -18,6 +18,21 @@ export const FeaturedProjects: React.FC = () => {
         overflow: "hidden",
       }}
     >
+      <Row style={{ backgroundColor: "", width: "100%" }}>
+        <p
+          style={{
+            textAlign: "left",
+            color: "white",
+            fontSize: "6vw",
+            fontFamily: "OCRAExtended, OCR A Extended",
+            borderRadius: "50px",
+            marginLeft: "7%",
+            backgroundColor: "black",
+          }}
+        >
+          Projects/Work
+        </p>
+      </Row>
       {FeaturedProjects.map((item, index) => (
         <ProjectCard key={index} data={item} />
       ))}
