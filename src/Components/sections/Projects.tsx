@@ -36,6 +36,21 @@ export const FeaturedProjects: React.FC = () => {
       {FeaturedProjects.map((item, index) => (
         <ProjectCard key={index} data={item} />
       ))}
+      {/* <Row style={{ backgroundColor: "", width: "100%" }}>
+        <p
+          style={{
+            color: "white",
+            fontSize: "20px",
+            fontFamily: "OCRAExtended, OCR A Extended",
+            float: "right",
+            textAlign: "right",
+            width: "100%",
+            marginTop: "15px",
+          }}
+        >
+          All Projects...
+        </p>
+      </Row> */}
     </Container>
   );
 };

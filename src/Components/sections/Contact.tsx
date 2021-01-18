@@ -290,7 +290,6 @@ export const Contact: React.FC = () => {
           width: "100%",
         }}
       >
-        {/* <Col md={3}></Col> */}
         <Col
           xs={12}
           sm={12}
@@ -298,7 +297,7 @@ export const Contact: React.FC = () => {
           lg={6}
           xl={6}
           style={{
-            // backgroundColor: "#0cce6b",
+            // backgr`oundColor: "#0cce6b",
             // backgroundColor: "#000d2a",
             height: "35rem",
             // height: "100%",
@@ -367,11 +366,11 @@ export const Contact: React.FC = () => {
           )}
         </Col>
         <Col
-          xs={11}
-          sm={11}
+          xs={12}
+          sm={12}
           md={6}
-          lg={5}
-          xl={5}
+          lg={6}
+          xl={6}
           // className="contactButton"
           style={{
             // backgroundColor: "red",

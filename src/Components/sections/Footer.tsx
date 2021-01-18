@@ -7,7 +7,6 @@ export const Footer: React.FC = () => {
     <Container
       fluid
       style={{
-        height: "15rem",
         backgroundColor: "",
       }}
     >
