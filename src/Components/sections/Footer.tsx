@@ -22,8 +22,8 @@ export const Footer: React.FC = () => {
           lg={6}
           style={{ backgroundColor: "" }}
         ></Col>
-        <Col xs={12} sm={12} md={6} lg={6} style={{ backgroundColor: "green" }}>
-          <ul>
+        <Col xs={12} sm={12} md={6} lg={6} style={{ backgroundColor: "" }}>
+          <ul style={{ fontSize: "20px", color: "white" }}>
             <li>Home</li>
             <li>All Projects</li>
           </ul>
