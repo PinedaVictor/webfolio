@@ -41,7 +41,7 @@ export const Hero: React.FC<HeroProps> = (props) => {
   });
 
   useEffect(() => {
-    console.log("View port prop in hero in useEffect with:::", props.viewPort);
+    // console.log("View port prop in hero in useEffect with:::", props.viewPort);
     let marginTop = 0;
     const width = props.viewPort.width;
     const height = props.viewPort.height;

@@ -15,7 +15,7 @@ export const Contact: React.FC = () => {
     for (let i = 0; i < 20; i++) {
       // tempArr.push(Math.random() * (100 - 25) + 25);
       tempArr.push(((i + 1) * 100) / 20);
-      console.log("index:::", i);
+      // console.log("index:::", i);
     }
     setAccentDiv(tempArr);
   };
@@ -24,7 +24,7 @@ export const Contact: React.FC = () => {
     GenAccentDivs();
   }, []);
 
-  const contactTransition = useTransition(contactForm, null, {
+  const contactFormTransition = useTransition(contactForm, null, {
     config: {
       duration: 450,
     },
@@ -46,7 +46,7 @@ export const Contact: React.FC = () => {
     leave: { opacity: 0 },
   });
 
-  const resumeTransition = useTransition(resumeForm, null, {
+  const resumeFormTransition = useTransition(resumeForm, null, {
     config: {
       duration: 450,
     },
@@ -66,6 +66,11 @@ export const Contact: React.FC = () => {
     },
     leave: { opacity: 0 },
   });
+
+  const submitContactForm = (event: any) => {
+    event.preventDefault();
+    console.log("Calling onSubmit");
+  };
 
   const ContactForm = () => {
     return (
@@ -98,6 +103,7 @@ export const Contact: React.FC = () => {
           <IoMdClose size="2rem" style={{ marginLeft: "-5px" }} />
         </Button>
         <Form
+          onSubmit={submitContactForm}
           style={{
             maxWidth: "35rem",
             margin: "auto",
@@ -219,6 +225,7 @@ export const Contact: React.FC = () => {
       </Col>
     );
   };
+
   return (
     <Container
       fluid
@@ -354,7 +361,7 @@ export const Contact: React.FC = () => {
               ))}
             </div>
           </div>
-          {contactTransition.map(
+          {contactFormTransition.map(
             ({ item, key, props }) =>
               item && (
                 <Col key={key} sm={12}>
@@ -416,7 +423,7 @@ export const Contact: React.FC = () => {
               </p>
             </Button>
           </div>
-          {resumeTransition.map(
+          {resumeFormTransition.map(
             ({ item, key, props }) =>
               item && (
                 <Col key={key} sm={12}>

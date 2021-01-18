@@ -25,12 +25,12 @@ type SVGIcon = React.FC<React.SVGProps<SVGSVGElement>>;
 export const Dexterity: React.FC = () => {
   const ParallaxAttributes = useContext(ParallaxContext);
 
-  console.log("The YOFFSET::::", ParallaxAttributes.yOffset);
-  console.log("The viewport Width:::", ParallaxAttributes.viewPort);
-  console.log(
-    "Transform::::",
-    (ParallaxAttributes.yOffset / ParallaxAttributes.viewPort.width) * 100
-  );
+  // console.log("The YOFFSET::::", ParallaxAttributes.yOffset);
+  // console.log("The viewport Width:::", ParallaxAttributes.viewPort);
+  // console.log(
+  //   "Transform::::",
+  //   (ParallaxAttributes.yOffset / ParallaxAttributes.viewPort.width) * 100
+  // );
 
   const DexSoftwareIcons = () => {
     const icons = [
