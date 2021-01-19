@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, SyntheticEvent } from "react";
 import "../../Styles/main.scss";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { IoMdClose } from "react-icons/io";
@@ -66,10 +66,15 @@ export const Contact: React.FC = () => {
     },
     leave: { opacity: 0 },
   });
-
+  // React.FormEvent<HTMLFormElement>
+  // SyntheticBaseEvent
   const submitContactForm = (event: any) => {
     event.preventDefault();
-    console.log("Calling onSubmit");
+    const { name, email, subject, message } = event.target.elements;
+    // const contactForm = event.currentTarget.elements;
+
+    // console.log("Calling onSubmit with::::", name.value);
+    console.log("THis is the event::::");
   };
 
   const ContactForm = () => {
@@ -113,7 +118,7 @@ export const Contact: React.FC = () => {
           <Form.Group controlId="name">
             <Form.Control type="name" placeholder="Name" />
           </Form.Group>
-          <Form.Group controlId="formBasicEmail">
+          <Form.Group controlId="email">
             <Form.Text
               style={{
                 color: "white",
@@ -127,11 +132,11 @@ export const Contact: React.FC = () => {
             <Form.Control type="email" placeholder="Email" />
           </Form.Group>
 
-          <Form.Group controlId="formBasicEmail">
+          <Form.Group controlId="subject">
             <Form.Control type="subject" placeholder="Subject" />
           </Form.Group>
 
-          <Form.Group controlId="exampleForm.ControlTextarea1">
+          <Form.Group controlId="message">
             <Form.Control as="textarea" rows={3} placeholder="Message" />
           </Form.Group>
           <Button
