@@ -1,9 +1,11 @@
-import React, { useState, useEffect, SyntheticEvent } from "react";
+import React, { useState, useEffect } from "react";
 import "../../Styles/main.scss";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { IoMdClose } from "react-icons/io";
 import { BiMessageRoundedDetail } from "react-icons/bi";
 import { useTransition, animated } from "react-spring";
+import firebase from "firebase";
+import "firebase/functions";
 
 export const Contact: React.FC = () => {
   const [contactForm, toggleContactForm] = useState(false);
@@ -66,14 +68,20 @@ export const Contact: React.FC = () => {
     },
     leave: { opacity: 0 },
   });
+  // FIXME: Use types
   // React.FormEvent<HTMLFormElement>
   // SyntheticBaseEvent
   const submitContactForm = (event: any) => {
     event.preventDefault();
     const { name, email, subject, message } = event.target.elements;
-    // const contactForm = event.currentTarget.elements;
-
-    console.log("Calling onSubmit with::::", name.value);
+    const data = {
+      name: name.value,
+      email: email.value,
+      subject: subject.value,
+      message: message.value,
+    };
+    console.log("Calling onSubmit with::::", data);
+    const sendEmails = firebase.functions().httpsCallable("contact");
   };
 
   const ContactForm = () => {
