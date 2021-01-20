@@ -7,8 +7,20 @@ import { useTransition, animated } from "react-spring";
 import firebase from "firebase";
 import "firebase/functions";
 
+interface ContactFormFields {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
 export const Contact: React.FC = () => {
   const [contactForm, toggleContactForm] = useState(false);
+  const [constactFormFields, setFormFields] = useState<ContactFormFields>({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
   const [resumeForm, toggleResumeForm] = useState(false);
   const [accentDiv, setAccentDiv] = useState<Array<number>>([]);
 
@@ -82,6 +94,8 @@ export const Contact: React.FC = () => {
     };
     console.log("Calling onSubmit with::::", data);
     const sendEmails = firebase.functions().httpsCallable("contact");
+
+    // sendEmails(data).then(() => {});
   };
 
   const ContactForm = () => {
