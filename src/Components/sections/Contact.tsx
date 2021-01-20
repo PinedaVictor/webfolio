@@ -73,8 +73,7 @@ export const Contact: React.FC = () => {
     const { name, email, subject, message } = event.target.elements;
     // const contactForm = event.currentTarget.elements;
 
-    // console.log("Calling onSubmit with::::", name.value);
-    console.log("THis is the event::::");
+    console.log("Calling onSubmit with::::", name.value);
   };
 
   const ContactForm = () => {
