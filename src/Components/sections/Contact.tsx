@@ -103,7 +103,7 @@ export const Contact: React.FC = () => {
           setFormFields(resetForm);
         })
         .catch((error) => {
-          console.log("The email was not able to send");
+          console.log("The email was not able to send", error);
         });
     };
 
@@ -111,10 +111,8 @@ export const Contact: React.FC = () => {
       event.preventDefault();
       const name = event.target.name;
       const value = event.target.value;
-      console.log("Calling onChange");
       setFormFields((prevState) => {
         const data = Object.assign({}, prevState);
-        console.log("This is the targetvalue", data);
         const newData = Object.assign(data, { ...data, [name]: value });
         return newData;
       });
