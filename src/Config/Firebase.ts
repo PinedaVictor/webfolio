@@ -8,3 +8,4 @@ export const firebaseConfig = {
   appId: process.env.REACT_APP_appId,
   measurementId: process.env.REACT_APP_measurementId,
 };
+console.log("FB config::", firebaseConfig);

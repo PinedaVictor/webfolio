@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "../../Styles/main.scss";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { IoMdClose } from "react-icons/io";
@@ -96,9 +96,15 @@ export const Contact: React.FC = () => {
       };
 
       console.log("Calling onSubmit with::::", data);
-      // const sendEmails = firebase.functions().httpsCallable("contact");
-
-      // sendEmails(data).then(() => {});
+      const sendEmails = firebase.functions().httpsCallable("contact");
+      sendEmails(data)
+        .then(() => {
+          const resetForm = { name: "", email: "", subject: "", message: "" };
+          setFormFields(resetForm);
+        })
+        .catch((error) => {
+          console.log("The email was not able to send");
+        });
     };
 
     const handleInputChange = (event: any) => {
