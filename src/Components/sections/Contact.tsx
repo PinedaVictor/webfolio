@@ -15,12 +15,6 @@ interface ContactFormFields {
 }
 export const Contact: React.FC = () => {
   const [contactForm, toggleContactForm] = useState(false);
-  const [contactFormFields, setFormFields] = useState<ContactFormFields>({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
   const [resumeForm, toggleResumeForm] = useState(false);
   const [accentDiv, setAccentDiv] = useState<Array<number>>([]);
 
@@ -80,39 +74,47 @@ export const Contact: React.FC = () => {
     },
     leave: { opacity: 0 },
   });
-  // FIXME: Use types
-  // React.FormEvent<HTMLFormElement>
-  // SyntheticBaseEvent
-  const submitContactForm = (event: any) => {
-    event.preventDefault();
-    const { name, email, subject, message } = event.target.elements;
-    const data = {
-      name: name.value,
-      email: email.value,
-      subject: subject.value,
-      message: message.value,
-    };
-
-    console.log("Calling onSubmit with::::", data);
-    const sendEmails = firebase.functions().httpsCallable("contact");
-
-    // sendEmails(data).then(() => {});
-  };
-
-  const contactFormNameChange = (event: any) => {
-    event.preventDefault();
-    const name = event.target.name;
-    const value = event.target.value;
-    // const newState = { [name]: value } as Pick<
-    //   IAddPlayerFormState,
-    //   keyof IAddPlayerFormState
-    // >;
-    // setFormFields((prev) => ({prev, name: value }));
-
-    // console.log("THe data:::", name, value);
-  };
 
   const ContactForm = () => {
+    const [contactFormFields, setFormFields] = useState<ContactFormFields>({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+    // FIXME: Use types
+    // React.FormEvent<HTMLFormElement>
+    // SyntheticBaseEvent
+    const submitContactForm = (event: any) => {
+      event.preventDefault();
+      const { name, email, subject, message } = event.target.elements;
+      const data = {
+        name: name.value,
+        email: email.value,
+        subject: subject.value,
+        message: message.value,
+      };
+
+      console.log("Calling onSubmit with::::", data);
+      // const sendEmails = firebase.functions().httpsCallable("contact");
+
+      // sendEmails(data).then(() => {});
+    };
+
+    const handleInputChange = (event: any) => {
+      event.preventDefault();
+      const name = event.target.name;
+      const value = event.target.value;
+      console.log("Calling onChange");
+      setFormFields((prevState) => {
+        const data = Object.assign({}, prevState);
+        console.log("This is the targetvalue", data);
+        const newData = Object.assign(data, { ...data, [name]: value });
+        return newData;
+      });
+
+      console.log("After setting state");
+    };
     return (
       <Col
         xs={12}
@@ -153,7 +155,7 @@ export const Contact: React.FC = () => {
         >
           <Form.Group controlId="name">
             <Form.Control
-              onChange={(e) => contactFormNameChange(e)}
+              onChange={(e) => handleInputChange(e)}
               type="name"
               name="name"
               placeholder="Name"
@@ -173,17 +175,32 @@ export const Contact: React.FC = () => {
             </Form.Text>
             <Form.Control
               type="email"
-              // onChange={}
+              name="email"
+              onChange={(e) => handleInputChange(e)}
               placeholder="Email"
+              value={contactFormFields.email}
             />
           </Form.Group>
 
           <Form.Group controlId="subject">
-            <Form.Control type="subject" placeholder="Subject" />
+            <Form.Control
+              type="subject"
+              name="subject"
+              placeholder="Subject"
+              value={contactFormFields.subject}
+              onChange={(e) => handleInputChange(e)}
+            />
           </Form.Group>
 
           <Form.Group controlId="message">
-            <Form.Control as="textarea" rows={3} placeholder="Message" />
+            <Form.Control
+              as="textarea"
+              name="message"
+              rows={3}
+              placeholder="Message"
+              value={contactFormFields.message}
+              onChange={(e) => handleInputChange(e)}
+            />
           </Form.Group>
           <Button
             style={{
