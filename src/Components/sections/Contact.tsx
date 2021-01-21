@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../../Styles/main.scss";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { IoMdClose } from "react-icons/io";
@@ -15,7 +15,7 @@ interface ContactFormFields {
 }
 export const Contact: React.FC = () => {
   const [contactForm, toggleContactForm] = useState(false);
-  const [constactFormFields, setFormFields] = useState<ContactFormFields>({
+  const [contactFormFields, setFormFields] = useState<ContactFormFields>({
     name: "",
     email: "",
     subject: "",
@@ -92,10 +92,24 @@ export const Contact: React.FC = () => {
       subject: subject.value,
       message: message.value,
     };
+
     console.log("Calling onSubmit with::::", data);
     const sendEmails = firebase.functions().httpsCallable("contact");
 
     // sendEmails(data).then(() => {});
+  };
+
+  const contactFormNameChange = (event: any) => {
+    event.preventDefault();
+    const name = event.target.name;
+    const value = event.target.value;
+    // const newState = { [name]: value } as Pick<
+    //   IAddPlayerFormState,
+    //   keyof IAddPlayerFormState
+    // >;
+    // setFormFields((prev) => ({prev, name: value }));
+
+    // console.log("THe data:::", name, value);
   };
 
   const ContactForm = () => {
@@ -129,6 +143,7 @@ export const Contact: React.FC = () => {
           <IoMdClose size="2rem" style={{ marginLeft: "-5px" }} />
         </Button>
         <Form
+          id="ContactForm"
           onSubmit={submitContactForm}
           style={{
             maxWidth: "35rem",
@@ -137,7 +152,13 @@ export const Contact: React.FC = () => {
           }}
         >
           <Form.Group controlId="name">
-            <Form.Control type="name" placeholder="Name" />
+            <Form.Control
+              onChange={(e) => contactFormNameChange(e)}
+              type="name"
+              name="name"
+              placeholder="Name"
+              value={contactFormFields.name}
+            />
           </Form.Group>
           <Form.Group controlId="email">
             <Form.Text
@@ -150,7 +171,11 @@ export const Contact: React.FC = () => {
             >
               {"Your email will NOT be shared with anyone else."}
             </Form.Text>
-            <Form.Control type="email" placeholder="Email" />
+            <Form.Control
+              type="email"
+              // onChange={}
+              placeholder="Email"
+            />
           </Form.Group>
 
           <Form.Group controlId="subject">
