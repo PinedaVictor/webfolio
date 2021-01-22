@@ -1,5 +1,5 @@
 import * as functions from "firebase-functions";
-import * as sgMail from "@sendgrid/mail";
+import sgMail from "@sendgrid/mail";
 
 const sendGridConfig = functions.config().sendgrid;
 const SEND_GRID_API_KEY = sendGridConfig.key;
