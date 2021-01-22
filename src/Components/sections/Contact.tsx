@@ -4,7 +4,7 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { IoMdClose } from "react-icons/io";
 import { BiMessageRoundedDetail } from "react-icons/bi";
 import { useTransition, animated } from "react-spring";
-import firebase from "firebase";
+import firebase from "firebase/app";
 import "firebase/functions";
 
 interface ContactFormFields {
@@ -17,6 +17,7 @@ export const Contact: React.FC = () => {
   const [contactForm, toggleContactForm] = useState(false);
   const [resumeForm, toggleResumeForm] = useState(false);
   const [accentDiv, setAccentDiv] = useState<Array<number>>([]);
+  console.log("The firebase app:::::", firebase);
 
   const GenAccentDivs = () => {
     const tempArr = [];
@@ -97,13 +98,15 @@ export const Contact: React.FC = () => {
 
       console.log("Calling onSubmit with::::", data);
       const sendEmails = firebase.functions().httpsCallable("contact");
+      console.log("Got the email VAR");
       sendEmails(data)
         .then(() => {
+          console.log("About to clear the form");
           const resetForm = { name: "", email: "", subject: "", message: "" };
           setFormFields(resetForm);
         })
         .catch((error) => {
-          console.log("The email was not able to send", error);
+          console.log("The email was not able to send::::", error);
         });
     };
 
