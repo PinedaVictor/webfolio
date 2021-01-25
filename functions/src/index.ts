@@ -8,6 +8,10 @@ const CLIENT_TEMPLATE_ID = sendGridConfig.client_template;
 
 sgMail.setApiKey(SEND_GRID_API_KEY);
 
+const fs = require("fs");
+const pathToResume = "./assets/PinedaVictor.pdf";
+const resumeAttachment = fs.readFileSync(pathToResume).toString("base64");
+
 export const contact = functions.https.onCall((data: any) => {
   const vpNotificationTemplate = {
     from: data.email,
@@ -15,7 +19,6 @@ export const contact = functions.https.onCall((data: any) => {
     dynamicTemplateData: {
       name: data.name,
       message: data.text,
-      phone: data.phone,
       subject: data.subject,
       preheader: "[Website Inquiry]",
     },
@@ -39,6 +42,34 @@ export const contact = functions.https.onCall((data: any) => {
 
   Promise.all([vpNotification1, clientNotification])
     .then(() => true)
+    .catch((error) => {
+      throw new functions.https.HttpsError(
+        "internal",
+        `ERROR in Promise All: ${error}`
+      );
+    });
+});
+
+export const sendResume = functions.https.onCall((data: any) => {
+  sgMail
+    .send({
+      to: data.email,
+      from: "pinedavictor095@gmail.com",
+      templateId: CONFIRMATION_TEMPLATE_ID,
+      dynamicTemplateData: {
+        name: data.name,
+        subject: "VP Resume Inquiry",
+        preheader: "[VP resume]",
+      },
+      attachments: [
+        {
+          content: resumeAttachment,
+          filename: "pinedaVictor.pdf",
+          type: "application/pdf",
+          disposition: "attachment",
+        },
+      ],
+    })
     .catch((error) => {
       throw new functions.https.HttpsError(
         "internal",
