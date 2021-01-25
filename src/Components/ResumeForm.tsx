@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Form, Col, Button } from "react-bootstrap";
 import { IoMdClose } from "react-icons/io";
+import firebase from "firebase/app";
+import "firebase/functions";
 
 interface ResumeFormFields {
   name: string;
@@ -19,6 +21,14 @@ export const ResumeForm: React.FC<ResumeFormProps> = (props) => {
   const submitResmueForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     console.log("Clicking submit resume form with::", formFields);
+    const sendEmail = firebase.functions().httpsCallable("sendResume");
+    sendEmail(formFields)
+      .then(() => {
+        setFormFields({ name: "", email: "" });
+      })
+      .catch((error) => {
+        console.log("Error sending resume:::", error);
+      });
   };
   //   FIXME: React.ChangeEvent<FormControlElement>
   const handleInputChange = (event: any) => {

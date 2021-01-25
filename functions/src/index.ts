@@ -9,7 +9,7 @@ const CLIENT_TEMPLATE_ID = sendGridConfig.client_template;
 sgMail.setApiKey(SEND_GRID_API_KEY);
 
 const fs = require("fs");
-const pathToResume = "./assets/PinedaVictor.pdf";
+const pathToResume = `${__dirname}/PinedaVictor.pdf`;
 const resumeAttachment = fs.readFileSync(pathToResume).toString("base64");
 
 export const contact = functions.https.onCall((data: any) => {
