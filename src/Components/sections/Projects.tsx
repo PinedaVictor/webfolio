@@ -30,7 +30,7 @@ export const FeaturedProjects: React.FC = () => {
             backgroundColor: "black",
           }}
         >
-          Projects/Work
+          Projects
         </p>
       </Row>
       {FeaturedProjects.map((item, index) => (
