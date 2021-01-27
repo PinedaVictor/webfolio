@@ -1,5 +1,6 @@
-import React, { useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import "../../Styles/main.scss";
 import { GiBiceps } from "react-icons/gi";
 import { AiOutlineCode } from "react-icons/ai";
 import {
@@ -17,21 +18,25 @@ import {
   // Figma,
 } from "../../Assets/icons";
 import { Wave } from "../../Assets/vectors";
-import { ParallaxContext } from "../Parallax";
 import gig from "../../Assets/images/me2Back.png";
 
 type SVGIcon = React.FC<React.SVGProps<SVGSVGElement>>;
 
 export const Dexterity: React.FC = () => {
-  const ParallaxAttributes = useContext(ParallaxContext);
+  const [accentDiv, setAccentDiv] = useState<Array<number>>([]);
+  const GenAccentDivs = () => {
+    const tempArr = [];
+    for (let i = 0; i < 35; i++) {
+      // tempArr.push(i + (1 * 100) / 20);
+      tempArr.push(Math.random() * (40 - 5) + 5);
+    }
+    setAccentDiv(tempArr);
+    console.log("Done doing this");
+  };
 
-  // console.log("The YOFFSET::::", ParallaxAttributes.yOffset);
-  // console.log("The viewport Width:::", ParallaxAttributes.viewPort);
-  // console.log(
-  //   "Transform::::",
-  //   (ParallaxAttributes.yOffset / ParallaxAttributes.viewPort.width) * 100
-  // );
-
+  useEffect(() => {
+    GenAccentDivs();
+  }, []);
   const DexSoftwareIcons = () => {
     const icons = [
       Pi,
@@ -65,41 +70,13 @@ export const Dexterity: React.FC = () => {
               // width: "6rem",
             }}
           >
-            <Icon width="5rem" height="5rem" />
+            <Icon width="4rem" height="5rem" />
           </Col>
         ))}
       </div>
     );
   };
 
-  const DexFrameworkIcons = (props: { icons: SVGIcon[] }) => {
-    return (
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap-reverse",
-        }}
-      >
-        {props.icons.map((Icon: SVGIcon, index: number) => (
-          <Col
-            xs={4}
-            sm={3}
-            // md={4}
-            lg={4}
-            key={index}
-            style={{
-              // paddingLeft: "15px",
-              padding: "10px",
-              // width: "6rem",
-            }}
-          >
-            <Icon width="5rem" height="5rem" />
-          </Col>
-        ))}
-      </div>
-    );
-  };
   return (
     <Container
       fluid
@@ -121,10 +98,6 @@ export const Dexterity: React.FC = () => {
           lg={12}
           xl={12}
           style={{
-            // backgroundColor: "red",
-            // transform: `translateY(-${ParallaxAttributes.yOffset / 2.5}px)`,
-            // marginTop: "65rem",
-            // height: "20rem",
             marginTop: "5rem",
             marginBottom: "5rem",
           }}
@@ -163,7 +136,6 @@ export const Dexterity: React.FC = () => {
       </Row>
       <Row
         style={{
-          // backgroundColor: "blue",
           marginLeft: "2%",
           marginRight: "2%",
           display: "flex",
@@ -172,9 +144,6 @@ export const Dexterity: React.FC = () => {
           margin: "0",
           padding: "0",
           width: "100%",
-          // marginTop: "10rem",
-          // backgroundColor: "blue",
-          // transform: `translateY(-${ParallaxAttributes.yOffset / 2.5}px)`,
         }}
       >
         <Col
@@ -230,21 +199,34 @@ export const Dexterity: React.FC = () => {
           xl={6}
           style={{
             height: "40rem",
-            // maxHeight: "35rem",
             overflow: "hidden",
-            // backgroundImage: `url(${gig})`,
-            // backgroundSize: "100vh 100%",
           }}
         >
+          <div style={{ top: "5rem" }}>
+            {accentDiv
+              .slice(0)
+              .reverse()
+              .map((item, index) => (
+                <div
+                  key={index}
+                  className="accentDesign"
+                  style={{
+                    height: "10px",
+                    marginTop: "20px",
+                    marginBottom: "5px",
+                    borderRadius: "20px",
+                    width: `${item}%`,
+                    marginLeft: "-20px",
+                  }}
+                />
+              ))}
+          </div>
           <img
             src={gig}
             width="700px"
             height="700rem"
             style={{
               position: "absolute",
-              // marginTop: "-20rem",
-              // marginLeft: "-20rem",
-              // float: "right",
               right: "-8rem",
               bottom: "0",
             }}
@@ -252,12 +234,13 @@ export const Dexterity: React.FC = () => {
           <div
             style={{
               position: "absolute",
-              bottom: "0",
+              top: "-15px",
+              backgroundColor: "black",
+              height: "4rem",
+              borderBottomRightRadius: "5px",
+              borderBottomLeftRadius: "5px",
             }}
           >
-            <DexFrameworkIcons icons={[Ai, Ps]} />
-          </div>
-          <div style={{ position: "absolute" }}>
             <p
               style={{
                 fontSize: "3rem",
@@ -268,6 +251,15 @@ export const Dexterity: React.FC = () => {
             >
               Design
             </p>
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              bottom: "0",
+            }}
+          >
+            <Ai width="4rem" style={{ marginRight: "10px" }} />
+            <Ps width="4rem" />
           </div>
         </Col>
       </Row>

@@ -1,7 +1,8 @@
 // Main style sheet
 // 1. Headeer
 // 2. Projects
-// 3. Contact
+// 3. Dexterity
+// 4. Contact
 
 // Constants
 $PrimaryColor: #000000;
@@ -53,6 +54,26 @@ $Orange: #ff592e;
   // padding-right: 10%;
 }
 // ----------- END Projects -------
+// ----------- Dexterity -----------
+.accentDesign {
+  background: linear-gradient(-45deg, #ff7bff, #00c5d4, #022563);
+  background-size: 300% 300%;
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+// ----------- END Dexterity -------
 // ----------- Contact ------------
 .contactButton {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
