@@ -76,23 +76,30 @@ $Orange: #ff592e;
 
 // ----------- END Dexterity -------
 // ----------- Contact ------------
+#getResumeButton {
+  background-color: black;
+  border: 3px solid white;
+  top: 5%;
+  left: 5%;
+  position: absolute;
+  border-radius: 25px;
+  width: 15rem;
+  height: 15rem;
+  box-shadow: 20px 20px 40px black;
+}
+#emailButton {
+}
+.buttonText {
+  margin: auto;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: Arial;
+}
 .contactButton {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 300% 300%;
   animation: gradient 5s ease infinite;
-}
-.idk {
-  border-style: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 300% 300%;
-  border-width: 3px;
-  border-color: #23d5ab;
-  animation: gradient 5s ease infinite;
-  background-color: black;
-}
-.idk:hover {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 300% 300%;
-  animation: gradient 3s ease infinite;
 }
 
 @keyframes gradient {

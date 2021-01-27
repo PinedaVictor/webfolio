@@ -70,8 +70,6 @@ export const Contact: React.FC = () => {
     <Container
       fluid
       style={{
-        // backgroundColor: "black",
-        // backgroundColor: "#000d2a",
         marginBottom: "30px",
         margin: "0",
         padding: "0",
@@ -167,17 +165,7 @@ export const Contact: React.FC = () => {
               boxShadow: "20px 20px 40px black",
             }}
           >
-            <p
-              style={{
-                margin: "auto",
-                textAlign: "center",
-                fontSize: "3rem",
-                fontWeight: "bold",
-                fontFamily: "Arial",
-              }}
-            >
-              Email
-            </p>
+            <p className="buttonText">Email</p>
           </Button>
           <div
             style={{
@@ -194,7 +182,6 @@ export const Contact: React.FC = () => {
                     marginTop: "10px",
                     marginBottom: "5px",
                     borderRadius: "20px",
-                    // width: `${Math.random() * (100 - 50) + 50}%`,
                     width: `${item}%`,
                   }}
                 />
@@ -220,9 +207,7 @@ export const Contact: React.FC = () => {
           md={6}
           lg={6}
           xl={6}
-          // className="contactButton"
           style={{
-            // backgroundColor: "red",
             height: "35rem",
             borderRadius: "25px",
             margin: "auto",
@@ -239,30 +224,10 @@ export const Contact: React.FC = () => {
             }}
           >
             <Button
+              id="getResumeButton"
               onClick={() => toggleResumeForm(!resumeForm)}
-              style={{
-                backgroundColor: "black",
-                border: "3px solid white",
-                top: "5%",
-                left: "5%",
-                position: "absolute",
-                borderRadius: "25px",
-                width: "15rem",
-                height: "15rem",
-                boxShadow: "20px 20px 40px black",
-              }}
             >
-              <p
-                style={{
-                  margin: "auto",
-                  textAlign: "center",
-                  fontSize: "3rem",
-                  fontWeight: "bold",
-                  fontFamily: "Arial",
-                }}
-              >
-                Get Resume
-              </p>
+              <p className="buttonText">Get Resume</p>
             </Button>
           </div>
           {resumeFormTransition.map(
