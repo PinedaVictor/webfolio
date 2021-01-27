@@ -10,26 +10,22 @@ export const Footer: React.FC = () => {
         backgroundColor: "",
       }}
     >
-      <Row style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+      <Row style={{ textAlign: "center" }}>
         <div
           className="contactButton"
-          style={{ height: "2px", width: "100%" }}
+          style={{ height: "2px", width: "100%", marginBottom: "1rem" }}
         />
-        <Col
-          xs={12}
-          sm={12}
-          md={6}
-          lg={6}
-          style={{ backgroundColor: "" }}
-        ></Col>
-        <Col xs={12} sm={12} md={6} lg={6} style={{ backgroundColor: "" }}>
-          <ul style={{ fontSize: "20px", color: "white" }}>
-            <li>Home</li>
-            <li>All Projects</li>
-          </ul>
-        </Col>
-      </Row>
-      <Row>
+        <p
+          style={{
+            textAlign: "center",
+            width: "100%",
+            color: "white",
+            fontSize: "2rem",
+            textDecoration: "underline",
+          }}
+        >
+          All Projects
+        </p>
         <p
           style={{
             textAlign: "center",
