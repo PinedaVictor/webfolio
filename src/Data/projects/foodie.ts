@@ -12,9 +12,6 @@ export const Foodie = {
     { icon: IoLogoFirebase, Framework: "Firebase" },
   ],
   backgroundImg: img,
-  backgroundImgWidth: "100",
-  backgroundImgHeight: "100",
-  backgroundImgPosition: "",
   cruces: [
     "Designed and implemented a database architecture that served as the data layer for the mobile application",
     "Built an interactive real time chat with Firestore",

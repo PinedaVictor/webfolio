@@ -24,34 +24,28 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
       opacity: 0,
       width: "100%",
       backgroundColor: "red",
-      height: "33rem",
+      height: "35rem",
       position: "absolute",
       left: "0",
       overflow: "hidden",
     },
     enter: {
-      transform: "translate3d(0, -33em, 0)",
+      transform: "translate3d(0, -35em, 0)",
       opacity: 1,
     },
-    leave: { transform: "translate3d(0, 33rem, 0)", opacity: 0 },
+    leave: { transform: "translate3d(0, 35rem, 0)", opacity: 0 },
   });
 
   const ProjectDisplay = () => {
-    console.log(
-      "The size::::",
-      props.data.backgroundImgHeight,
-      props.data.backgroundImgWidth
-    );
+    console.log("The size::::", props.data);
     return (
       <div
         style={{
           width: "100%",
           height: "100%",
           backgroundImage: `url(${props.data.backgroundImg})`,
-          backgroundSize: "100vh 100%",
-          // backgroundSize: `${props.data.backgroundImgWidth}vh ${props.data.backgroundImgHeight}%`,
+          backgroundSize: "100vw 100",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: `${props.data.backgroundImgPosition}`,
         }}
       >
         <h1
@@ -62,7 +56,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
             fontSize: "60px",
             paddingLeft: "15px",
             paddingTop: "15px",
-            backgroundColor: "black",
           }}
         >
           {props.data.type}
@@ -151,12 +144,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
       md={6}
       style={{
         backgroundColor: "black",
-        height: "33rem",
+        height: "35rem",
         left: "0",
         border: "1px solid black",
         margin: "0",
         padding: "0",
-        // zIndex: 1,
       }}
     >
       <ProjectDisplay />

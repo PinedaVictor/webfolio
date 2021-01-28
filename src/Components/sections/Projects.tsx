@@ -1,10 +1,10 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import { ProjectCard } from "../ui/ProjectCard";
-import { Foodie, happiibook, UIS } from "../../Data/projects";
+import { Foodie, Happiibook, UIS } from "../../Data/projects";
 
 export const FeaturedProjects: React.FC = () => {
-  const FeaturedProjects = [Foodie, Foodie, UIS, Foodie];
+  const FeaturedProjects = [Foodie, Happiibook, UIS, Foodie];
 
   return (
     <Container

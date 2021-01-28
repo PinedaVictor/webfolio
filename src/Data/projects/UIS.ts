@@ -1,4 +1,4 @@
-import img from "../../Assets/images/uis.png";
+import img from "../../Assets/images/uis.jpg";
 import { IoLogoFirebase } from "react-icons/io5";
 import { FaReact } from "react-icons/fa";
 import { BsCodeSlash } from "react-icons/bs";
@@ -12,9 +12,6 @@ export const UIS = {
     { icon: IoLogoFirebase, Framework: "Firebase" },
   ],
   backgroundImg: img,
-  backgroundImgWidth: "50",
-  backgroundImgHeight: "50",
-  backgroundImgPosition: "bottom",
   cruces: [
     "Implemented backend serverless architecture using Firebase cloud functions to support the website’s contact form",
     "Designed and delivered company logos and assets to use for website and marketing material",
