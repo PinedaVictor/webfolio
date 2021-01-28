@@ -1,7 +1,6 @@
 import img from "../../Assets/images/uis.jpg";
 import { IoLogoFirebase } from "react-icons/io5";
 import { FaReact, FaUikit } from "react-icons/fa";
-import { BsCodeSlash } from "react-icons/bs";
 
 export const UIS = {
   title: "United International Services LLC",
@@ -14,7 +13,8 @@ export const UIS = {
   backgroundImg: img,
   cruces: [
     "Designed all company graphical assets and implemented tech stack",
-    "",
+    "Firebase Cloud Functions",
     "Full Stack React App",
+    "UIS LLC",
   ],
 };

@@ -12,5 +12,10 @@ export const Foodie = {
     { icon: IoLogoFirebase, Framework: "Firebase" },
   ],
   backgroundImg: img,
-  cruces: ["Rank individual plates of restaurants", "Senior design project"],
+  cruces: [
+    "Allowed users to rank individual restaurant plates",
+    "Built interactive comment chat",
+    "Designed graphical assets",
+    "Senior Design",
+  ],
 };

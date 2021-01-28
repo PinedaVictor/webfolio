@@ -82,7 +82,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
               key={index}
               style={{
                 position: "absolute",
-                top: `${(0 + index) * 25}%`,
+                top: `${(0 + index) * 20}%`,
                 right: "0",
                 backgroundColor: "black",
                 padding: "10px",
