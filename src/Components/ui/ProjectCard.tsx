@@ -48,18 +48,63 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
           backgroundRepeat: "no-repeat",
         }}
       >
-        <h1
+        <div
           style={{
-            color: "white",
-            fontFamily: "sans-serif",
-            fontWeight: "bold",
-            fontSize: "60px",
-            paddingLeft: "15px",
-            paddingTop: "15px",
+            backgroundColor: "black",
+            position: "absolute",
+            borderRadius: "5px",
           }}
         >
-          {props.data.type}
-        </h1>
+          <h1
+            style={{
+              color: "white",
+              // fontFamily: "helvetica",
+              fontWeight: "bold",
+              fontSize: "60px",
+              paddingLeft: "15px",
+              paddingTop: "15px",
+            }}
+          >
+            {props.data.type}
+          </h1>
+        </div>
+        <div
+          style={{
+            position: "absolute",
+            width: "90%",
+            height: "80%",
+            bottom: "0",
+            right: "0",
+          }}
+        >
+          {props.data.cruces.map((crux: string, index: number) => (
+            <div
+              key={index}
+              style={{
+                position: "absolute",
+                top: `${(0 + index) * 25}%`,
+                right: "0",
+                backgroundColor: "black",
+                padding: "10px",
+                // paddingRight: `${100 / (index + 1 * 2)}%`,
+                borderTopLeftRadius: "5px",
+                borderBottomLeftRadius: "5px",
+                display: "flex",
+              }}
+            >
+              <p
+                style={{
+                  margin: "auto",
+                  color: "white",
+                  letterSpacing: "1px",
+                  fontSize: "18px",
+                }}
+              >
+                {crux}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     );
   };
