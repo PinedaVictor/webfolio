@@ -1,10 +1,17 @@
 import img from "../../Assets/images/3.jpg";
+import { IoLogoFirebase } from "react-icons/io5";
+import { FaReact } from "react-icons/fa";
+import { BsCodeSlash } from "react-icons/bs";
 
 export const happiibook = [
   {
     title: "happiibook LLC",
     type: "Web App",
-    icons: ["Firebase", "Ts"],
+    icons: [
+      { icon: FaReact, Framework: "React" },
+      { icon: BsCodeSlash, Framework: "NativeBase" },
+      { icon: IoLogoFirebase, Framework: "Firebase" },
+    ],
     hasBackground_IMG: true,
     backgroundImg: img,
     cruces: [

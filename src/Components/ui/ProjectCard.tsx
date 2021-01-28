@@ -15,10 +15,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
 ) => {
   const [info, toggle] = useState(false);
 
-  let projectData: any = {};
-  const project = props.data.map((data: any) => (projectData = data));
-  // console.log("Project Data:::", project);
-
   const transition = useTransition(info, null, {
     config: {
       duration: 450,
@@ -41,29 +37,36 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
   });
 
   const ProjectDisplay = () => {
-    let gig = "";
-    props.data.map((item: any) => (gig = item.backgroundImg));
+    console.log(
+      "The size::::",
+      props.data.backgroundImgHeight,
+      props.data.backgroundImgWidth
+    );
     return (
       <div
         style={{
           width: "100%",
           height: "100%",
-          backgroundImage: `url(${gig})`,
+          backgroundImage: `url(${props.data.backgroundImg})`,
           backgroundSize: "100vh 100%",
+          // backgroundSize: `${props.data.backgroundImgWidth}vh ${props.data.backgroundImgHeight}%`,
           backgroundRepeat: "no-repeat",
+          backgroundPosition: `${props.data.backgroundImgPosition}`,
         }}
       >
-        <p
+        <h1
           style={{
             color: "white",
-            fontSize: "120px",
             fontFamily: "sans-serif",
-            overflow: "hidden",
             fontWeight: "bold",
+            fontSize: "60px",
+            paddingLeft: "15px",
+            paddingTop: "15px",
+            backgroundColor: "black",
           }}
         >
-          {projectData.type}
-        </p>
+          {props.data.type}
+        </h1>
       </div>
     );
   };
@@ -101,7 +104,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
         >
           <Code />
         </div>
-        {projectData.icons.map((Icon: FrameworkIcon, index: number) => (
+        {props.data.icons.map((Icon: FrameworkIcon, index: number) => (
           <div
             key={index}
             style={{
