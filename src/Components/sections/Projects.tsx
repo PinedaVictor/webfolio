@@ -23,9 +23,9 @@ export const FeaturedProjects: React.FC = () => {
           style={{
             textAlign: "left",
             color: "white",
-            fontSize: "6vw",
+            fontSize: "7vw",
             fontFamily: "OCRAExtended, OCR A Extended",
-            borderRadius: "50px",
+            borderRadius: "5px",
             marginLeft: "7%",
             backgroundColor: "black",
           }}
@@ -36,21 +36,6 @@ export const FeaturedProjects: React.FC = () => {
       {FeaturedProjects.map((item, index) => (
         <ProjectCard key={index} data={item} />
       ))}
-      {/* <Row style={{ backgroundColor: "", width: "100%" }}>
-        <p
-          style={{
-            color: "white",
-            fontSize: "20px",
-            fontFamily: "OCRAExtended, OCR A Extended",
-            float: "right",
-            textAlign: "right",
-            width: "100%",
-            marginTop: "15px",
-          }}
-        >
-          All Projects...
-        </p>
-      </Row> */}
     </Container>
   );
 };
