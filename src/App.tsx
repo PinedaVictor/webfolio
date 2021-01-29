@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import firebase from "firebase/app";
 import { Home, AllProjects } from "./Pages";
 import { firebaseConfig } from "./Config";
