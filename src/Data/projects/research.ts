@@ -11,7 +11,7 @@ export const Research = {
   ],
   backgroundImg: img,
   cruces: [
-    "Scala Monads both designed to generate random input arguments",
+    "Scala Monads designed to generate random input arguments",
     "Java and Scala automated tests used to test and score student labs",
     "Assessed Java vs Scala testing techniques based on ease of use and effectiveness",
   ],
