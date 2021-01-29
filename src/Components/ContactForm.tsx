@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../Styles/contactForm.scss";
 import { Button, Form, Col } from "react-bootstrap";
 import { IoMdClose } from "react-icons/io";
 import firebase from "firebase/app";
@@ -63,17 +64,18 @@ export const ContactForm: React.FC<ContactProps> = (props) => {
   };
   return (
     <Col
+      className="colWrapper"
       xs={12}
       sm={12}
       md={12}
       lg={12}
       xl={12}
-      style={{
-        height: "100%",
-        borderRadius: "25px",
-        margin: "auto",
-        top: "0",
-      }}
+      // style={{
+      //   height: "100%",
+      //   borderRadius: "25px",
+      //   margin: "auto",
+      //   top: "0",
+      // }}
     >
       <Button
         style={{
