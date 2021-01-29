@@ -3,11 +3,25 @@ import { Link } from "react-router-dom";
 import { IoChevronBackCircleOutline } from "react-icons/io5";
 import { Layout } from "../Components/ui/Layout";
 import { Container } from "react-bootstrap";
-import { Foodie } from "../Data/projects";
+import {
+  Foodie,
+  ThreeDPrinterBuild,
+  UDSCar,
+  UIS,
+  Research,
+  Happiibook,
+} from "../Data/projects";
 import { ProjectCard } from "../Components/ui/ProjectCard";
 
 export const AllProjects: React.FC = () => {
-  const projects = [Foodie, Foodie, Foodie, Foodie, Foodie, Foodie];
+  const projects = [
+    ThreeDPrinterBuild,
+    UDSCar,
+    Research,
+    Happiibook,
+    Foodie,
+    UIS,
+  ];
   return (
     <Layout>
       <Container

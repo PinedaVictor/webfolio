@@ -53,6 +53,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
             backgroundColor: "black",
             position: "absolute",
             borderRadius: "5px",
+            paddingRight: "10px",
           }}
         >
           <h1
