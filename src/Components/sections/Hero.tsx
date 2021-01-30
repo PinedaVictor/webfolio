@@ -41,7 +41,6 @@ export const Hero: React.FC<HeroProps> = (props) => {
   });
 
   useEffect(() => {
-    // console.log("View port prop in hero in useEffect with:::", props.viewPort);
     let marginTop = 0;
     const width = props.viewPort.width;
     const height = props.viewPort.height;
@@ -82,33 +81,23 @@ export const Hero: React.FC<HeroProps> = (props) => {
       <div
         style={{
           transform: `translate3d(-${props.yOffset * 5}px,${0}px,0px)`,
-          // zIndex: 1,
           position: "relative",
-          backgroundColor: "",
         }}
       >
-        <Row
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "wrap",
-            backgroundColor: "",
-          }}
-        >
-          <Col xs={1} sm={1} md={1} style={{ backgroundColor: "" }}></Col>
+        <Row id="initialsIntgrityRow">
+          <Col xs={1} sm={1} md={1}></Col>
           <Col
             xs={12}
             sm={6}
             md={5}
             lg={5}
             style={{
-              backgroundColor: "",
               paddingTop: "10px",
             }}
           >
             {transitionOne.map(({ props, key }) => (
               <animated.div key={key} style={props}>
-                <Initials className="initials" />
+                <Initials id="initials" />
               </animated.div>
             ))}
           </Col>
@@ -117,80 +106,50 @@ export const Hero: React.FC<HeroProps> = (props) => {
             sm={1}
             md={6}
             style={{
-              backgroundColor: "",
               padding: "10px",
               paddingTop: "55px",
             }}
           >
             <div
               style={{
-                backgroundColor: "",
                 maxWidth: "250px",
               }}
             >
               {transitionTwo.map(({ props, key }) => (
                 <animated.div key={key} style={props}>
-                  <Integrity className="integrity" />
+                  <Integrity id="integrity" />
                 </animated.div>
               ))}
             </div>
           </Col>
         </Row>
-        <Row
-          style={{
-            backgroundColor: "",
-            paddingBottom: "10px",
-            paddingTop: "20px",
-          }}
-        >
-          <Col
-            xs={0}
-            sm={3}
-            md={4}
-            lg={7}
-            style={{ backgroundColor: "" }}
-          ></Col>
-          <Col style={{ backgroundColor: "" }}>
+        <Row id="creativityRow">
+          <Col xs={0} sm={3} md={4} lg={7}></Col>
+          <Col>
             <animated.div style={fade}>
-              <Creativity className="creativity" />
+              <Creativity id="creativity" />
             </animated.div>
           </Col>
         </Row>
         <Row
           style={{
             paddingTop: "20px",
-            backgroundColor: "",
           }}
         >
-          <Col
-            xs={0}
-            sm={2}
-            md={3}
-            lg={8}
-            style={{ backgroundColor: "" }}
-          ></Col>
+          <Col xs={0} sm={2} md={3} lg={8}></Col>
           <Col>
             <animated.div style={fade}>
-              <Perseverance className="perseverance" />
+              <Perseverance id="perseverance" />
             </animated.div>
           </Col>
         </Row>
       </div>
-      <Row
-        style={{
-          backgroundColor: "",
-          // height: "100vh",
-        }}
-      >
+      <Row>
         <CPU
+          id="CPUVector"
           style={{
-            width: "100%",
-            height: "100%",
-            // backgroundColor: "black",
-            // marginTop: "-43rem",
             marginTop: `${CPUMarginTop}rem`,
             transform: `translateY(-${props.yOffset * 1}px)`,
-            zIndex: -1,
           }}
         />
       </Row>

@@ -11,25 +11,42 @@ $Orange: #ff592e;
 
 // ----------- Header -------------
 .HeroWrapper {
-  // background-color: $PrimaryColor;
   height: 100vh;
   margin-top: 55px;
-  // background-color: red;
 }
 
-.initials {
+#initials {
   max-width: 175px;
   min-width: 150px;
 }
-.integrity {
+
+#integrity {
   max-width: 250px;
   min-width: 250px;
 }
-.creativity {
+#creativity {
   max-width: 400px;
 }
-.perseverance {
+
+#perseverance {
   max-width: 300px;
+}
+
+#initialsIntgrityRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#creativityRow {
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+#CPUVector {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 // ----------- END Header ---------
 
