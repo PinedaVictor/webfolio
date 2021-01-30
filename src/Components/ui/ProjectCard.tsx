@@ -112,10 +112,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
         {!info && (
           <p
             style={{
-              marginTop: "12px",
+              // marginTop: "12px",
+              margin: "auto",
               fontWeight: "bold",
               letterSpacing: "1px",
-              fontSize: "24px",
+              fontSize: "20px",
               marginRight: "3px",
             }}
           >
