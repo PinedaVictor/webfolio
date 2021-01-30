@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import "../../Styles/main.scss";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { BiMessageRoundedDetail } from "react-icons/bi";
 import { useTransition, animated } from "react-spring";

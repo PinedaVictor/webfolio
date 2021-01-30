@@ -27,7 +27,7 @@ export const Dexterity: React.FC = () => {
     const tempArr = [];
     for (let i = 0; i < 35; i++) {
       // tempArr.push(i + (1 * 100) / 20);
-      tempArr.push(Math.random() * (40 - 5) + 5);
+      tempArr.push(Math.random() * (50 - 5) + 5);
     }
     setAccentDiv(tempArr);
     console.log("Done doing this");
@@ -64,9 +64,7 @@ export const Dexterity: React.FC = () => {
             lg={2}
             key={index}
             style={{
-              // paddingLeft: "15px",
               padding: "10px",
-              // width: "6rem",
             }}
           >
             <Icon width="4rem" height="5rem" />
@@ -86,97 +84,42 @@ export const Dexterity: React.FC = () => {
       </Row>
       <Row id="softwareAndDesignRow">
         <Col className="dexCol" xs={12} sm={12} md={12} lg={6} xl={6}>
-          <div
-            style={{
-              position: "absolute",
-              bottom: "0",
-            }}
-          >
+          <div id="softwareIconsWrapper">
             <DexSoftwareIcons />
           </div>
-          <div style={{ position: "absolute" }}>
-            <p
-              style={{
-                fontSize: "3rem",
-                fontFamily: "OCRAExtended, OCR A Extended",
-                textAlign: "center",
-                color: "white",
-              }}
-            >
-              Software
-            </p>
+          <div id="dexSoftwareTitleWrapper">
+            <p id="dexSoftwareTitle">Software</p>
           </div>
-          <AiOutlineCode
-            size="20rem"
-            color="white"
-            style={{
-              position: "absolute",
-              marginTop: "3rem",
-            }}
-          />
-          <Wave width="90rem" style={{ marginLeft: "-10rem" }} />
-          <Wave
-            width="90rem"
-            style={{ marginTop: "-10rem", marginLeft: "-15rem" }}
-          />
+          <AiOutlineCode id="dexCodeOutline" size="20rem" color="white" />
+          <Wave width="90rem" id="waveOne" />
+          <Wave width="90rem" id="waveTwo" />
         </Col>
         <Col className="dexCol" xs={12} sm={12} md={12} lg={6} xl={6}>
           <div style={{ top: "5rem" }}>
-            {accentDiv
-              .slice(0)
-              .reverse()
-              .map((item, index) => (
-                <div
-                  key={index}
-                  className="accentDesign"
-                  style={{
-                    height: "10px",
-                    marginTop: "20px",
-                    marginBottom: "5px",
-                    borderRadius: "20px",
-                    width: `${item}%`,
-                    marginLeft: "-20px",
-                  }}
-                />
-              ))}
+            {accentDiv.map((item, index) => (
+              <div
+                key={index}
+                id="accentDesignDiv"
+                className="accentDesign"
+                style={{
+                  width: `${item}%`,
+                }}
+              />
+            ))}
           </div>
           <img
+            id="selfPortraitImg"
             src={gig}
             width="700px"
             height="700rem"
             style={{
-              position: "absolute",
               right: "-8rem",
-              bottom: "0",
             }}
           />
-          <div
-            style={{
-              position: "absolute",
-              top: "-15px",
-              backgroundColor: "black",
-              height: "4rem",
-              borderBottomRightRadius: "5px",
-              borderBottomLeftRadius: "5px",
-            }}
-          >
-            <p
-              style={{
-                fontSize: "3rem",
-                color: "white",
-                fontFamily: "OCRAExtended, OCR A Extended",
-                textAlign: "center",
-              }}
-            >
-              Design
-            </p>
+          <div id="dexDesignTitleWrapper">
+            <p id="dexDesignTitle">Design</p>
           </div>
-          <div
-            style={{
-              position: "absolute",
-              bottom: "0",
-            }}
-          >
+          <div id="dexDesignIconsWrapper">
             <Ai width="4rem" style={{ marginRight: "10px" }} />
             <Ps width="4rem" />
           </div>

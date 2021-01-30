@@ -121,10 +121,71 @@ $Aqua: #00c5d4;
   overflow: hidden;
 }
 
+#softwareIconsWrapper {
+  position: absolute;
+  bottom: 0;
+}
+
+#dexSoftwareTitleWrapper {
+  position: absolute;
+}
+#dexSoftwareTitle {
+  font-size: 3rem;
+  font-family: OCRAExtended, OCR A Extended;
+  text-align: center;
+  color: white;
+}
+
+#dexCodeOutline {
+  position: absolute;
+  margin-top: 3rem;
+}
+
+#waveOne {
+  margin-left: -10rem;
+}
+#waveTwo {
+  margin-top: -10rem;
+  margin-left: -15rem;
+}
+
 .accentDesign {
   background: linear-gradient(-45deg, #ff7bff, #00c5d4, #022563);
   background-size: 300% 300%;
   animation: gradient 5s ease infinite;
+}
+
+#accentDesignDiv {
+  height: 10px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  margin-left: -20px;
+}
+
+#selfPortraitImg {
+  position: absolute;
+  bottom: 0;
+}
+
+#dexDesignTitleWrapper {
+  position: absolute;
+  top: -15px;
+  background-color: black;
+  height: 4rem;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+#dexDesignTitle {
+  font-size: 3rem;
+  color: white;
+  font-family: OCRAExtended, OCR A Extended;
+  text-align: center;
+}
+
+#dexDesignIconsWrapper {
+  position: absolute;
+  bottom: 0;
 }
 
 @keyframes gradient {
