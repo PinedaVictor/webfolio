@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "../Styles/main.scss";
 import { Layout } from "../Components/ui/Layout";
 import {
   Hero,

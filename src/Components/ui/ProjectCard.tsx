@@ -106,12 +106,18 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
       )}
       <Button
         id="techStackOpenButton"
-        style={{ width: info ? "2.7rem" : "10rem" }}
+        style={{ width: info ? "2.7rem" : "12rem" }}
         onClick={() => toggle(!info)}
       >
         {!info && (
           <p
-            style={{ margin: "auto", fontWeight: "bold", letterSpacing: "1px" }}
+            style={{
+              marginTop: "12px",
+              fontWeight: "bold",
+              letterSpacing: "1px",
+              fontSize: "24px",
+              marginRight: "3px",
+            }}
           >
             Tech Stack
           </p>

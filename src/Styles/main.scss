@@ -51,7 +51,24 @@ $Orange: #ff592e;
 // ----------- END Header ---------
 
 // ----------- Projects -----------
+#projectsWrapper {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  overflow: hidden;
+}
 
+#projectsTitle {
+  text-align: left;
+  color: white;
+  font-size: 7vw;
+  font-family: OCRAExtended, OCR A Extended;
+  border-radius: 5px;
+  margin-left: 7%;
+  background-color: $PrimaryColor;
+}
 // ----------- END Projects -------
 // ----------- Dexterity -----------
 .accentDesign {

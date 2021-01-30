@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "../../Styles/main.scss";
 import {
   Creativity,
   Initials,

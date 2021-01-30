@@ -7,31 +7,9 @@ export const FeaturedProjects: React.FC = () => {
   const FeaturedProjects = [Foodie, Happiibook, UIS, Research];
 
   return (
-    <Container
-      fluid
-      style={{
-        margin: "0",
-        padding: "0",
-        display: "flex",
-        flexWrap: "wrap",
-        flexDirection: "row",
-        overflow: "hidden",
-      }}
-    >
+    <Container fluid id="projectsWrapper">
       <Row style={{ backgroundColor: "", width: "100%" }}>
-        <p
-          style={{
-            textAlign: "left",
-            color: "white",
-            fontSize: "7vw",
-            fontFamily: "OCRAExtended, OCR A Extended",
-            borderRadius: "5px",
-            marginLeft: "7%",
-            backgroundColor: "black",
-          }}
-        >
-          Projects
-        </p>
+        <p id="projectsTitle">Projects</p>
       </Row>
       {FeaturedProjects.map((item, index) => (
         <ProjectCard key={index} data={item} />

@@ -81,7 +81,7 @@ export const Dexterity: React.FC = () => {
     <Container
       fluid
       style={{
-        backgroundColor: "black",
+        // backgroundColor: "red",
         // backgroundColor: "#000d2a",
         marginBottom: "30px",
         margin: "0",
@@ -155,6 +155,7 @@ export const Dexterity: React.FC = () => {
           style={{
             height: "40rem",
             overflow: "hidden",
+            // backgroundColor: "blue",
           }}
         >
           <div
@@ -185,10 +186,10 @@ export const Dexterity: React.FC = () => {
               marginTop: "3rem",
             }}
           />
-          <Wave width="80rem" style={{ marginLeft: "-10rem" }} />
+          <Wave width="90rem" style={{ marginLeft: "-10rem" }} />
           <Wave
-            width="80rem"
-            style={{ marginTop: "-5rem", marginLeft: "-15rem" }}
+            width="90rem"
+            style={{ marginTop: "-10rem", marginLeft: "-15rem" }}
           />
         </Col>
         <Col
