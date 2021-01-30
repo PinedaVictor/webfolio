@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../Styles/contactForm.scss";
+import "../Styles/components/contactForm.scss";
 import { Button, Form, Col } from "react-bootstrap";
 import { IoMdClose } from "react-icons/io";
 import firebase from "firebase/app";

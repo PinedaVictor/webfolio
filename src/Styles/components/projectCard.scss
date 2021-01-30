@@ -1,0 +1,116 @@
+.projectCardWrapper {
+  background-color: black;
+  height: 35rem;
+  left: 0;
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+}
+
+#techStackOpenButton {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+  border-radius: 50px;
+  height: 2.7rem;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid;
+  border-color: white;
+}
+
+#projectContentWrapper {
+  background-color: black;
+  height: 100%;
+}
+
+#techStackIcon {
+  width: 100%;
+  height: 100%;
+  margin-top: 2.5rem;
+}
+#techStackIconWrapper {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-color: #000d2a;
+}
+
+#codeVectorWrapper {
+  margin-left: 50%;
+  height: 100vh;
+  opacity: 60%;
+}
+
+.frameworkWrapper {
+  position: absolute;
+  right: 0;
+  background-color: black;
+  padding: 10px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  display: flex;
+  box-shadow: -5px 2px 0px #004fff;
+}
+
+.frameworkIcon {
+  fill: #000d2a;
+  background-color: #ff592e;
+  border-radius: 50%;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.frameworkTitle {
+  margin: auto;
+  color: white;
+  letter-spacing: 1px;
+}
+
+#projectDisplayWrapper {
+  width: 100%;
+  height: 100%;
+  background-size: 100vw 100;
+  background-repeat: no-repeat;
+}
+
+#projectDisplayHeaderWrapper {
+  position: absolute;
+  border-radius: 5px;
+  padding-right: 10px;
+}
+
+#projectDisplayHeader {
+  color: white;
+  font-weight: bold;
+  font-size: 60px;
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+#projectDisplayCrucesWrapper {
+  position: absolute;
+  width: 90%;
+  height: 80%;
+  bottom: 0;
+  right: 0;
+}
+
+.cruxWrapper {
+  position: absolute;
+  right: 0;
+  background-color: black;
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: flex;
+}
+.displayCrux {
+  margin: auto;
+  color: white;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
