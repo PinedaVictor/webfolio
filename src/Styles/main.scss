@@ -8,6 +8,7 @@
 // Constants
 $PrimaryColor: #000000;
 $Orange: #ff592e;
+$Aqua: #00c5d4;
 
 // ----------- Header -------------
 .HeroWrapper {
@@ -71,6 +72,55 @@ $Orange: #ff592e;
 }
 // ----------- END Projects -------
 // ----------- Dexterity -----------
+#dexWrapper {
+  margin-bottom: 30px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#dexSectionRow {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+#dexterityTitle {
+  text-align: center;
+  color: white;
+  font-size: 10vw;
+  width: 100%;
+  font-family: OCRAExtended, OCR A Extended;
+}
+
+#dexBicepIconWrapper {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+#dexBicepIcon {
+  border-radius: 50%;
+  background-color: $Aqua;
+}
+
+#softwareAndDesignRow {
+  // margin-left: 2%;
+  // margin-right: 2%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.dexCol {
+  height: 40rem;
+  overflow: hidden;
+}
+
 .accentDesign {
   background: linear-gradient(-45deg, #ff7bff, #00c5d4, #022563);
   background-size: 300% 300%;

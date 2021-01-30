@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import "../../Styles/main.scss";
 import { GiBiceps } from "react-icons/gi";
 import { AiOutlineCode } from "react-icons/ai";
 import {
@@ -78,86 +77,15 @@ export const Dexterity: React.FC = () => {
   };
 
   return (
-    <Container
-      fluid
-      style={{
-        // backgroundColor: "red",
-        // backgroundColor: "#000d2a",
-        marginBottom: "30px",
-        margin: "0",
-        padding: "0",
-        overflow: "hidden",
-        // height: "100vh",
-      }}
-    >
-      <Row>
-        <Col
-          xs={12}
-          sm={12}
-          md={12}
-          lg={12}
-          xl={12}
-          style={{
-            marginTop: "5rem",
-            marginBottom: "5rem",
-          }}
-        >
-          <p
-            style={{
-              textAlign: "center",
-              color: "white",
-              fontSize: "10vw",
-              width: "100%",
-              fontFamily: "OCRAExtended, OCR A Extended",
-            }}
-          >
-            Dexterity
-          </p>
-          <div
-            style={{
-              margin: "auto",
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "center",
-              width: "100%",
-            }}
-          >
-            <GiBiceps
-              size="5rem"
-              color="white"
-              style={{
-                borderRadius: "50%",
-                backgroundColor: "#00c5d4",
-              }}
-            />
-          </div>
-        </Col>
+    <Container fluid id="dexWrapper">
+      <Row id="dexSectionRow">
+        <p id="dexterityTitle">Dexterity</p>
+        <div id="dexBicepIconWrapper">
+          <GiBiceps id="dexBicepIcon" size="5rem" color="white" />
+        </div>
       </Row>
-      <Row
-        style={{
-          marginLeft: "2%",
-          marginRight: "2%",
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          margin: "0",
-          padding: "0",
-          width: "100%",
-        }}
-      >
-        <Col
-          xs={12}
-          sm={12}
-          md={12}
-          lg={6}
-          xl={6}
-          style={{
-            height: "40rem",
-            overflow: "hidden",
-            // backgroundColor: "blue",
-          }}
-        >
+      <Row id="softwareAndDesignRow">
+        <Col className="dexCol" xs={12} sm={12} md={12} lg={6} xl={6}>
           <div
             style={{
               position: "absolute",
@@ -192,17 +120,7 @@ export const Dexterity: React.FC = () => {
             style={{ marginTop: "-10rem", marginLeft: "-15rem" }}
           />
         </Col>
-        <Col
-          xs={12}
-          sm={12}
-          md={12}
-          lg={6}
-          xl={6}
-          style={{
-            height: "40rem",
-            overflow: "hidden",
-          }}
-        >
+        <Col className="dexCol" xs={12} sm={12} md={12} lg={6} xl={6}>
           <div style={{ top: "5rem" }}>
             {accentDiv
               .slice(0)
