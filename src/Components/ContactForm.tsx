@@ -26,24 +26,16 @@ export const ContactForm: React.FC<ContactProps> = (props) => {
   // FIXME: Use types and use state objects
   // React.FormEvent<HTMLFormElement>
   // SyntheticBaseEvent
-  const submitContactForm = (event: any) => {
+  const submitContactForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const { name, email, subject, message } = event.target.elements;
-    const data = {
-      name: name.value,
-      email: email.value,
-      subject: subject.value,
-      message: message.value,
-    };
 
-    console.log("Calling onSubmit with::::", data);
+    console.log("Calling onSubmit with::::", contactFormFields);
     const sendEmails = firebase.functions().httpsCallable("contact");
     console.log("Got the email VAR");
-    sendEmails(data)
+    sendEmails(contactFormFields)
       .then(() => {
         console.log("About to clear the form");
-        const resetForm = { name: "", email: "", subject: "", message: "" };
-        setFormFields(resetForm);
+        setFormFields({ name: "", email: "", subject: "", message: "" });
       })
       .catch((error) => {
         console.log("The email was not able to send::::", error);
