@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 firebase.initializeApp(firebaseConfig);
 export const App: React.FC = () => {
   return (
-    <Router forceRefresh={true}>
+    <Router forceRefresh={false}>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/AllProjects" component={AllProjects} />

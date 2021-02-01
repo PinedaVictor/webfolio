@@ -45,9 +45,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
           backgroundImage: `url(${props.data.backgroundImg})`,
         }}
       >
-        <div id="projectDisplayHeaderWrapper">
-          <h1 id="projectDisplayHeader">{props.data.type}</h1>
-        </div>
+        {/* <div id="projectDisplayHeaderWrapper"> */}
+        <h1 id="projectDisplayHeader">{props.data.type}</h1>
+        {/* </div> */}
         <div id="projectDisplayCrucesWrapper">
           {props.data.cruces.map((crux: string, index: number) => (
             <div
@@ -58,7 +58,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
                 // paddingRight: `${100 / (index + 1 * 2)}%`,
               }}
             >
-              <p className="displayCrux">{crux}</p>
+              {/* <p className="displayCrux">{crux}</p> */}
             </div>
           ))}
         </div>
