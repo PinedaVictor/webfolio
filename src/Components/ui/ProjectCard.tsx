@@ -77,19 +77,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
   const ProjectDetails = () => {
     return (
       <div>
-        <p
-          style={{
-            color: "white",
-            fontSize: "2.3vh",
-            fontFamily: "San Francisco Text",
-          }}
-        >
-          Company:
-        </p>
         <div>
           {props.data.cruces.map((crux: string, index: number) => (
             <div key={index} style={{ marginTop: "25px" }}>
-              <ul>
+              <ul style={{ color: "white" }}>
                 <li style={{ backgroundColor: "" }}>
                   <p className="displayCrux">{crux}</p>
                 </li>

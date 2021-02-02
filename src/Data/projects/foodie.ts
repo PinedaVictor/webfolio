@@ -16,6 +16,5 @@ export const Foodie = {
     "Allowed users to rank individual restaurant plates",
     "Built interactive comment chat",
     "Designed graphical assets",
-    "Senior Design",
   ],
 };
