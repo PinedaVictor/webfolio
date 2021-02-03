@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   Creativity,
   Initials,
@@ -8,15 +8,11 @@ import {
 } from "../../Assets/vectors";
 import { Container, Col, Row } from "react-bootstrap";
 import { useTransition, useSpring, animated } from "react-spring";
+import { ParallaxContext } from "../Parallax";
 
-interface HeroProps {
-  yOffset: number;
-  viewPort: { width: number; height: number };
-}
-
-export const Hero: React.FC<HeroProps> = (props) => {
+export const Hero: React.FC = () => {
   const [CPUMarginTop, setCPUMarginTop] = useState(0);
-  const items = ["the"];
+
   const fade = useSpring({
     from: { opacity: 0 },
     opacity: 1,
@@ -25,14 +21,16 @@ export const Hero: React.FC<HeroProps> = (props) => {
     },
   });
 
-  const transitionOne = useTransition(items, (item) => item, {
+  const ParallaxAttributes = useContext(ParallaxContext);
+
+  const transitionOne = useTransition([1], (item) => item, {
     from: {
       transform: "translate3d(-800px, 0, 0)",
       width: "300px",
     },
     enter: { transform: "translate3d(20px,0px,0)" },
   });
-  const transitionTwo = useTransition(items, (item) => item, {
+  const transitionTwo = useTransition([1], (item) => item, {
     from: {
       transform: "translate3d(-800px, 0px, 0)",
     },
@@ -41,9 +39,9 @@ export const Hero: React.FC<HeroProps> = (props) => {
 
   useEffect(() => {
     let marginTop = 0;
-    const width = props.viewPort.width;
-    const height = props.viewPort.height;
 
+    const width = window.innerWidth;
+    const height = window.innerHeight;
     // Surface duo
     if (width == 540 && height == 720) {
       marginTop = -13;
@@ -73,13 +71,15 @@ export const Hero: React.FC<HeroProps> = (props) => {
       marginTop = -44;
     }
     setCPUMarginTop(marginTop);
-  }, [props.viewPort]);
+  }, [ParallaxAttributes]);
 
   return (
     <Container fluid className="HeroWrapper" style={{ backgroundColor: "" }}>
       <div
         style={{
-          transform: `translate3d(-${props.yOffset * 5}px,${0}px,0px)`,
+          transform: `translate3d(-${
+            ParallaxAttributes.yOffset * 5
+          }px,${0}px,0px)`,
           position: "relative",
         }}
       >
@@ -148,7 +148,7 @@ export const Hero: React.FC<HeroProps> = (props) => {
           id="CPUVector"
           style={{
             marginTop: `${CPUMarginTop}rem`,
-            transform: `translateY(-${props.yOffset * 1}px)`,
+            transform: `translateY(-${ParallaxAttributes.yOffset * 1}px)`,
           }}
         />
       </Row>

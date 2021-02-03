@@ -13,16 +13,16 @@ export const ParallaxContext = createContext<ParallaxType>({
 export const Parallax: React.FC = (props) => {
   const [yOffset, setYOffset] = useState(window.pageYOffset);
   const [viewPort, setViewPort] = useState<{ width: number; height: number }>({
-    width: window.visualViewport.width,
-    height: window.visualViewport.height,
+    width: window.innerWidth,
+    height: window.innerHeight,
   });
 
   const handleScroll = () => setYOffset(window.pageYOffset);
 
   const handleViewPortResize = () => {
     setViewPort({
-      width: window.visualViewport.width,
-      height: window.visualViewport.height,
+      width: window.innerWidth,
+      height: window.innerHeight,
     });
   };
 
@@ -35,6 +35,7 @@ export const Parallax: React.FC = (props) => {
     window.addEventListener("resize", handleViewPortResize);
     return () => window.removeEventListener("resize", handleViewPortResize);
   }, []);
+
   return (
     <ParallaxContext.Provider value={{ yOffset, viewPort }}>
       {props.children}

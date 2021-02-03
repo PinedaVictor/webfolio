@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Styles/main.scss";
+import "../../Styles/components/footer.scss";
 import { Row, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 

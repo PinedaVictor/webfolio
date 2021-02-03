@@ -1,0 +1,25 @@
+// ----------- Footer --------
+.footerDivider {
+  height: 2px;
+  width: 100%;
+  margin-bottom: 1rem;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 300% 300%;
+  animation: gradient 5s ease infinite;
+}
+.footerLink {
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-size: 2rem;
+}
+.footerLink:hover {
+  text-decoration: underline;
+  color: white;
+}
+#copyRight {
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+// ----------- END Footer ----
