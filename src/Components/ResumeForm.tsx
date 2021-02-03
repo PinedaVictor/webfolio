@@ -26,15 +26,15 @@ export const ResumeForm: React.FC<ResumeFormProps> = (props) => {
   const submitResumeForm = (event: React.FormEvent<HTMLFormElement>) => {
     setSendingEmail(true);
     event.preventDefault();
-    console.log("Clicking submit resume form with::", formFields);
     const sendEmail = firebase.functions().httpsCallable("sendResume");
     sendEmail(formFields)
       .then(() => {
         setFormFields({ name: "", email: "" });
+        setSendingEmail(false);
         setEmailSent(true);
         setTimeout(() => {
-          setSendingEmail(false);
-        }, 1000);
+          setEmailSent(false);
+        }, 1700);
       })
       .catch(() => {
         setEmailFailed(true);

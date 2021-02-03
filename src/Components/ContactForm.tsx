@@ -34,20 +34,18 @@ export const ContactForm: React.FC<ContactProps> = (props) => {
   const submitContactForm = (event: React.FormEvent<HTMLFormElement>) => {
     setSendingEmail(true);
     event.preventDefault();
-    console.log("Calling onSubmit with::::", contactFormFields);
     const sendEmails = firebase.functions().httpsCallable("contact");
     console.log("Got the email VAR");
     sendEmails(contactFormFields)
       .then(() => {
-        console.log("About to clear the form");
         setFormFields({ name: "", email: "", subject: "", message: "" });
+        setSendingEmail(false);
         setEmailSent(true);
         setTimeout(() => {
-          setSendingEmail(false);
-        }, 1000);
+          setEmailSent(false);
+        }, 1700);
       })
       .catch((error) => {
-        console.log("The email was not able to send::::", error);
         setEmailFailed(true);
         setTimeout(() => {
           setSendingEmail(false);
@@ -64,8 +62,6 @@ export const ContactForm: React.FC<ContactProps> = (props) => {
       const newData = Object.assign(data, { ...data, [name]: value });
       return newData;
     });
-
-    console.log("After setting state");
   };
 
   const emailSendingStatusTransition = useTransition(sendingEmail, null, {
