@@ -13,5 +13,8 @@ export const UDSCar = {
     { icon: IoCodeSlashOutline, Framework: "Distance Sensor" },
   ],
   backgroundImg: img,
-  cruces: ["Ultrasonic Distance Sensor", "Autonomous car"],
+  cruces: [
+    "Utilized an Ultrasonic Distance Sensor for wall detection",
+    "Programmed Arduino Uno to handle motor control based on sensor readings",
+  ],
 };
