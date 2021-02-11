@@ -3,8 +3,8 @@ import { IoLogoFirebase, IoApps } from "react-icons/io5";
 import { FaReact } from "react-icons/fa";
 
 export const Happiibook = {
-  title: "happiibook LLC",
-  type: "Software Architecture",
+  title: "Software Architecture",
+  type: "happiibook LLC",
   icons: [
     { icon: FaReact, Framework: "React" },
     { icon: IoApps, Framework: "Nrwl Nx" },

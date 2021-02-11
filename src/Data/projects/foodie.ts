@@ -4,8 +4,8 @@ import { FaReact } from "react-icons/fa";
 import { BsCodeSlash } from "react-icons/bs";
 
 export const Foodie = {
-  title: "Foodie",
-  type: "Mobile App",
+  title: "Mobile App",
+  type: "Senior Design project Foodie",
   icons: [
     { icon: FaReact, Framework: "React Native" },
     { icon: BsCodeSlash, Framework: "NativeBase" },

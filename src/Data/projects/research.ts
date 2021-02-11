@@ -3,8 +3,8 @@ import { FaJava } from "react-icons/fa";
 import { DiScala } from "react-icons/di";
 
 export const Research = {
-  title: "CSUN Research",
-  type: "Research",
+  title: "Research",
+  type: "CSUN Student Testing Research",
   icons: [
     { icon: FaJava, Framework: "Java" },
     { icon: DiScala, Framework: "Scala" },

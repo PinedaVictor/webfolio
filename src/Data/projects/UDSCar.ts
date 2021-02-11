@@ -1,11 +1,11 @@
-import img from "../../Assets/images/1.jpg";
-import { IoLogoFirebase, IoCodeSlashOutline } from "react-icons/io5";
+import img from "../../Assets/images/uno2.2.jpg";
+import { IoCodeSlashOutline } from "react-icons/io5";
 import { SiArduino } from "react-icons/si";
 import { GiCartwheel } from "react-icons/gi";
 
 export const UDSCar = {
-  title: "Ultrasonic Distance Sensor Car",
-  type: "Robot",
+  title: "Autonomous car",
+  type: "Ultrasonic Distance Sensor Car",
   icons: [
     { icon: SiArduino, Framework: "Arduino" },
     { icon: GiCartwheel, Framework: "DC motors" },

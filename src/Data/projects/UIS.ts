@@ -3,8 +3,8 @@ import { IoLogoFirebase } from "react-icons/io5";
 import { FaReact, FaUikit } from "react-icons/fa";
 
 export const UIS = {
-  title: "United International Services LLC",
-  type: "Web App",
+  title: "Web App",
+  type: "United International Services LLC",
   icons: [
     { icon: FaReact, Framework: "React" },
     { icon: FaUikit, Framework: "UI Kit" },

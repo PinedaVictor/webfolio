@@ -68,7 +68,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
         }}
       >
         {/* <div id="projectDisplayHeaderWrapper"> */}
-        <h1 id="projectDisplayHeader">{props.data.type}</h1>
+        <h1 id="projectDisplayHeader">{props.data.title}</h1>
         {/* </div> */}
       </div>
     );
@@ -159,7 +159,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
                 // marginTop: "12px",
                 margin: "auto",
                 fontWeight: "bold",
-                letterSpacing: "1.7px",
+                letterSpacing: "1.5px",
                 fontSize: "16px",
                 marginRight: "3px",
                 fontFamily: "Arial",
