@@ -1,4 +1,4 @@
-import img from "../../Assets/images/2.jpg";
+import img from "../../Assets/images/1.jpg";
 import { IoLogoFirebase, IoCodeSlashOutline } from "react-icons/io5";
 import { SiArduino } from "react-icons/si";
 import { GiCartwheel } from "react-icons/gi";
