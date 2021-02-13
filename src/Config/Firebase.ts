@@ -9,6 +9,9 @@
 //   measurementId: process.env.REACT_APP_measurementId,
 // };
 // console.log("FB config::", process.env.REACT_APP_apiKey);
+import "firebase/app";
+import "firebase/functions";
+
 export const firebaseConfig = {
   apiKey: "AIzaSyCyfe2YguvBcVZd7Oc863ISvrijfXR-geU",
   authDomain: "personal-contact-45e85.firebaseapp.com",
