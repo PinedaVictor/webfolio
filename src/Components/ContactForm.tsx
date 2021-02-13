@@ -28,9 +28,7 @@ export const ContactForm: React.FC<ContactProps> = (props) => {
   const [sendingEmail, setSendingEmail] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
   const [emailFailed, setEmailFailed] = useState(false);
-  // FIXME: Use types and use state objects
-  // React.FormEvent<HTMLFormElement>
-  // SyntheticBaseEvent
+
   const submitContactForm = (event: React.FormEvent<HTMLFormElement>) => {
     setSendingEmail(true);
     event.preventDefault();
