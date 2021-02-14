@@ -44,9 +44,6 @@ export const ResumeForm: React.FC<ResumeFormProps> = (props) => {
           <IoMdClose size="2rem" style={{ marginLeft: "-5px" }} />
         </Button>
       </div>
-      <p style={{ color: "white" }}>
-        {"Enter your email and my resume will be sent"}
-      </p>
       <Form
         onSubmit={onFormSubmit}
         style={{
@@ -56,6 +53,9 @@ export const ResumeForm: React.FC<ResumeFormProps> = (props) => {
         }}
       >
         <Form.Group controlId="name">
+          <Form.Text className="formEmailPolicy">
+            {"Your information will NOT be shared with anyone else."}
+          </Form.Text>
           <Form.Control
             type="name"
             name="name"
@@ -65,9 +65,6 @@ export const ResumeForm: React.FC<ResumeFormProps> = (props) => {
           />
         </Form.Group>
         <Form.Group controlId="formBasicEmail">
-          <Form.Text className="formEmailPolicy">
-            {"Your email will NOT be shared with anyone else."}
-          </Form.Text>
           <Form.Control
             type="email"
             name="email"

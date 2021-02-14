@@ -49,6 +49,9 @@ export const ContactForm: React.FC<ContactProps> = (props) => {
       </Button>
       <Form className="contactForm" onSubmit={onFormSubmit}>
         <Form.Group controlId="name">
+          <Form.Text className="formEmailPolicy">
+            {"Your information will NOT be shared with anyone else."}
+          </Form.Text>
           <Form.Control
             onChange={onInputChange}
             type="name"
@@ -58,9 +61,6 @@ export const ContactForm: React.FC<ContactProps> = (props) => {
           />
         </Form.Group>
         <Form.Group controlId="email">
-          <Form.Text className="formEmailPolicy">
-            {"Your email will NOT be shared with anyone else."}
-          </Form.Text>
           <Form.Control
             type="email"
             name="email"
