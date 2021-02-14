@@ -1,5 +1,6 @@
 import * as functions from "firebase-functions";
 import sgMail from "@sendgrid/mail";
+import firebase from "firebase/app";
 
 const sendGridConfig = functions.config().sendgrid;
 const SEND_GRID_API_KEY = sendGridConfig.key;
@@ -11,6 +12,8 @@ sgMail.setApiKey(SEND_GRID_API_KEY);
 const fs = require("fs");
 const pathToResume = `${__dirname}/PinedaVictor.pdf`;
 const resumeAttachment = fs.readFileSync(pathToResume).toString("base64");
+
+const db = firebase.firestore();
 
 export const contact = functions.https.onCall((data: any) => {
   const vpNotificationTemplate = {
@@ -76,4 +79,10 @@ export const sendResume = functions.https.onCall((data: any) => {
         `ERROR in Promise All: ${error}`
       );
     });
+
+  try {
+    db.collection("resumesSent").add({ name: data.name, email: data.email });
+  } catch (error) {
+    console.log("Error:::", error);
+  }
 });
