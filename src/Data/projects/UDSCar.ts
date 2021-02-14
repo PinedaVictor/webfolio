@@ -14,7 +14,8 @@ export const UDSCar = {
   ],
   backgroundImg: img,
   cruces: [
-    "Utilized an Ultrasonic Distance Sensor for wall detection",
-    "Programmed Arduino Uno to handle motor control based on sensor readings",
+    "Integrated an ultrasonic distance sensor, two 12V DC motor, and Tamiya gear box",
+    "Programmed Arduino Uno to handle motor control based on sensor readings to avoid collisions",
+    "Wired and soldered hardware components",
   ],
 };

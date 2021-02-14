@@ -12,9 +12,8 @@ export const UIS = {
   ],
   backgroundImg: img,
   cruces: [
+    "Implemented backend serverless architecture using Firebase cloud functions to support the website’s contact form",
     "Designed all company graphical assets and implemented tech stack",
-    "Firebase Cloud Functions",
-    "Full Stack React App",
-    "UIS LLC",
+    "Created and refined specifications based on company requirements",
   ],
 };

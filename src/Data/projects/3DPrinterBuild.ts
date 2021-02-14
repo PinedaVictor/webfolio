@@ -11,5 +11,10 @@ export const ThreeDPrinterBuild = {
     { icon: SiArduino, Framework: "Arduino Mega" },
   ],
   backgroundImg: img,
-  cruces: ["Built 3D Printer"],
+  cruces: [
+    "Assembled various hardware components",
+    "Wired/soldered electrical hardware used to control components",
+    "Designed parts in SolidWorks to be printed",
+    "Ensured software was operating as intended",
+  ],
 };

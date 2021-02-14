@@ -14,7 +14,8 @@ export const Foodie = {
   backgroundImg: img,
   cruces: [
     "Allowed users to rank individual restaurant plates",
-    "Built interactive comment chat",
+    "Built an interactive real time chat",
     "Designed graphical assets",
+    "Implemented UI/UX design with fluent user navigation using React Native and Nativebase.io",
   ],
 };
