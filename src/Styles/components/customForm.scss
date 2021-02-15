@@ -1,0 +1,36 @@
+.emailSendingStatusWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+.emailSendingtMessage {
+  font-size: 4rem;
+  width: 100%;
+  text-align: center;
+  font-family: San Francisco Text;
+  color: #ffffff;
+}
+
+.errorSendingEmailMessage {
+  font-size: 3rem;
+  width: 100%;
+  text-align: center;
+  font-family: San Francisco Text;
+  color: #ffffff;
+}
+.emailSentMessage {
+  font-size: 3rem;
+  width: 100%;
+  text-align: center;
+  font-family: San Francisco Text;
+  color: white;
+}
+
+.emailSentCheckIcon {
+  border-radius: 50%;
+  background-color: #00c5d4;
+  padding: 7px;
+}

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../../Styles/components/customForm.scss";
 import { animated, useTransition } from "react-spring";
 import { IoMdCheckmark } from "react-icons/io";
 import { Col, Spinner } from "react-bootstrap";
@@ -98,39 +99,11 @@ export const useCustomForm = () => {
       item && (
         <Col key={key} sm={12}>
           <animated.div key={key} style={props}>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                flexWrap: "wrap",
-                justifyContent: "center",
-                marginTop: "10rem",
-              }}
-            >
+            <div className="emailSendingStatusWrapper">
               {!emailFailed ? (
-                <p
-                  style={{
-                    fontSize: "4rem",
-                    width: "100%",
-                    textAlign: "center",
-                    fontFamily: "San Francisco Text",
-                    color: "white",
-                  }}
-                >
-                  Sending
-                </p>
+                <p className="emailSendingtMessage">Sending</p>
               ) : (
-                <p
-                  style={{
-                    fontSize: "3rem",
-                    width: "100%",
-                    textAlign: "center",
-                    fontFamily: "San Francisco Text",
-                    color: "white",
-                  }}
-                >
-                  Error sending email
-                </p>
+                <p className="errorSendingEmailMessage">Error sending email</p>
               )}
               <Spinner
                 animation="grow"
@@ -151,34 +124,12 @@ export const useCustomForm = () => {
       item && (
         <Col key={key} sm={12}>
           <animated.div key={key} style={props}>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                flexWrap: "wrap",
-                justifyContent: "center",
-                marginTop: "10rem",
-              }}
-            >
-              <p
-                style={{
-                  fontSize: "3rem",
-                  width: "100%",
-                  textAlign: "center",
-                  fontFamily: "San Francisco Text",
-                  color: "white",
-                }}
-              >
-                Email Sent
-              </p>
+            <div className="emailSendingStatusWrapper">
+              <p className="emailSentMessage">Email Sent</p>
               <IoMdCheckmark
+                className="emailSentCheckIcon"
                 size="5rem"
                 color="white"
-                style={{
-                  borderRadius: "50%",
-                  backgroundColor: "#00c5d4",
-                  padding: "7px",
-                }}
               />
             </div>
           </animated.div>
