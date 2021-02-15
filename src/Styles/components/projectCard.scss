@@ -14,12 +14,26 @@
   margin: 10px;
   border-radius: 20px;
   height: 2.7rem;
-  background-color: black;
+  background-color: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 2.5px solid;
   border-color: white;
+
+  &:hover {
+    background-color: #000000;
+    border: 2px solid #ff592e;
+    outline: none;
+  }
+  &:active {
+    background-color: #000000;
+    outline: none;
+  }
+  &:focus {
+    background-color: #000000;
+    outline: none;
+  }
 }
 
 .toggleInfoButtonText {
@@ -43,7 +57,21 @@
   justify-content: center;
   align-items: center;
   border: 2.5px solid;
-  border-color: white;
+  border-color: #ffffff;
+
+  &:hover {
+    background-color: #000000;
+    border: 2px solid #ff592e;
+    outline: none;
+  }
+  &:active {
+    background-color: #000000;
+    outline: none;
+  }
+  &:focus {
+    background-color: #000000;
+    outline: none;
+  }
 }
 
 .detailsButtonText {
