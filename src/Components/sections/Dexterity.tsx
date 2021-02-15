@@ -26,16 +26,15 @@ export const Dexterity: React.FC = () => {
   const GenAccentDivs = () => {
     const tempArr = [];
     for (let i = 0; i < 35; i++) {
-      // tempArr.push(i + (1 * 100) / 20);
       tempArr.push(Math.random() * (50 - 5) + 5);
     }
     setAccentDiv(tempArr);
-    console.log("Done doing this");
   };
 
   useEffect(() => {
     GenAccentDivs();
   }, []);
+
   const DexSoftwareIcons = () => {
     const icons = [
       Pi,
@@ -60,7 +59,6 @@ export const Dexterity: React.FC = () => {
           <Col
             xs={4}
             sm={2}
-            // md={4}
             lg={2}
             key={index}
             style={{

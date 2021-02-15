@@ -19,7 +19,6 @@ export const Drawer: React.FC<DrawerProps> = (props: DrawerProps) => {
       right: 0,
       top: 0,
       color: "white",
-      // boxShadow: "0px 55px 70px #878787",
       zIndex: 999,
     },
     enter: { transform: "translate3d(0px, 0px, 0px)", opacity: 1 },
@@ -32,17 +31,9 @@ export const Drawer: React.FC<DrawerProps> = (props: DrawerProps) => {
         ({ item, key, props }) =>
           item && (
             <animated.div key={key} style={props}>
-              <div>Close Icon</div>
               <div style={{ color: "white", fontSize: "20px" }}>
-                <ul>
-                  <li>Home</li>
-                  <li>All Projects</li>
-                  <li>Resume</li>
-                  <li>Contact</li>
-                </ul>
+                <ul>{/* <li>...</li> */}</ul>
               </div>
-              <div>Happy Face Svg with Stay up below it</div>
-              <div>Signiture Svg</div>
             </animated.div>
           )
       )}

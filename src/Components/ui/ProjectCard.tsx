@@ -67,9 +67,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
           backgroundImage: `url(${props.data.backgroundImg})`,
         }}
       >
-        {/* <div id="projectDisplayHeaderWrapper"> */}
         <h1 id="projectDisplayHeader">{props.data.title}</h1>
-        {/* </div> */}
       </div>
     );
   };
@@ -81,7 +79,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
           {props.data.cruces.map((crux: string, index: number) => (
             <div key={index} style={{ marginTop: "25px" }}>
               <ul style={{ color: "white" }}>
-                <li style={{ backgroundColor: "" }}>
+                <li>
                   <p className="displayCrux">{crux}</p>
                 </li>
               </ul>
@@ -146,7 +144,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
       )}
       <div>
         <Button
-          id="techStackOpenButton"
+          className="techStackOpenButton"
           style={{ width: projectTechStack ? "2.7rem" : "10rem" }}
           onClick={() => {
             toggleTechStack(!projectTechStack);
@@ -154,19 +152,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
           }}
         >
           {!projectTechStack && (
-            <p
-              style={{
-                // marginTop: "12px",
-                margin: "auto",
-                fontWeight: "bold",
-                letterSpacing: "1.5px",
-                fontSize: "16px",
-                marginRight: "3px",
-                fontFamily: "Arial",
-              }}
-            >
-              Tech Stack
-            </p>
+            <p className="toggleInfoButtonText">Tech Stack</p>
           )}
           <div
             style={{
@@ -184,42 +170,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
         {projectTechStack && (
           <div>
             <Button
-              // id="techStackOpenButton"
-              style={{
-                position: "absolute",
-                right: "4rem",
-                bottom: "0rem",
-                margin: "10px",
-                borderRadius: "20px",
-                height: "2.7rem",
-                backgroundColor: "black",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                border: "2.5px solid",
-                borderColor: "white",
-              }}
+              className="projectDetailsToggleButton"
               onClick={() => toggleDetails(!projectDetails)}
             >
-              <p
-                style={{
-                  // marginTop: "12px",
-                  margin: "auto",
-                  fontWeight: "bold",
-                  letterSpacing: "1.7px",
-                  fontSize: "16px",
-                  marginRight: "3px",
-                  fontFamily: "Arial",
-                }}
-              >
-                Details
-              </p>
-              <div
-                style={{
-                  width: "2rem",
-                  height: "2rem",
-                }}
-              >
+              <p className="detailsButtonText">Details</p>
+              <div className="detailsArrowIconWrapper">
                 {projectDetails ? (
                   <IoMdClose size="2rem" />
                 ) : (
