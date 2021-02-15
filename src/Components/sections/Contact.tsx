@@ -66,126 +66,48 @@ export const Contact: React.FC = () => {
   });
 
   return (
-    <Container
-      fluid
-      style={{
-        marginBottom: "30px",
-        margin: "0",
-        padding: "0",
-        marginTop: "33px",
-        overflow: "hidden",
-      }}
-    >
+    <Container id="contactSectionWrapper" fluid>
       <Row>
-        <Col
-          xs={12}
-          sm={12}
-          md={12}
-          lg={12}
-          xl={12}
-          style={{
-            marginTop: "5rem",
-            marginBottom: "5rem",
-          }}
-        >
-          <p
-            style={{
-              textAlign: "center",
-              color: "white",
-              fontSize: "10vw",
-              width: "100%",
-              fontFamily: "OCRAExtended, OCR A Extended",
-            }}
-          >
-            Contact
-          </p>
-          <div
-            style={{
-              margin: "auto",
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "center",
-              width: "100%",
-            }}
-          >
+        <Col id="contactSectionHeader" xs={12} sm={12} md={12} lg={12} xl={12}>
+          <p id="contactHeaderText">Contact</p>
+          <div id="contactIconWrapper">
             <BiMessageRoundedDetail
+              id="contactChatIcon"
               size="5rem"
               color="white"
-              style={{
-                borderRadius: "50%",
-                backgroundColor: "#00c5d4",
-                padding: "7px",
-              }}
             />
           </div>
         </Col>
       </Row>
-      <Row
-        style={{
-          // backgroundColor: "red",
-          marginLeft: "2%",
-          marginRight: "2%",
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          margin: "0",
-          padding: "0",
-          width: "100%",
-        }}
-      >
+      <Row id="contactOptionsWrapper">
         <Col
+          className="emailResumeContactCols"
           xs={12}
           sm={12}
           md={7}
           lg={6}
           xl={6}
-          style={{
-            // backgr`oundColor: "#0cce6b",
-            // backgroundColor: "#000d2a",
-            height: "35rem",
-            // height: "100%",
-            // width: "100%",
-            // margin: "auto",
-            overflow: "hidden",
-          }}
         >
           <Button
+            id="emailContactButton"
             onClick={() => toggleContactForm(!contactForm)}
-            style={{
-              backgroundColor: "black",
-              border: "3px solid white",
-              top: "15%",
-              left: "10%",
-              position: "absolute",
-              borderRadius: "25px",
-              width: "15rem",
-              height: "15rem",
-              boxShadow: "20px 20px 40px black",
-            }}
           >
-            <p className="buttonText">Email</p>
+            <p className="contactButtonText">Email</p>
           </Button>
-          <div
-            style={{
-              backgroundColor: "",
-            }}
-          >
-            <div>
-              {accentDiv.map((item, index) => (
-                <div
-                  key={index}
-                  className="contactButton"
-                  style={{
-                    height: "10px",
-                    marginTop: "10px",
-                    marginBottom: "5px",
-                    borderRadius: "20px",
-                    width: `${item}%`,
-                  }}
-                />
-              ))}
-            </div>
+          <div>
+            {accentDiv.map((item, index) => (
+              <div
+                key={index}
+                className="linearGradientAccent"
+                style={{
+                  height: "10px",
+                  marginTop: "10px",
+                  marginBottom: "5px",
+                  borderRadius: "20px",
+                  width: `${item}%`,
+                }}
+              />
+            ))}
           </div>
           {contactFormTransition.map(
             ({ item, key, props }) =>
@@ -201,32 +123,19 @@ export const Contact: React.FC = () => {
           )}
         </Col>
         <Col
+          className="emailResumeContactCols"
           xs={12}
           sm={12}
           md={6}
           lg={6}
           xl={6}
-          style={{
-            height: "35rem",
-            borderRadius: "25px",
-            margin: "auto",
-            marginTop: "15px",
-          }}
         >
-          <div
-            className="contactButton"
-            style={{
-              width: "90%",
-              height: "25rem",
-              position: "absolute",
-              borderRadius: "25px",
-            }}
-          >
+          <div className="linearGradientAccent" id="getResumeButtonWrapper">
             <Button
               id="getResumeButton"
               onClick={() => toggleResumeForm(!resumeForm)}
             >
-              <p className="buttonText">Get Resume</p>
+              <p className="contactButtonText">Get Resume</p>
             </Button>
           </div>
           {resumeFormTransition.map(
