@@ -8,7 +8,7 @@ export const FeaturedProjects: React.FC = () => {
 
   return (
     <Container fluid id="projectsWrapper">
-      <Row style={{ backgroundColor: "", width: "100%" }}>
+      <Row id="projectTitleWrapper">
         <p id="projectsTitle">Projects</p>
       </Row>
       {FeaturedProjects.map((item, index) => (
