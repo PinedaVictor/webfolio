@@ -37,7 +37,7 @@ export const ContactForm: React.FC<ContactProps> = (props) => {
       setFormFields({ name: "", email: "", subject: "", message: "" });
     }
   };
-
+  /* eslint-disable-next-line  @typescript-eslint/no-explicit-any */
   const onInputChange = (e: any) => {
     handleInputChange(e, setFormFields);
   };

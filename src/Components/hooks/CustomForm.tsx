@@ -6,7 +6,7 @@ import { Col, Spinner } from "react-bootstrap";
 import firebase from "firebase";
 
 type FunctionName = "sendResume" | "contact";
-
+// eslint-disable-next-line
 export const useCustomForm = () => {
   const [sendingEmail, setSendingEmail] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
@@ -37,6 +37,7 @@ export const useCustomForm = () => {
   };
 
   const handleInputChange = <T,>(
+    // eslint-disable-next-line
     event: any,
     setFormFields: React.Dispatch<React.SetStateAction<T>>
   ) => {

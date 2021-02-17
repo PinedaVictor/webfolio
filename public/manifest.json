@@ -1,7 +1,7 @@
 {
   "short_name": "VP",
   "name": "Victor Pineda",
-  "description": "Portfolio website for Victor Pineda",
+  "description": "Portfolio website by Victor Pineda",
   "icons": [
     {
       "src": "/images/android-chrome-192x192.png",
@@ -19,6 +19,8 @@
       "sizes":"180x180"
     }
   ],
+  "start_url": ".",
+  "scope":"/",
   "background_color": "#00c5d4",
   "display": "standalone",
   "theme_color": "#00c5d4"

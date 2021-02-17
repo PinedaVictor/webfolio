@@ -32,7 +32,7 @@ export const ResumeForm: React.FC<ResumeFormProps> = (props) => {
       setFormFields({ name: "", email: "" });
     }
   };
-
+  /* eslint-disable-next-line  @typescript-eslint/no-explicit-any */
   const onInputChange = (e: any) => {
     handleInputChange(e, setFormFields);
   };

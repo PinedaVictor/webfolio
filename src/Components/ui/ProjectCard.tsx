@@ -8,6 +8,7 @@ import { IconType } from "react-icons";
 
 type FrameworkIcon = { icon: IconType; Framework: string };
 interface ProjectCardProps {
+  // eslint-disable-next-line
   data: any;
 }
 

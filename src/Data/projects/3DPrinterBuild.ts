@@ -1,5 +1,4 @@
 import img from "../../Assets/images/three7.jpg";
-import { IoLogoFirebase } from "react-icons/io5";
 import { MdBuild } from "react-icons/md";
 import { SiArduino } from "react-icons/si";
 
