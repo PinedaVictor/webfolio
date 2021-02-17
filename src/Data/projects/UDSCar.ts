@@ -1,4 +1,4 @@
-import img from "../../Assets/images/uno2.2.jpg";
+import img from "../../Assets/images/unoFinal.jpg";
 import { IoCodeSlashOutline } from "react-icons/io5";
 import { SiArduino } from "react-icons/si";
 import { GiCartwheel } from "react-icons/gi";

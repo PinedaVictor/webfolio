@@ -1,4 +1,4 @@
-import img from "../../Assets/images/2.jpg";
+import img from "../../Assets/images/foodie.jpg";
 import { IoLogoFirebase } from "react-icons/io5";
 import { FaReact } from "react-icons/fa";
 import { BsCodeSlash } from "react-icons/bs";

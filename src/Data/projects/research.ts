@@ -1,4 +1,4 @@
-import img from "../../Assets/images/research.jpg";
+import img from "../../Assets/images/researchFinal.jpg";
 import { FaJava } from "react-icons/fa";
 import { DiScala } from "react-icons/di";
 

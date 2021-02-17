@@ -17,7 +17,7 @@ import {
   // Figma,
 } from "../../Assets/icons";
 import { Wave } from "../../Assets/vectors";
-import gig from "../../Assets/images/me2Back.png";
+import gig from "../../Assets/images/VPSelfPortrait.png";
 
 type SVGIcon = React.FC<React.SVGProps<SVGSVGElement>>;
 

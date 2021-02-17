@@ -1,4 +1,4 @@
-import img from "../../Assets/images/1.jpg";
+import img from "../../Assets/images/codeOne.jpg";
 import { IoLogoFirebase, IoApps } from "react-icons/io5";
 import { FaReact } from "react-icons/fa";
 
