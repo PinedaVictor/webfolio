@@ -1,10 +1,15 @@
-# Getting Started with Create React App
+# Developer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+pinedavictor.com
 
-## Available Scripts
+I have open sorced this web app to inspire and help any developer wanting to implement a portfolio site for themselves. Feel free to fork this repository and make your own portfolio. This site is geared towards showcasing project based work highlighting the technology stack utilzed in each project.
 
-In the project directory, you can run:
+## Features
+
+ - TSX function components
+ - Firebase cloud functions
+ - Custom framework icons vectors
+ - No JQuery
 
 ### `yarn start`
 
