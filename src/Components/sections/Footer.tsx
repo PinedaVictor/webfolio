@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
     <Container fluid>
       <Row style={{ textAlign: "center" }}>
         <div className="footerDivider" />
-        <Link className="footerLink" to="AllProjects">
+        <Link className="footerLink" to="/AllProjects">
           <p>All Projects</p>
         </Link>
         <div id="footerMediaIcons">

@@ -1,3 +1,21 @@
+.buttonActions {
+  &:hover {
+    background-color: #000000;
+    border: 2px solid #ff592e;
+    outline: none;
+  }
+  &:active {
+    background-color: #000000;
+    outline: none;
+  }
+  &:focus {
+    background-color: #000000 !important;
+    outline: none !important;
+    border-color: #ffffff !important;
+    box-shadow: none !important;
+  }
+}
+
 .projectCardWrapper {
   background-color: black;
   height: 35rem;
@@ -21,19 +39,7 @@
   border: 2.5px solid;
   border-color: white;
 
-  &:hover {
-    background-color: #000000;
-    border: 2px solid #ff592e;
-    outline: none;
-  }
-  &:active {
-    background-color: #000000;
-    outline: none;
-  }
-  &:focus {
-    background-color: #000000;
-    outline: none;
-  }
+  @extend .buttonActions;
 }
 
 .toggleInfoButtonText {
@@ -59,19 +65,7 @@
   border: 2.5px solid;
   border-color: #ffffff;
 
-  &:hover {
-    background-color: #000000;
-    border: 2px solid #ff592e;
-    outline: none;
-  }
-  &:active {
-    background-color: #000000;
-    outline: none;
-  }
-  &:focus {
-    background-color: #000000;
-    outline: none;
-  }
+  @extend .buttonActions;
 }
 
 .detailsButtonText {

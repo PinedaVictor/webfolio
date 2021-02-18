@@ -1,44 +1,23 @@
 @font-face {
   font-family: "OCR A Extended";
-  src: url("//db.onlinewebfonts.com/t/971c473a19b6bba1059ba6add6af78d7.eot");
-  src: url("//db.onlinewebfonts.com/t/971c473a19b6bba1059ba6add6af78d7.eot?#iefix")
-      format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/971c473a19b6bba1059ba6add6af78d7.woff2")
-      format("woff2"),
-    url("//db.onlinewebfonts.com/t/971c473a19b6bba1059ba6add6af78d7.woff")
-      format("woff"),
-    url("//db.onlinewebfonts.com/t/971c473a19b6bba1059ba6add6af78d7.ttf")
-      format("truetype"),
-    url("//db.onlinewebfonts.com/t/971c473a19b6bba1059ba6add6af78d7.svg#OCR A Extended")
-      format("svg");
+  src: url("./Assets/fonts/OCRAExtended/ocraextended.eot");
+  src: url("./Assets/fonts/OCRAExtended/ocraextended.ttf") format("truetype"),
+    url("./Assets/fonts/OCRAExtended/ocraextended.woff") format("woff"),
+    url("./Assets/fonts/OCRAExtended/ocraextended.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "San Francisco Text";
-  src: url("//db.onlinewebfonts.com/t/79e6a42b40a09e3d0bff529c69d037fa.eot");
-  src: url("//db.onlinewebfonts.com/t/79e6a42b40a09e3d0bff529c69d037fa.eot?#iefix")
-      format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/79e6a42b40a09e3d0bff529c69d037fa.woff2")
-      format("woff2"),
-    url("//db.onlinewebfonts.com/t/79e6a42b40a09e3d0bff529c69d037fa.woff")
-      format("woff"),
-    url("//db.onlinewebfonts.com/t/79e6a42b40a09e3d0bff529c69d037fa.ttf")
-      format("truetype"),
-    url("//db.onlinewebfonts.com/t/79e6a42b40a09e3d0bff529c69d037fa.svg#San Francisco Text")
-      format("svg");
+  src: url("./Assets/fonts/SFT/sanfranciscotext.eot");
+  src: url("./Assets/fonts/SFT/sanfranciscotext.ttf") format("truetype"),
+    url("./Assets/fonts/SFT/sanfranciscotext.woff") format("woff"),
+    url("./Assets/fonts/SFT/sanfranciscotext.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Arial";
-  src: url("//db.onlinewebfonts.com/t/8d223b3ad8d4819e9dcf22757e4cc2c4.eot");
-  src: url("//db.onlinewebfonts.com/t/8d223b3ad8d4819e9dcf22757e4cc2c4.eot?#iefix")
-      format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/8d223b3ad8d4819e9dcf22757e4cc2c4.woff2")
-      format("woff2"),
-    url("//db.onlinewebfonts.com/t/8d223b3ad8d4819e9dcf22757e4cc2c4.woff")
-      format("woff"),
-    url("//db.onlinewebfonts.com/t/8d223b3ad8d4819e9dcf22757e4cc2c4.ttf")
-      format("truetype"),
-    url("//db.onlinewebfonts.com/t/8d223b3ad8d4819e9dcf22757e4cc2c4.svg#Arial")
-      format("svg");
+  src: url("./Assets/fonts/Arial/arial.eot");
+  src: url("./Assets/fonts/Arial/arial.ttf") format("truetype"),
+    url("./Assets/fonts/Arial/arial.woff") format("woff"),
+    url("./Assets/fonts/Arial/arial.woff2") format("woff2");
 }
