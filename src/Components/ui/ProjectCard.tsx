@@ -129,27 +129,28 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
             </Col>
           )
       )}
-      {projectTechStack && (
-        <div>
-          {transitionDetails.map(
-            ({ item, key, props }) =>
-              item && (
-                <Col key={key} sm={12}>
-                  <animated.div key={key} style={props}>
-                    <ProjectDetails />
-                  </animated.div>
-                </Col>
-              )
-          )}
-        </div>
+      {transitionDetails.map(
+        ({ item, key, props }) =>
+          item && (
+            <Col key={key} sm={12}>
+              <animated.div key={key} style={props}>
+                <ProjectDetails />
+              </animated.div>
+            </Col>
+          )
       )}
       <div>
         <Button
           className="techStackOpenButton"
-          style={{ width: projectTechStack ? "2.7rem" : "10rem" }}
+          style={{
+            width: projectTechStack ? "2.7rem" : "10.2rem",
+          }}
           onClick={() => {
+            console.log("Closing both transitions");
+            if (projectDetails == true) {
+              toggleDetails(false);
+            }
             toggleTechStack(!projectTechStack);
-            toggleDetails(false);
           }}
         >
           {!projectTechStack && (
