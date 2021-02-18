@@ -98,7 +98,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
           <TechStack id="techStackIcon" />
         </div>
         <div id="codeVectorWrapper">
-          <Code />
+          <Code width="100%" />
         </div>
         {props.data.icons.map((Icon: FrameworkIcon, index: number) => (
           <div
