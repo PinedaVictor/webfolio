@@ -146,7 +146,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = (
             width: projectTechStack ? "2.7rem" : "10.2rem",
           }}
           onClick={() => {
-            console.log("Closing both transitions");
             if (projectDetails == true) {
               toggleDetails(false);
             }
