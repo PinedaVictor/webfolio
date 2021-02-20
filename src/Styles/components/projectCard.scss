@@ -1,3 +1,21 @@
+.buttonActions {
+  &:hover {
+    background-color: #000000;
+    border: 2px solid #ff592e;
+    outline: none;
+  }
+  &:active {
+    background-color: #000000;
+    outline: none;
+  }
+  &:focus {
+    background-color: #000000 !important;
+    outline: none !important;
+    border-color: #ffffff !important;
+    box-shadow: none !important;
+  }
+}
+
 .projectCardWrapper {
   background-color: black;
   height: 35rem;
@@ -21,19 +39,7 @@
   border: 2.5px solid;
   border-color: white;
 
-  &:hover {
-    background-color: #000000;
-    border: 2px solid #ff592e;
-    outline: none;
-  }
-  &:active {
-    background-color: #000000;
-    outline: none;
-  }
-  &:focus {
-    background-color: #000000;
-    outline: none;
-  }
+  @extend .buttonActions;
 }
 
 .toggleInfoButtonText {
@@ -59,19 +65,7 @@
   border: 2.5px solid;
   border-color: #ffffff;
 
-  &:hover {
-    background-color: #000000;
-    border: 2px solid #ff592e;
-    outline: none;
-  }
-  &:active {
-    background-color: #000000;
-    outline: none;
-  }
-  &:focus {
-    background-color: #000000;
-    outline: none;
-  }
+  @extend .buttonActions;
 }
 
 .detailsButtonText {
@@ -102,13 +96,13 @@
   float: left;
   width: 50%;
   height: 100%;
-  background-color: #000d2a;
+  background-color: #042959;
 }
 
 #codeVectorWrapper {
   margin-left: 50%;
   height: 100vh;
-  opacity: 60%;
+  width: auto;
 }
 
 .frameworkWrapper {
@@ -145,11 +139,12 @@
 }
 
 #projectDisplayHeader {
-  color: white;
+  color: #ffffff;
   font-weight: bold;
-  font-size: 60px;
-  padding: 7px;
+  font-size: 6vh;
+  padding: 3px;
   font-family: San Francisco Text;
+  background-color: rgba($color: #000000, $alpha: 0.63);
 }
 
 #projectDisplayCrucesWrapper {
